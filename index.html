@@ -482,14 +482,34 @@ body.ar .chat-window{left:auto;right:2rem;}
     <span class="services-count fade-up">06 services</span>
   </div>
   <div class="services-grid">
-    <div class="svc fade-up"><div class="svc-img-wrap"><img class="svc-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="" loading="lazy"><div class="svc-num-overlay">01</div></div><div class="svc-body"><h3 data-en="Monthly Bookkeeping" data-ar="حفظ الدفاتر الشهري">Monthly Bookkeeping</h3><p data-en="Full transaction recording from banks, cards, and payment processors every month." data-ar="تسجيل كامل للمعاملات من البنوك والبطاقات وأنظمة الدفع كل شهر.">Full transaction recording from banks, cards, and payment processors every month.</p><span class="svc-arrow" data-en="Learn more →" data-ar="اقرأ المزيد →">Learn more →</span></div></div>
-    <div class="svc fade-up"><div class="svc-img-wrap"><img class="svc-img" src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600&q=80" alt="" loading="lazy"><div class="svc-num-overlay">02</div></div><div class="svc-body"><h3 data-en="Bank Reconciliation" data-ar="مطابقة الحسابات">Bank Reconciliation</h3><p data-en="Monthly reconciliation until every balance ties to the cent." data-ar="مطابقة شهرية حتى يتطابق كل رصيد إلى آخر فلس.">Monthly reconciliation until every balance ties to the cent.</p><span class="svc-arrow" data-en="Learn more →" data-ar="اقرأ المزيد →">Learn more →</span></div></div>
-    <div class="svc fade-up"><div class="svc-img-wrap"><img class="svc-img" src="https://images.unsplash.com/photo-1543286386-713bdd548da4?w=600&q=80" alt="" loading="lazy"><div class="svc-num-overlay">03</div></div><div class="svc-body"><h3 data-en="Financial Reporting" data-ar="التقارير المالية">Financial Reporting</h3><p data-en="P&L, balance sheet, and cash flow — delivered by the 10th of each month." data-ar="الأرباح والخسائر، الميزانية، والتدفق النقدي — بحلول العاشر من كل شهر.">P&L, balance sheet, and cash flow — delivered by the 10th of each month.</p><span class="svc-arrow" data-en="Learn more →" data-ar="اقرأ المزيد →">Learn more →</span></div></div>
-    <div class="svc fade-up"><div class="svc-img-wrap"><img class="svc-img" src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&q=80" alt="" loading="lazy"><div class="svc-num-overlay">04</div></div><div class="svc-body"><h3 data-en="VAT Preparation" data-ar="ضريبة القيمة المضافة">VAT Preparation</h3><p data-en="Filing-ready VAT returns compliant with UAE FTA requirements." data-ar="إقرارات ضريبة القيمة المضافة وفق متطلبات الهيئة الاتحادية للضرائب.">Filing-ready VAT returns compliant with UAE FTA requirements.</p><span class="svc-arrow" data-en="Learn more →" data-ar="اقرأ المزيد →">Learn more →</span></div></div>
-    <div class="svc fade-up"><div class="svc-img-wrap"><img class="svc-img" src="https://images.unsplash.com/photo-1568234928966-359c35dd8327?w=600&q=80" alt="" loading="lazy"><div class="svc-num-overlay">05</div></div><div class="svc-body"><h3 data-en="Catch-Up Bookkeeping" data-ar="تنظيف السجلات المتراكمة">Catch-Up Bookkeeping</h3><p data-en="Backlog clean-up for disorganized or unrecorded transactions." data-ar="ترتيب وتصحيح السجلات المحاسبية المتراكمة بأثر رجعي.">Backlog clean-up for disorganized or unrecorded transactions.</p><span class="svc-arrow" data-en="Learn more →" data-ar="اقرأ المزيد →">Learn more →</span></div></div>
-    <div class="svc fade-up"><div class="svc-img-wrap"><img class="svc-img" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80" alt="" loading="lazy"><div class="svc-num-overlay">06</div></div><div class="svc-body"><h3 data-en="Financial Advisory" data-ar="استشارات مالية">Financial Advisory</h3><p data-en="Performance analysis and recommendations to improve cash flow and reduce costs." data-ar="تحليل الأداء المالي وتقديم توصيات لتحسين التدفق النقدي.">Performance analysis and recommendations to improve cash flow and reduce costs.</p><span class="svc-arrow" data-en="Learn more →" data-ar="اقرأ المزيد →">Learn more →</span></div></div>
+    <div class="svc fade-up" onclick="openService('bookkeeping')" style="cursor:pointer;"><div class="svc-img-wrap"><img class="svc-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="" loading="lazy"><div class="svc-num-overlay">01</div></div><div class="svc-body"><h3 data-en="Monthly Bookkeeping" data-ar="مسك الدفاتر الشهري">Monthly Bookkeeping</h3><p data-en="Full transaction recording from banks, cards, and payment processors every month." data-ar="تسجيل كامل للمعاملات من البنوك والبطاقات وأنظمة الدفع كل شهر.">Full transaction recording from banks, cards, and payment processors every month.</p><span class="svc-arrow" data-en="Learn more →" data-ar="اقرأ المزيد →">Learn more →</span></div></div>
+    <div class="svc fade-up" onclick="openService('reconciliation')" style="cursor:pointer;"><div class="svc-img-wrap"><img class="svc-img" src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600&q=80" alt="" loading="lazy"><div class="svc-num-overlay">02</div></div><div class="svc-body"><h3 data-en="Bank Reconciliation" data-ar="مطابقة الحسابات البنكية">Bank Reconciliation</h3><p data-en="Monthly reconciliation until every balance ties to the cent." data-ar="مطابقة شهرية حتى يتطابق كل رصيد إلى آخر فلس.">Monthly reconciliation until every balance ties to the cent.</p><span class="svc-arrow" data-en="Learn more →" data-ar="اقرأ المزيد →">Learn more →</span></div></div>
+    <div class="svc fade-up" onclick="openService('reporting')" style="cursor:pointer;"><div class="svc-img-wrap"><img class="svc-img" src="https://images.unsplash.com/photo-1543286386-713bdd548da4?w=600&q=80" alt="" loading="lazy"><div class="svc-num-overlay">03</div></div><div class="svc-body"><h3 data-en="Financial Reporting" data-ar="التقارير المالية">Financial Reporting</h3><p data-en="P&L, balance sheet, and cash flow — delivered by the 10th of each month." data-ar="الأرباح والخسائر، الميزانية، والتدفق النقدي — بحلول العاشر من كل شهر.">P&L, balance sheet, and cash flow — delivered by the 10th of each month.</p><span class="svc-arrow" data-en="Learn more →" data-ar="اقرأ المزيد →">Learn more →</span></div></div>
+    <div class="svc fade-up" onclick="openService('vat')" style="cursor:pointer;"><div class="svc-img-wrap"><img class="svc-img" src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&q=80" alt="" loading="lazy"><div class="svc-num-overlay">04</div></div><div class="svc-body"><h3 data-en="VAT Preparation" data-ar="إعداد ضريبة القيمة المضافة">VAT Preparation</h3><p data-en="Filing-ready VAT returns compliant with UAE FTA requirements." data-ar="إقرارات ضريبة القيمة المضافة وفق متطلبات الهيئة الاتحادية للضرائب.">Filing-ready VAT returns compliant with UAE FTA requirements.</p><span class="svc-arrow" data-en="Learn more →" data-ar="اقرأ المزيد →">Learn more →</span></div></div>
+    <div class="svc fade-up" onclick="openService('catchup')" style="cursor:pointer;"><div class="svc-img-wrap"><img class="svc-img" src="https://images.unsplash.com/photo-1568234928966-359c35dd8327?w=600&q=80" alt="" loading="lazy"><div class="svc-num-overlay">05</div></div><div class="svc-body"><h3 data-en="Catch-Up Bookkeeping" data-ar="تسوية السجلات المتأخرة">Catch-Up Bookkeeping</h3><p data-en="Backlog clean-up for disorganized or unrecorded transactions." data-ar="ترتيب وتصحيح السجلات المحاسبية المتراكمة بأثر رجعي.">Backlog clean-up for disorganized or unrecorded transactions.</p><span class="svc-arrow" data-en="Learn more →" data-ar="اقرأ المزيد →">Learn more →</span></div></div>
+    <div class="svc fade-up" onclick="openService('advisory')" style="cursor:pointer;"><div class="svc-img-wrap"><img class="svc-img" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80" alt="" loading="lazy"><div class="svc-num-overlay">06</div></div><div class="svc-body"><h3 data-en="Financial Advisory" data-ar="الاستشارات المالية">Financial Advisory</h3><p data-en="Performance analysis and recommendations to improve cash flow and reduce costs." data-ar="تحليل الأداء المالي وتقديم توصيات لتحسين التدفق النقدي.">Performance analysis and recommendations to improve cash flow and reduce costs.</p><span class="svc-arrow" data-en="Learn more →" data-ar="اقرأ المزيد →">Learn more →</span></div></div>
   </div>
 </section>
+
+<!-- SERVICE DETAIL MODAL -->
+<div id="svcOverlay" onclick="closeService()" style="display:none;position:fixed;inset:0;background:rgba(13,27,42,0.7);z-index:600;backdrop-filter:blur(4px);"></div>
+<div id="svcDrawer" style="display:none;position:fixed;top:0;right:0;bottom:0;width:min(580px,100vw);background:var(--white);z-index:700;overflow-y:auto;transform:translateX(100%);transition:transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94);box-shadow:-20px 0 60px rgba(13,27,42,0.2);">
+  <div style="position:sticky;top:0;background:var(--white);z-index:10;padding:1.25rem 1.75rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;">
+    <span id="svcNum" style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--mint);font-weight:600;"></span>
+    <button onclick="closeService()" style="background:var(--paper);border:1px solid var(--border);width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;color:var(--slate);transition:all 0.2s;" onmouseover="this.style.background='var(--navy)';this.style.color='#fff'" onmouseout="this.style.background='var(--paper)';this.style.color='var(--slate)'">✕</button>
+  </div>
+  <div style="padding:2.5rem 1.75rem;">
+    <div id="svcImgWrap" style="border-radius:14px;overflow:hidden;height:220px;margin-bottom:2rem;">
+      <img id="svcImg" src="" alt="" style="width:100%;height:220px;object-fit:cover;">
+    </div>
+    <h2 id="svcTitle" style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;line-height:1.1;margin-bottom:1rem;"></h2>
+    <p id="svcTagline" style="font-size:1rem;color:var(--mint);font-weight:500;margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--border);"></p>
+    <div id="svcBody" style="font-size:0.925rem;color:var(--slate);line-height:1.9;"></div>
+    <div id="svcSteps" style="margin-top:2rem;"></div>
+    <div id="svcWho" style="margin-top:2rem;background:var(--paper);border-radius:12px;padding:1.5rem;"></div>
+    <a id="svcCta" href="https://wa.me/971501337192" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:0.6rem;margin-top:2rem;padding:1rem;background:var(--navy);color:#fff;text-decoration:none;font-size:0.82rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;border-radius:8px;border:2px solid var(--navy);transition:all 0.2s;" onmouseover="this.style.background='transparent';this.style.color='var(--navy)'" onmouseout="this.style.background='var(--navy)';this.style.color='#fff'">💬 <span id="svcCtaText">Get started on WhatsApp</span></a>
+  </div>
+</div>
 
 <!-- WHY ABA -->
 <section id="why">
@@ -836,6 +856,202 @@ body.ar .chat-window{left:auto;right:2rem;}
 </div>
 
 <script>
+// ===== SERVICE DRAWER DATA =====
+const serviceData = {
+  bookkeeping: {
+    num: { en: 'Service 01', ar: 'الخدمة ٠١' },
+    img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
+    title: { en: 'Monthly Bookkeeping', ar: 'مسك الدفاتر الشهري' },
+    tagline: {
+      en: 'Every transaction recorded. Every dirham accounted for.',
+      ar: 'كل معاملة مسجَّلة. كل درهم موثَّق.'
+    },
+    body: {
+      en: `<p>Think of bookkeeping as the foundation your entire business stands on. Without accurate, up-to-date records, you're making decisions in the dark — guessing at profit margins, unsure where cash is going, and vulnerable to errors when tax time arrives.</p>
+<p style="margin-top:1rem;">Every month, we collect all your financial activity — bank statements, credit card transactions, invoices, receipts, and payment processor exports — and record each one accurately in your accounting software. No backlogs. No guesswork. Just clean, organized data you can rely on.</p>`,
+      ar: `<p>مسك الدفاتر هو الأساس الذي يقوم عليه نشاطك التجاري بأكمله. بدون سجلات دقيقة ومحدَّثة، تتخذ قراراتك في الظلام — تخمّن هوامش الربح، ولا تعرف أين تذهب الأموال، وتكون عرضةً للأخطاء عند موسم تقديم الإقرارات الضريبية.</p>
+<p style="margin-top:1rem;">كل شهر نجمع جميع نشاطاتك المالية — كشوف الحساب البنكية، ومعاملات بطاقات الائتمان، والفواتير، والإيصالات، وتقارير أنظمة الدفع — ونسجّل كل واحدة بدقة في برنامج المحاسبة الخاص بك. لا تأخير. لا تخمين. بيانات نظيفة ومنظَّمة تثق بها.</p>`
+    },
+    steps: {
+      en: ['We connect to your bank feeds, card statements, and payment platforms', 'Every transaction is categorized to the correct account', 'Expenses, revenues, and transfers are clearly separated', 'Your books are closed cleanly each month — ready for review'],
+      ar: ['نتصل بتغذيات بنكك وكشوف بطاقاتك ومنصات الدفع', 'كل معاملة تُصنَّف في الحساب الصحيح', 'تُفصَل المصروفات والإيرادات والتحويلات بوضوح تام', 'تُغلَق دفاترك بشكل نظيف كل شهر — جاهزة للمراجعة']
+    },
+    who: {
+      en: '✅ Best for: Startups, small businesses, freelancers, and any business that needs a clean financial foundation.',
+      ar: '✅ الأنسب لـ: الشركات الناشئة، والمشاريع الصغيرة، والعاملين المستقلين، وكل نشاط تجاري يحتاج أساساً مالياً سليماً.'
+    },
+    cta: { en: 'Start Monthly Bookkeeping', ar: 'ابدأ مسك الدفاتر الشهري' }
+  },
+  reconciliation: {
+    num: { en: 'Service 02', ar: 'الخدمة ٠٢' },
+    img: 'https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800&q=80',
+    title: { en: 'Bank Reconciliation', ar: 'مطابقة الحسابات البنكية' },
+    tagline: {
+      en: 'Your books match the bank — to the last fils.',
+      ar: 'دفاترك تطابق البنك — إلى آخر فلس.'
+    },
+    body: {
+      en: `<p>Bank reconciliation is the process of comparing your internal financial records against your actual bank statement — making sure they match perfectly. It catches errors, detects duplicate entries, identifies unauthorized transactions, and confirms that nothing has been missed.</p>
+<p style="margin-top:1rem;">Many businesses skip this step or do it rarely. The result? Discrepancies build up silently over months, and by the time they're discovered, untangling them costs time and money. We reconcile every account every single month so your numbers always reflect reality.</p>`,
+      ar: `<p>مطابقة الحسابات البنكية هي عملية مقارنة سجلاتك المالية الداخلية مع كشف الحساب البنكي الفعلي — للتأكد من تطابقهما تماماً. تكتشف الأخطاء، وترصد الإدخالات المكررة، وتُحدِّد المعاملات غير المصرح بها، وتؤكد عدم إغفال أي شيء.</p>
+<p style="margin-top:1rem;">كثير من الشركات تتجاهل هذه الخطوة أو تؤجّلها. النتيجة؟ تتراكم التناقضات بصمت لأشهر، وحين تُكتشَف يكون فكّها مُكلِفاً في الوقت والمال. نحن نطابق كل حساب كل شهر حتى تعكس أرقامك الواقع دائماً.</p>`
+    },
+    steps: {
+      en: ['Download bank and credit card statements for the month', 'Match every transaction against your accounting records', 'Identify and resolve any discrepancies or missing entries', 'Confirm closing balances — verified and signed off'],
+      ar: ['تنزيل كشوف البنك وبطاقات الائتمان للشهر', 'مطابقة كل معاملة مع سجلات المحاسبة', 'تحديد وحل أي تناقضات أو إدخالات مفقودة', 'تأكيد أرصدة الإغلاق — موثَّقة ومعتمدة']
+    },
+    who: {
+      en: '✅ Best for: Any business with bank accounts, credit cards, or multiple payment channels — which is every business.',
+      ar: '✅ الأنسب لـ: أي نشاط تجاري لديه حسابات بنكية أو بطاقات ائتمان أو قنوات دفع متعددة — أي كل الشركات.'
+    },
+    cta: { en: 'Start Bank Reconciliation', ar: 'ابدأ مطابقة الحسابات' }
+  },
+  reporting: {
+    num: { en: 'Service 03', ar: 'الخدمة ٠٣' },
+    img: 'https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&q=80',
+    title: { en: 'Financial Reporting', ar: 'التقارير المالية' },
+    tagline: {
+      en: 'Know exactly how your business performed — every month.',
+      ar: 'اعرف بالضبط كيف أدّى نشاطك التجاري — كل شهر.'
+    },
+    body: {
+      en: `<p>A financial report is not just a document — it's a dashboard for your business. It tells you whether you're profitable, whether you have enough cash to cover next month's expenses, and whether your assets outweigh your liabilities.</p>
+<p style="margin-top:1rem;">By the 10th of every month, you receive three core reports: the <strong>Profit & Loss statement</strong> (what you earned and spent), the <strong>Balance Sheet</strong> (what you own vs. what you owe), and the <strong>Cash Flow Statement</strong> (how money actually moved). Together they give you a complete picture — not just a guess.</p>`,
+      ar: `<p>التقرير المالي ليس مجرد وثيقة — إنه لوحة تحكم نشاطك التجاري. يخبرك ما إذا كنت رابحاً، وما إذا كان لديك سيولة كافية لتغطية نفقات الشهر القادم، وما إذا كانت أصولك تفوق خصومك.</p>
+<p style="margin-top:1rem;">بحلول العاشر من كل شهر تستلم ثلاثة تقارير أساسية: <strong>قائمة الأرباح والخسائر</strong> (ما كسبته وأنفقته)، و<strong>الميزانية العمومية</strong> (ما تملكه مقابل ما عليك)، و<strong>قائمة التدفق النقدي</strong> (كيف تحركت الأموال فعلياً). معاً تعطيك صورة كاملة — لا مجرد تخمين.</p>`
+    },
+    steps: {
+      en: ['All bookkeeping and reconciliation completed for the month', 'Profit & Loss statement prepared and reviewed', 'Balance Sheet updated with current assets and liabilities', 'Cash Flow Statement compiled — delivered to you by the 10th'],
+      ar: ['اكتمال مسك الدفاتر والمطابقة للشهر', 'إعداد ومراجعة قائمة الأرباح والخسائر', 'تحديث الميزانية العمومية بالأصول والخصوم الحالية', 'إعداد قائمة التدفق النقدي — تُسلَّم إليك بحلول العاشر']
+    },
+    who: {
+      en: '✅ Best for: Business owners who want to make informed decisions, attract investors, or simply know if they\'re really making money.',
+      ar: '✅ الأنسب لـ: أصحاب الأعمال الذين يريدون اتخاذ قرارات مدروسة، أو استقطاب المستثمرين، أو معرفة ما إذا كانوا يحققون أرباحاً فعلية.'
+    },
+    cta: { en: 'Get Monthly Reports', ar: 'احصل على التقارير الشهرية' }
+  },
+  vat: {
+    num: { en: 'Service 04', ar: 'الخدمة ٠٤' },
+    img: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&q=80',
+    title: { en: 'VAT Preparation & Filing', ar: 'إعداد وتقديم ضريبة القيمة المضافة' },
+    tagline: {
+      en: 'Stay compliant with the UAE FTA — on time, every time.',
+      ar: 'ابقَ ممتثلاً للهيئة الاتحادية للضرائب — في الموعد، كل مرة.'
+    },
+    body: {
+      en: `<p>Since the UAE introduced VAT at 5% in 2018, businesses with annual revenues above AED 375,000 are required to register and file regular VAT returns with the Federal Tax Authority (FTA). Late or incorrect filings result in penalties that can be costly and damaging to your reputation.</p>
+<p style="margin-top:1rem;">We handle the entire VAT process for you: calculating the VAT you've collected from customers (output tax), calculating the VAT you've paid on purchases (input tax), and submitting an accurate return to the FTA — quarterly or monthly depending on your package. You focus on your business; we handle the compliance.</p>`,
+      ar: `<p>منذ تطبيق الإمارات لضريبة القيمة المضافة بنسبة 5% عام 2018، باتت الشركات ذات الإيرادات السنوية التي تتجاوز 375,000 درهم ملزَمةً بالتسجيل وتقديم الإقرارات الضريبية بانتظام إلى الهيئة الاتحادية للضرائب (FTA). التأخر أو الأخطاء في التقديم تترتب عليها غرامات مُكلِفة وتُلحق الضرر بسمعتك.</p>
+<p style="margin-top:1rem;">نتولى عنك عملية ضريبة القيمة المضافة بالكامل: احتساب الضريبة التي جمعتها من العملاء (الضريبة الناتجة)، واحتساب الضريبة التي دفعتها على مشترياتك (ضريبة المدخلات)، وتقديم إقرار دقيق إلى الهيئة — ربع سنوياً أو شهرياً حسب باقتك. أنت تركّز على نشاطك، ونحن نتولى الامتثال.</p>`
+    },
+    steps: {
+      en: ['Review all invoices, receipts, and expense records for the period', 'Calculate output VAT (collected from customers)', 'Calculate input VAT (paid on business expenses)', 'Submit accurate VAT return to FTA before the deadline'],
+      ar: ['مراجعة جميع الفواتير والإيصالات وسجلات المصروفات للفترة', 'احتساب ضريبة المخرجات (المحصَّلة من العملاء)', 'احتساب ضريبة المدخلات (المدفوعة على مصاريف النشاط)', 'تقديم إقرار ضريبي دقيق إلى الهيئة قبل الموعد النهائي']
+    },
+    who: {
+      en: '✅ Best for: Any UAE-registered business with annual revenues above AED 375,000, or voluntarily registered businesses below that threshold.',
+      ar: '✅ الأنسب لـ: أي نشاط تجاري مسجَّل في الإمارات بإيرادات سنوية تتجاوز 375,000 درهم، أو الشركات المسجَّلة طوعاً دون هذا الحد.'
+    },
+    cta: { en: 'Handle My VAT Filing', ar: 'تولَّ تقديم ضريبة القيمة المضافة عني' }
+  },
+  catchup: {
+    num: { en: 'Service 05', ar: 'الخدمة ٠٥' },
+    img: 'https://images.unsplash.com/photo-1568234928966-359c35dd8327?w=800&q=80',
+    title: { en: 'Catch-Up Bookkeeping', ar: 'تسوية السجلات المتأخرة' },
+    tagline: {
+      en: 'Months or years behind? We\'ll bring you current — fast.',
+      ar: 'متأخر أشهراً أو سنوات؟ سنُعيدك إلى المسار — بسرعة.'
+    },
+    body: {
+      en: `<p>It happens to many businesses: things get busy, bookkeeping gets pushed aside, and suddenly you're six months — or two years — behind on your records. Receipts are piled up, transactions are unrecorded, and your accounts are a mess. This is exactly what catch-up bookkeeping is for.</p>
+<p style="margin-top:1rem;">We work through your backlog systematically — collecting all historical statements, receipts, and documents, then recording every transaction in the correct period. The result is a complete, accurate financial history that you can trust, use for tax purposes, and build your ongoing bookkeeping on top of.</p>`,
+      ar: `<p>يحدث هذا لكثير من الشركات: تزداد الأعمال ويُؤجَّل مسك الدفاتر، وفجأةً تجد نفسك متأخراً ستة أشهر — أو سنتين — في سجلاتك. الإيصالات متكدِّسة، والمعاملات غير مسجَّلة، والحسابات في فوضى. هنا بالضبط تأتي خدمة تسوية السجلات المتأخرة.</p>
+<p style="margin-top:1rem;">نعمل على متأخراتك بمنهجية — نجمع جميع كشوف الحسابات والإيصالات والوثائق التاريخية، ثم نسجّل كل معاملة في الفترة الصحيحة. النتيجة هي تاريخ مالي كامل ودقيق يمكنك الوثوق به، واستخدامه للأغراض الضريبية، والبناء عليه لمواصلة مسك الدفاتر.</p>`
+    },
+    steps: {
+      en: ['Collect all historical bank statements, invoices, and receipts', 'Record every transaction in chronological order by period', 'Reconcile each month from the beginning to present', 'Hand over clean, complete books — ready for ongoing use'],
+      ar: ['جمع جميع كشوف الحساب التاريخية والفواتير والإيصالات', 'تسجيل كل معاملة بترتيب زمني حسب الفترة', 'مطابقة كل شهر من البداية حتى الآن', 'تسليم دفاتر نظيفة ومكتملة — جاهزة للاستمرار']
+    },
+    who: {
+      en: '✅ Best for: Businesses that have fallen behind on bookkeeping, new business owners inheriting messy records, or anyone facing an audit with incomplete books.',
+      ar: '✅ الأنسب لـ: الشركات التي تأخرت في مسك الدفاتر، وأصحاب الأعمال الجدد الذين ورثوا سجلات غير منظَّمة، أو من يواجه تدقيقاً مالياً بدفاتر ناقصة.'
+    },
+    cta: { en: 'Clean Up My Books', ar: 'رتِّب دفاتري الآن' }
+  },
+  advisory: {
+    num: { en: 'Service 06', ar: 'الخدمة ٠٦' },
+    img: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80',
+    title: { en: 'Financial Advisory', ar: 'الاستشارات المالية' },
+    tagline: {
+      en: 'Turn your numbers into a strategy for growth.',
+      ar: 'حوِّل أرقامك إلى استراتيجية للنمو.'
+    },
+    body: {
+      en: `<p>Clean books are the starting point — but financial advisory is where those numbers start working for you. Instead of just recording what happened, we analyze the data to tell you <em>why</em> it happened and <em>what to do next</em>.</p>
+<p style="margin-top:1rem;">We look at your profit margins by product or service, identify where you're spending too much, flag clients or contracts that are draining rather than growing your business, and suggest practical steps to improve cash flow. Think of it as having a part-time CFO — without the full-time salary.</p>`,
+      ar: `<p>الدفاتر النظيفة هي نقطة البداية — لكن الاستشارات المالية هي المكان الذي تبدأ فيه الأرقام تعمل لصالحك. بدلاً من مجرد تسجيل ما حدث، نحلّل البيانات لنخبرك <em>لماذا</em> حدث و<em>ماذا تفعل بعد ذلك</em>.</p>
+<p style="margin-top:1rem;">نفحص هوامش ربحك حسب المنتج أو الخدمة، ونُحدِّد أين تُنفق أكثر من اللازم، ونُنبِّهك إلى العملاء أو العقود التي تستنزف بدلاً من تنمية نشاطك، ونقترح خطوات عملية لتحسين التدفق النقدي. فكّر في الأمر كأن لديك مديراً مالياً بدوام جزئي — دون راتب بدوام كامل.</p>`
+    },
+    steps: {
+      en: ['Deep analysis of monthly P&L, margins, and trends', 'Identify top cost centres and underperforming areas', 'Cash flow forecast for the coming months', 'Written recommendations delivered with each monthly report'],
+      ar: ['تحليل معمَّق للأرباح والخسائر الشهرية والهوامش والاتجاهات', 'تحديد أكبر مراكز التكلفة والمجالات ضعيفة الأداء', 'توقعات التدفق النقدي للأشهر القادمة', 'توصيات مكتوبة تُرسَل مع كل تقرير شهري']
+    },
+    who: {
+      en: '✅ Best for: Growing businesses that want to scale smartly, reduce waste, and make decisions based on real financial data rather than gut feeling.',
+      ar: '✅ الأنسب لـ: الشركات النامية التي تريد التوسع بذكاء، وتقليل الهدر، واتخاذ القرارات بناءً على بيانات مالية حقيقية لا على الحدس.'
+    },
+    cta: { en: 'Get Financial Advisory', ar: 'احصل على استشارة مالية' }
+  }
+};
+
+function openService(key) {
+  const lang = document.documentElement.lang === 'ar' ? 'ar' : 'en';
+  const d = serviceData[key];
+  if (!d) return;
+
+  document.getElementById('svcNum').textContent = d.num[lang];
+  document.getElementById('svcImg').src = d.img;
+  document.getElementById('svcTitle').textContent = d.title[lang];
+  document.getElementById('svcTagline').textContent = d.tagline[lang];
+  document.getElementById('svcBody').innerHTML = d.body[lang];
+  document.getElementById('svcCtaText').textContent = d.cta[lang];
+
+  // Steps
+  const stepsEl = document.getElementById('svcSteps');
+  const stepsLabel = lang === 'ar' ? 'كيف يعمل' : 'How it works';
+  stepsEl.innerHTML = `<h4 style="font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--mint);margin-bottom:1rem;font-weight:600;">${stepsLabel}</h4>` +
+    d.steps[lang].map((s, i) => `<div style="display:flex;gap:1rem;align-items:flex-start;padding:0.75rem 0;border-bottom:1px solid var(--border);">
+      <span style="width:26px;height:26px;border-radius:50%;background:var(--navy);color:var(--mint);font-size:0.72rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">${i+1}</span>
+      <span style="font-size:0.9rem;color:var(--slate);line-height:1.6;padding-top:2px;">${s}</span>
+    </div>`).join('');
+
+  // Who is it for
+  document.getElementById('svcWho').innerHTML = `<p style="font-size:0.88rem;color:var(--slate);line-height:1.7;">${d.who[lang]}</p>`;
+
+  // Show
+  const overlay = document.getElementById('svcOverlay');
+  const drawer = document.getElementById('svcDrawer');
+  overlay.style.display = 'block';
+  drawer.style.display = 'block';
+  document.body.style.overflow = 'hidden';
+  requestAnimationFrame(() => {
+    drawer.style.transform = 'translateX(0)';
+    overlay.style.opacity = '1';
+  });
+}
+
+function closeService() {
+  const drawer = document.getElementById('svcDrawer');
+  const overlay = document.getElementById('svcOverlay');
+  drawer.style.transform = 'translateX(100%)';
+  setTimeout(() => {
+    drawer.style.display = 'none';
+    overlay.style.display = 'none';
+    document.body.style.overflow = '';
+  }, 400);
+}
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeService(); });
+
 // NAV
 window.addEventListener('scroll',()=>{
   document.getElementById('mainNav').classList.toggle('scrolled',window.scrollY>50);
