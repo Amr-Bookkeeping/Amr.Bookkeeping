@@ -6,108 +6,147 @@
 <title>Amr Mohamed — Bookkeeping & Accounting</title>
 <meta name="description" content="Professional bookkeeping services in the UAE">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,700;1,700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Playfair+Display:ital,wght@0,700;1,700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
-  --navy:#0d1b2a;--mint:#2ec4b6;--gold:#c9a84c;--slate:#5a6a7a;
-  --paper:#faf9f6;--white:#fff;--border:rgba(13,27,42,0.1);
+  --navy:#0d1b2a;
+  --mint:#2ec4b6;
+  --gold:#c9a84c;
+  --slate:#5a6a7a;
+  --paper:#f7f6f2;
+  --white:#fff;
+  --border:rgba(13,27,42,0.09);
+  --shadow-sm:0 2px 12px rgba(13,27,42,0.06);
+  --shadow-md:0 8px 32px rgba(13,27,42,0.10);
+  --shadow-lg:0 20px 60px rgba(13,27,42,0.13);
 }
 html{scroll-behavior:smooth;}
-body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--navy);line-height:1.7;}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--navy);line-height:1.7;-webkit-font-smoothing:antialiased;}
 body.ar{font-family:'Tajawal',sans-serif;direction:rtl;}
 
+/* SCROLLBAR */
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-track{background:transparent;}
+::-webkit-scrollbar-thumb{background:var(--mint);border-radius:2px;}
+
 /* LANG TOGGLE */
-.lang-toggle{
-  display:flex;gap:0;border:1px solid var(--border);overflow:hidden;border-radius:4px;
-  margin-left:2rem;
-}
+.lang-toggle{display:flex;gap:0;border:1px solid var(--border);overflow:hidden;border-radius:6px;margin-left:2rem;}
 body.ar .lang-toggle{margin-left:0;margin-right:2rem;}
-.lang-btn{
-  padding:0.35rem 0.75rem;font-size:0.72rem;font-weight:500;letter-spacing:0.08em;
-  background:transparent;border:none;cursor:pointer;color:var(--slate);transition:all 0.2s;
-}
+.lang-btn{padding:0.35rem 0.85rem;font-size:0.72rem;font-weight:500;letter-spacing:0.08em;background:transparent;border:none;cursor:pointer;color:var(--slate);transition:all 0.2s;}
 .lang-btn.active{background:var(--navy);color:#fff;}
 
 /* NAV */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
   display:flex;align-items:center;justify-content:space-between;
-  padding:1.25rem 4rem;
-  background:rgba(250,249,246,0.95);backdrop-filter:blur(14px);
+  padding:1.1rem 4rem;
+  background:rgba(247,246,242,0.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
   border-bottom:1px solid var(--border);
+  transition:padding 0.3s;
 }
-.nav-logo{font-size:0.85rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;color:var(--navy);}
+nav.scrolled{padding:0.8rem 4rem;box-shadow:var(--shadow-sm);}
+.nav-logo{font-size:0.85rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;color:var(--navy);display:flex;align-items:center;gap:0.6rem;}
+.nav-logo-dot{width:8px;height:8px;border-radius:50%;background:var(--mint);display:inline-block;}
 .nav-logo span{font-weight:300;color:var(--slate);}
 .nav-links{display:flex;gap:2rem;list-style:none;}
-.nav-links a{text-decoration:none;font-size:0.75rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--slate);transition:color 0.2s;}
-.nav-links a:hover{color:var(--mint);}
+.nav-links a{text-decoration:none;font-size:0.75rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--slate);transition:color 0.2s;position:relative;}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--mint);transition:width 0.25s;}
+.nav-links a:hover{color:var(--navy);}
+.nav-links a:hover::after{width:100%;}
 
 /* HERO */
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:8rem 4rem 5rem;position:relative;overflow:hidden;}
-.hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1600&q=80');background-size:cover;background-position:center;filter:brightness(0.22);}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(13,27,42,0.97) 0%,rgba(13,27,42,0.3) 60%);}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1800&q=85');background-size:cover;background-position:center;filter:brightness(0.18);transform:scale(1.03);transition:transform 8s ease;}
+.hero:hover .hero-bg{transform:scale(1);}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,27,42,0.98) 0%,rgba(13,27,42,0.6) 50%,rgba(13,27,42,0.4) 100%);}
+.hero-grid-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(46,196,182,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(46,196,182,0.03) 1px,transparent 1px);background-size:80px 80px;}
 .hero-content{position:relative;z-index:2;}
-.hero-eyebrow{font-size:0.7rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--mint);margin-bottom:1.75rem;display:flex;align-items:center;gap:0.75rem;}
-.hero-eyebrow::before{content:'';width:28px;height:1px;background:var(--mint);}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,7vw,6rem);font-weight:700;line-height:0.97;color:#fff;max-width:880px;margin-bottom:2rem;}
+.hero-eyebrow{font-size:0.68rem;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--mint);margin-bottom:2rem;display:flex;align-items:center;gap:0.75rem;}
+.hero-eyebrow::before{content:'';width:32px;height:1px;background:var(--mint);}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,7vw,6.2rem);font-weight:700;line-height:0.95;color:#fff;max-width:900px;margin-bottom:2.2rem;letter-spacing:-0.01em;}
 body.ar .hero h1{font-family:'Tajawal',sans-serif;font-size:clamp(2.5rem,6vw,5rem);line-height:1.1;}
 .hero h1 em{color:var(--mint);font-style:italic;}
-.hero-sub{font-size:1.05rem;color:rgba(255,255,255,0.5);max-width:480px;margin-bottom:3rem;font-weight:300;line-height:1.8;}
-.hero-actions{display:flex;gap:1rem;}
-.btn-primary{display:inline-block;padding:0.9rem 2.25rem;background:var(--mint);color:var(--navy);text-decoration:none;font-weight:500;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.22s;border:2px solid var(--mint);}
-.btn-primary:hover{background:transparent;color:var(--mint);}
-.btn-ghost{display:inline-block;padding:0.9rem 2.25rem;border:2px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.6);text-decoration:none;font-weight:500;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.22s;}
-.btn-ghost:hover{border-color:var(--mint);color:var(--mint);}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,0.45);max-width:500px;margin-bottom:3.5rem;font-weight:300;line-height:1.85;}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;}
+.btn-primary{display:inline-flex;align-items:center;gap:0.5rem;padding:0.95rem 2.4rem;background:var(--mint);color:var(--navy);text-decoration:none;font-weight:500;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.25s;border:2px solid var(--mint);border-radius:3px;}
+.btn-primary:hover{background:transparent;color:var(--mint);transform:translateY(-2px);}
+.btn-ghost{display:inline-flex;align-items:center;gap:0.5rem;padding:0.95rem 2.4rem;border:2px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.55);text-decoration:none;font-weight:500;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.25s;border-radius:3px;}
+.btn-ghost:hover{border-color:var(--mint);color:var(--mint);transform:translateY(-2px);}
+
 .hero-sidebar{position:absolute;right:4rem;bottom:5rem;z-index:2;display:flex;flex-direction:column;gap:2.5rem;align-items:flex-end;}
 body.ar .hero-sidebar{right:auto;left:4rem;align-items:flex-start;}
+.stat{text-align:right;}
+body.ar .stat{text-align:left;}
 .stat-num{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:700;color:var(--mint);line-height:1;display:block;}
-.stat-lbl{font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:0.2rem;display:block;}
+.stat-lbl{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-top:0.25rem;display:block;}
+.stat-divider{width:1px;height:40px;background:rgba(255,255,255,0.08);align-self:flex-end;}
 
 /* SHARED */
 section{padding:7rem 4rem;}
-.eyebrow{font-size:0.68rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--mint);display:flex;align-items:center;gap:0.75rem;margin-bottom:1.5rem;}
+.eyebrow{font-size:0.66rem;font-weight:500;letter-spacing:0.26em;text-transform:uppercase;color:var(--mint);display:flex;align-items:center;gap:0.75rem;margin-bottom:1.5rem;}
 .eyebrow::before{content:'';width:28px;height:1px;background:var(--mint);}
-h2.display{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,4vw,3.5rem);line-height:1.06;font-weight:700;}
+h2.display{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,4vw,3.5rem);line-height:1.05;font-weight:700;letter-spacing:-0.01em;}
 body.ar h2.display{font-family:'Tajawal',sans-serif;line-height:1.2;}
 h2.display em{color:var(--mint);font-style:italic;}
 
 /* SERVICES */
 #services{background:var(--white);}
-#services h2.display{margin-bottom:4rem;max-width:560px;}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
-.svc{border:1px solid var(--border);overflow:hidden;transition:transform 0.25s,box-shadow 0.25s;}
-.svc:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(13,27,42,0.1);}
-.svc-img-wrap{overflow:hidden;height:190px;}
-.svc-img{width:100%;height:190px;object-fit:cover;display:block;transition:transform 0.4s;}
-.svc:hover .svc-img{transform:scale(1.05);}
-.svc-body{padding:1.6rem;}
-.svc-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:rgba(46,196,182,0.2);line-height:1;margin-bottom:0.5rem;}
-.svc h3{font-size:1.05rem;font-weight:500;margin-bottom:0.45rem;}
-.svc p{font-size:0.88rem;color:var(--slate);line-height:1.75;}
+#services .section-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3.5rem;flex-wrap:wrap;gap:2rem;}
+#services h2.display{max-width:520px;}
+.services-count{font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--slate);padding-bottom:0.5rem;}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25px;background:var(--border);}
+.svc{background:var(--white);overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;position:relative;}
+.svc::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(13,27,42,0) 0%,transparent);pointer-events:none;transition:opacity 0.3s;}
+.svc:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);z-index:1;}
+.svc-img-wrap{overflow:hidden;height:200px;position:relative;}
+.svc-img{width:100%;height:200px;object-fit:cover;display:block;transition:transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);}
+.svc:hover .svc-img{transform:scale(1.08);}
+.svc-num-overlay{position:absolute;top:1rem;right:1rem;font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:rgba(255,255,255,0.5);line-height:1;}
+body.ar .svc-num-overlay{right:auto;left:1rem;}
+.svc-body{padding:1.75rem;}
+.svc h3{font-size:1.05rem;font-weight:500;margin-bottom:0.5rem;letter-spacing:-0.01em;}
+.svc p{font-size:0.875rem;color:var(--slate);line-height:1.8;}
+.svc-arrow{display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--mint);font-weight:500;opacity:0;transform:translateX(-8px);transition:all 0.25s;}
+body.ar .svc-arrow{transform:translateX(8px);}
+.svc:hover .svc-arrow{opacity:1;transform:translateX(0);}
 
 /* PRICING */
 #pricing{background:var(--paper);}
-#pricing h2.display{margin-bottom:1rem;}
-.pricing-sub{font-size:1rem;color:var(--slate);margin-bottom:4rem;}
+.pricing-header{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-bottom:4rem;}
+.pricing-note{font-size:0.88rem;color:var(--slate);line-height:1.8;border-left:2px solid var(--mint);padding-left:1.25rem;}
+body.ar .pricing-note{border-left:none;border-right:2px solid var(--mint);padding-left:0;padding-right:1.25rem;}
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
-.plan{border:1px solid var(--border);border-radius:12px;padding:2rem;display:flex;flex-direction:column;transition:transform 0.2s,box-shadow 0.2s;background:var(--white);}
-.plan:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(13,27,42,0.08);}
-.plan.featured{border:2px solid var(--mint);position:relative;}
-.plan-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--mint);color:var(--navy);font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 14px;border-radius:20px;white-space:nowrap;}
-.plan-name{font-size:0.7rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--slate);margin-bottom:1rem;}
-.plan-price{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700;line-height:1;margin-bottom:0.25rem;}
-.plan-price span{font-family:'DM Sans',sans-serif;font-size:0.9rem;font-weight:400;color:var(--slate);}
-.plan-divider{border:none;border-top:1px solid var(--border);margin:1.5rem 0;}
-.plan-features{list-style:none;display:flex;flex-direction:column;gap:0.75rem;flex:1;margin-bottom:2rem;}
-.plan-features li{display:flex;align-items:flex-start;gap:10px;font-size:0.9rem;color:var(--slate);line-height:1.5;}
-.plan-features li.off{color:rgba(90,106,122,0.4);}
-.plan-features li::before{content:'✓';color:var(--mint);font-weight:700;flex-shrink:0;margin-top:1px;}
-.plan-features li.off::before{content:'–';color:rgba(90,106,122,0.3);}
-.plan-btn{display:block;text-align:center;padding:0.85rem;border:2px solid var(--navy);color:var(--navy);text-decoration:none;font-size:0.8rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;transition:all 0.2s;border-radius:2px;}
+.plan{border:1px solid var(--border);border-radius:16px;padding:2.25rem;display:flex;flex-direction:column;transition:transform 0.25s,box-shadow 0.25s;background:var(--white);position:relative;overflow:hidden;}
+.plan::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:transparent;transition:background 0.25s;}
+.plan:hover::before{background:var(--mint);}
+.plan:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);}
+.plan.featured{border:2px solid var(--mint);background:var(--navy);}
+.plan.featured::before{background:var(--mint);}
+.plan-badge{display:inline-block;background:var(--mint);color:var(--navy);font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:1.25rem;width:fit-content;}
+.plan-name{font-size:0.68rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--slate);margin-bottom:0.75rem;}
+.plan.featured .plan-name{color:rgba(255,255,255,0.45);}
+.plan-price{font-family:'Playfair Display',serif;font-size:2.75rem;font-weight:700;line-height:1;margin-bottom:0.2rem;letter-spacing:-0.02em;}
+.plan.featured .plan-price{color:#fff;}
+.plan-price-sub{font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:400;color:var(--slate);}
+.plan.featured .plan-price-sub{color:rgba(255,255,255,0.4);}
+.plan-divider{border:none;border-top:1px solid var(--border);margin:1.75rem 0;}
+.plan.featured .plan-divider{border-color:rgba(255,255,255,0.08);}
+.plan-features{list-style:none;display:flex;flex-direction:column;gap:0.85rem;flex:1;margin-bottom:2rem;}
+.plan-features li{display:flex;align-items:flex-start;gap:10px;font-size:0.875rem;color:var(--slate);line-height:1.5;}
+.plan.featured .plan-features li{color:rgba(255,255,255,0.6);}
+.plan-features li.off{color:rgba(90,106,122,0.35);}
+.plan.featured .plan-features li.off{color:rgba(255,255,255,0.18);}
+.feat-check{width:18px;height:18px;border-radius:50%;background:rgba(46,196,182,0.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.feat-check svg{width:10px;height:10px;fill:var(--mint);}
+.feat-check.off{background:transparent;}
+.feat-check.off svg{fill:rgba(90,106,122,0.25);}
+.plan-btn{display:block;text-align:center;padding:0.9rem;border:2px solid var(--navy);color:var(--navy);text-decoration:none;font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.2s;border-radius:8px;}
 .plan-btn:hover{background:var(--navy);color:var(--white);}
 .plan.featured .plan-btn{background:var(--mint);border-color:var(--mint);color:var(--navy);}
-.plan.featured .plan-btn:hover{background:var(--navy);border-color:var(--navy);color:var(--white);}
+.plan.featured .plan-btn:hover{background:#fff;border-color:#fff;color:var(--navy);}
+.plan-value{text-align:center;margin-top:0.75rem;font-size:0.72rem;color:var(--slate);letter-spacing:0.05em;}
+.plan.featured .plan-value{color:rgba(255,255,255,0.3);}
 
 /* AML */
 #aml{background:var(--navy);color:var(--white);}
@@ -115,126 +154,143 @@ h2.display em{color:var(--mint);font-style:italic;}
 #aml .eyebrow::before{background:var(--gold);}
 #aml h2.display{color:var(--white);margin-bottom:1rem;}
 #aml h2.display em{color:var(--gold);}
-#aml .aml-intro{color:rgba(255,255,255,0.55);max-width:620px;font-size:1rem;line-height:1.85;margin-bottom:3rem;}
-.aml-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-bottom:3rem;}
-.aml-card{border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:2rem;transition:border-color 0.2s;}
-.aml-card:hover{border-color:rgba(201,168,76,0.4);}
-.aml-card-icon{font-size:2rem;margin-bottom:1rem;}
+#aml .aml-intro{color:rgba(255,255,255,0.5);max-width:640px;font-size:1rem;line-height:1.9;margin-bottom:3.5rem;font-weight:300;}
+.aml-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;margin-bottom:3rem;}
+.aml-card{border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:2.25rem;transition:border-color 0.25s,background 0.25s;}
+.aml-card:hover{border-color:rgba(201,168,76,0.3);background:rgba(255,255,255,0.02);}
+.aml-card-icon{font-size:2rem;margin-bottom:1.25rem;display:block;}
 .aml-card h3{font-size:1.1rem;font-weight:500;color:var(--white);margin-bottom:0.75rem;}
-.aml-card p{font-size:0.88rem;color:rgba(255,255,255,0.5);line-height:1.75;margin-bottom:1rem;}
-.aml-card a{font-size:0.8rem;color:var(--gold);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;font-weight:500;transition:color 0.2s;}
+.aml-card p{font-size:0.875rem;color:rgba(255,255,255,0.45);line-height:1.8;margin-bottom:1.25rem;}
+.aml-card a{font-size:0.75rem;color:var(--gold);text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;transition:color 0.2s;display:inline-flex;align-items:center;gap:0.4rem;}
 .aml-card a:hover{color:#fff;}
-.aml-services{border-top:1px solid rgba(255,255,255,0.08);padding-top:2.5rem;}
-.aml-services h3{font-size:1.1rem;font-weight:500;color:var(--white);margin-bottom:1.5rem;}
+.aml-services{border-top:1px solid rgba(255,255,255,0.06);padding-top:2.75rem;}
+.aml-services h3{font-size:1rem;font-weight:500;color:rgba(255,255,255,0.6);margin-bottom:1.5rem;letter-spacing:0.06em;}
 .aml-services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
-.aml-svc-item{padding:1.25rem;border:1px solid rgba(255,255,255,0.07);border-radius:8px;}
-.aml-svc-item p{font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.65;}
-.aml-svc-item strong{display:block;color:var(--white);font-size:0.9rem;margin-bottom:0.35rem;font-weight:500;}
+.aml-svc-item{padding:1.5rem;border:1px solid rgba(255,255,255,0.06);border-radius:10px;transition:border-color 0.2s;}
+.aml-svc-item:hover{border-color:rgba(46,196,182,0.2);}
+.aml-svc-item strong{display:block;color:var(--white);font-size:0.9rem;margin-bottom:0.4rem;font-weight:500;}
+.aml-svc-item p{font-size:0.835rem;color:rgba(255,255,255,0.4);line-height:1.7;}
 
 /* METHODOLOGY */
 #methodology{background:var(--paper);}
-#methodology h2.display{margin-bottom:4.5rem;}
-.steps{max-width:680px;}
-.step{display:grid;grid-template-columns:90px 1fr;gap:2rem;padding:2.25rem 0;border-top:1px solid var(--border);align-items:start;}
-.step-tag{font-size:0.62rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--mint);padding-top:0.35rem;}
-.step h3{font-size:1.35rem;font-weight:500;margin-bottom:0.45rem;}
-.step p{font-size:0.92rem;color:var(--slate);line-height:1.75;}
+#methodology h2.display{margin-bottom:5rem;}
+.steps{max-width:700px;}
+.step{display:grid;grid-template-columns:100px 1fr;gap:2rem;padding:2.5rem 0;border-top:1px solid var(--border);align-items:start;transition:padding-left 0.25s;}
+.step:hover{padding-left:0.5rem;}
+body.ar .step{padding-left:0;}
+body.ar .step:hover{padding-left:0;padding-right:0.5rem;}
+.step-tag{font-size:0.6rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--mint);padding-top:0.45rem;display:flex;align-items:center;gap:0.5rem;}
+.step-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--mint);}
+.step h3{font-size:1.3rem;font-weight:500;margin-bottom:0.5rem;letter-spacing:-0.01em;}
+.step p{font-size:0.9rem;color:var(--slate);line-height:1.8;}
+.step:last-child{border-bottom:1px solid var(--border);}
 
 /* ABOUT */
 #about{background:var(--white);}
-#about h2.display{max-width:660px;margin-bottom:2rem;}
-#about p{color:var(--slate);max-width:540px;font-size:1rem;line-height:1.85;margin-bottom:1.1rem;}
-.badges{display:flex;flex-wrap:wrap;margin-top:3rem;padding-top:2.5rem;border-top:1px solid var(--border);gap:0;}
-.badge{font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--slate);padding:0.5rem 2rem 0.5rem 0;margin-right:2rem;border-right:1px solid rgba(13,27,42,0.15);}
-.badge:last-child{border-right:none;}
+.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;}
+#about h2.display{max-width:520px;margin-bottom:2rem;}
+#about .about-text p{color:var(--slate);font-size:1rem;line-height:1.9;margin-bottom:1.1rem;}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem;}
+.about-stat-item{padding:1.5rem;border:1px solid var(--border);border-radius:10px;}
+.about-stat-num{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:var(--mint);line-height:1;display:block;}
+.about-stat-lbl{font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--slate);margin-top:0.35rem;display:block;}
+.badges{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:3rem;}
+.badge{font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--slate);padding:0.45rem 1rem;border:1px solid var(--border);border-radius:20px;background:var(--paper);transition:all 0.2s;}
+.badge:hover{border-color:var(--mint);color:var(--mint);}
 
 /* CONTACT */
 #contact{background:var(--paper);}
-#contact h2.display{font-style:italic;color:var(--mint);margin-bottom:1rem;}
-.contact-lead{font-size:1.05rem;color:var(--slate);max-width:460px;margin-bottom:3.5rem;line-height:1.8;}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem 4rem;max-width:640px;}
-.citem label{display:block;font-size:0.62rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--mint);margin-bottom:0.5rem;}
-.citem a,.citem span{font-size:1rem;color:var(--navy);text-decoration:none;transition:color 0.2s;}
+.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;}
+.contact-left h2.display{font-style:italic;color:var(--navy);margin-bottom:1rem;}
+.contact-lead{font-size:1rem;color:var(--slate);max-width:420px;margin-bottom:2.5rem;line-height:1.85;}
+.contact-cta{display:inline-flex;align-items:center;gap:0.75rem;padding:1rem 2rem;background:var(--navy);color:#fff;text-decoration:none;font-size:0.8rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;border-radius:6px;transition:all 0.25s;border:2px solid var(--navy);}
+.contact-cta:hover{background:transparent;color:var(--navy);}
+.contact-right{display:flex;flex-direction:column;gap:2rem;padding-top:0.5rem;}
+.citem{border-bottom:1px solid var(--border);padding-bottom:1.5rem;}
+.citem:last-child{border-bottom:none;}
+.citem label{display:block;font-size:0.6rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--mint);margin-bottom:0.5rem;}
+.citem a,.citem span{font-size:1.05rem;color:var(--navy);text-decoration:none;transition:color 0.2s;font-weight:400;}
 .citem a:hover{color:var(--mint);}
 
 /* FOOTER */
-footer{background:var(--navy);padding:1.75rem 4rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.05);}
-.f-brand{font-size:0.75rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.6);}
-.f-copy{font-size:0.7rem;color:rgba(255,255,255,0.28);}
+footer{background:var(--navy);padding:1.75rem 4rem;display:flex;justify-content:space-between;align-items:center;}
+.f-brand{font-size:0.75rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);}
+.f-brand span{color:var(--mint);}
+.f-copy{font-size:0.7rem;color:rgba(255,255,255,0.22);}
 
 /* AI CHAT */
 .chat-bubble{position:fixed;bottom:2rem;left:2rem;z-index:500;}
 body.ar .chat-bubble{left:auto;right:2rem;}
-.chat-btn{width:60px;height:60px;border-radius:50%;background:var(--mint);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(46,196,182,0.4);transition:transform 0.2s;}
-.chat-btn:hover{transform:scale(1.08);}
-.chat-btn svg{width:28px;height:28px;fill:var(--navy);}
-.chat-pulse{position:absolute;top:0;right:0;width:14px;height:14px;background:#ff4757;border-radius:50%;border:2px solid var(--paper);animation:pulse 2s infinite;}
-@keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.2);}}
-.chat-window{
-  position:fixed;bottom:6rem;left:2rem;z-index:500;
-  width:360px;height:500px;
-  background:var(--white);border-radius:16px;
-  box-shadow:0 20px 60px rgba(13,27,42,0.2);
-  display:none;flex-direction:column;overflow:hidden;
-  border:1px solid var(--border);
-}
+.chat-btn{width:58px;height:58px;border-radius:50%;background:var(--mint);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(46,196,182,0.45);transition:transform 0.2s,box-shadow 0.2s;}
+.chat-btn:hover{transform:scale(1.08);box-shadow:0 8px 32px rgba(46,196,182,0.55);}
+.chat-btn svg{width:26px;height:26px;fill:var(--navy);}
+.chat-pulse{position:absolute;top:2px;right:2px;width:12px;height:12px;background:#ff4757;border-radius:50%;border:2px solid var(--paper);animation:pulse 2.5s infinite;}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1;}50%{transform:scale(1.3);opacity:0.7;}}
+.chat-window{position:fixed;bottom:6rem;left:2rem;z-index:500;width:370px;height:510px;background:var(--white);border-radius:20px;box-shadow:var(--shadow-lg);display:none;flex-direction:column;overflow:hidden;border:1px solid var(--border);}
 body.ar .chat-window{left:auto;right:2rem;}
 .chat-window.open{display:flex;}
-.chat-header{background:var(--navy);padding:1rem 1.25rem;display:flex;align-items:center;gap:0.75rem;}
-.chat-avatar{width:36px;height:36px;border-radius:50%;background:var(--mint);display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:700;color:var(--navy);}
+.chat-header{background:var(--navy);padding:1.1rem 1.25rem;display:flex;align-items:center;gap:0.75rem;}
+.chat-avatar{width:38px;height:38px;border-radius:50%;background:var(--mint);display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:700;color:var(--navy);flex-shrink:0;}
 .chat-header-info{flex:1;}
 .chat-header-name{font-size:0.9rem;font-weight:500;color:#fff;}
-.chat-header-status{font-size:0.72rem;color:rgba(255,255,255,0.5);display:flex;align-items:center;gap:4px;}
-.chat-header-status::before{content:'';width:6px;height:6px;border-radius:50%;background:#2ecc71;display:inline-block;}
-.chat-close{background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.5);font-size:1.2rem;padding:0;}
-.chat-messages{flex:1;overflow-y:auto;padding:1rem;display:flex;flex-direction:column;gap:0.75rem;}
-.msg{max-width:80%;padding:0.65rem 0.9rem;border-radius:12px;font-size:0.88rem;line-height:1.55;}
+.chat-header-status{font-size:0.7rem;color:rgba(255,255,255,0.4);display:flex;align-items:center;gap:4px;}
+.chat-header-status::before{content:'';width:6px;height:6px;border-radius:50%;background:#2ecc71;display:inline-block;animation:pulse 2.5s infinite;}
+.chat-close{background:rgba(255,255,255,0.08);border:none;cursor:pointer;color:rgba(255,255,255,0.6);width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.9rem;transition:background 0.2s;}
+.chat-close:hover{background:rgba(255,255,255,0.15);}
+.chat-messages{flex:1;overflow-y:auto;padding:1.1rem;display:flex;flex-direction:column;gap:0.75rem;}
+.msg{max-width:82%;padding:0.7rem 1rem;border-radius:14px;font-size:0.875rem;line-height:1.6;}
 .msg.bot{background:var(--paper);color:var(--navy);align-self:flex-start;border-bottom-left-radius:4px;}
 .msg.user{background:var(--mint);color:var(--navy);align-self:flex-end;border-bottom-right-radius:4px;}
-.chat-suggestions{padding:0.5rem 1rem;display:flex;flex-wrap:wrap;gap:0.4rem;}
-.suggestion{background:var(--paper);border:1px solid var(--border);border-radius:20px;padding:0.3rem 0.75rem;font-size:0.75rem;cursor:pointer;transition:all 0.2s;color:var(--navy);}
-.suggestion:hover{background:var(--mint);border-color:var(--mint);color:var(--navy);}
+.chat-suggestions{padding:0.6rem 1rem;display:flex;flex-wrap:wrap;gap:0.4rem;}
+.suggestion{background:var(--paper);border:1px solid var(--border);border-radius:20px;padding:0.35rem 0.8rem;font-size:0.75rem;cursor:pointer;transition:all 0.2s;color:var(--navy);}
+.suggestion:hover{background:var(--mint);border-color:var(--mint);}
 .chat-input-area{padding:0.75rem;border-top:1px solid var(--border);display:flex;gap:0.5rem;}
-.chat-input{flex:1;border:1px solid var(--border);border-radius:8px;padding:0.5rem 0.75rem;font-size:0.88rem;outline:none;font-family:inherit;}
-.chat-input:focus{border-color:var(--mint);}
-.chat-send{background:var(--mint);border:none;border-radius:8px;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;}
+.chat-input{flex:1;border:1px solid var(--border);border-radius:10px;padding:0.55rem 0.9rem;font-size:0.875rem;outline:none;font-family:inherit;background:var(--paper);}
+.chat-input:focus{border-color:var(--mint);background:#fff;}
+.chat-send{background:var(--mint);border:none;border-radius:10px;width:38px;height:38px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;}
 .chat-send:hover{background:var(--navy);}
 .chat-send svg{width:16px;height:16px;fill:#fff;}
-.typing{display:flex;gap:4px;align-items:center;padding:0.65rem 0.9rem;}
+.typing{display:flex;gap:4px;align-items:center;padding:0.7rem 1rem;}
 .typing span{width:7px;height:7px;border-radius:50%;background:var(--slate);animation:typing 1.2s infinite;}
 .typing span:nth-child(2){animation-delay:0.2s;}
 .typing span:nth-child(3){animation-delay:0.4s;}
-@keyframes typing{0%,60%,100%{transform:translateY(0);}30%{transform:translateY(-6px);}}
+@keyframes typing{0%,60%,100%{transform:translateY(0);}30%{transform:translateY(-7px);}}
 
 /* ANIMATIONS */
-.fade-up{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.fade-up{opacity:0;transform:translateY(28px);transition:opacity 0.65s cubic-bezier(0.25,0.46,0.45,0.94),transform 0.65s cubic-bezier(0.25,0.46,0.45,0.94);}
 .fade-up.visible{opacity:1;transform:translateY(0);}
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
-.hero-eyebrow{animation:fadeUp 0.55s ease both;}
-.hero h1{animation:fadeUp 0.55s 0.1s ease both;}
-.hero-sub{animation:fadeUp 0.55s 0.2s ease both;}
-.hero-actions{animation:fadeUp 0.55s 0.3s ease both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.hero-eyebrow{animation:fadeUp 0.6s ease both;}
+.hero h1{animation:fadeUp 0.6s 0.12s ease both;}
+.hero-sub{animation:fadeUp 0.6s 0.22s ease both;}
+.hero-actions{animation:fadeUp 0.6s 0.32s ease both;}
+.hero-sidebar{animation:fadeUp 0.6s 0.42s ease both;}
 
 /* MOBILE */
-@media(max-width:860px){
+@media(max-width:900px){
   nav{padding:1rem 1.5rem;}
   .nav-links{display:none;}
   section{padding:4.5rem 1.5rem;}
   .hero{padding:7rem 1.5rem 4rem;}
   .hero-sidebar{display:none;}
   .services-grid,.pricing-grid,.aml-grid,.aml-services-grid{grid-template-columns:1fr;}
-  .contact-grid{grid-template-columns:1fr;}
+  .about-inner,.contact-inner,.pricing-header{grid-template-columns:1fr;}
   .hero-actions{flex-direction:column;align-items:flex-start;}
   footer{flex-direction:column;gap:0.5rem;text-align:center;padding:1.5rem;}
   .chat-window{width:calc(100vw - 2rem);left:1rem;}
   body.ar .chat-window{right:1rem;left:1rem;}
+  .about-stats{grid-template-columns:1fr 1fr;}
+  #services .section-header{flex-direction:column;align-items:flex-start;}
 }
 </style>
 </head>
 <body>
 
-<nav>
-  <a href="#" class="nav-logo">Amr Mohamed <span>/ Bookkeeping</span></a>
+<nav id="mainNav">
+  <a href="#" class="nav-logo">
+    <span class="nav-logo-dot"></span>
+    Amr Mohamed <span>/ Bookkeeping</span>
+  </a>
   <ul class="nav-links">
     <li><a href="#services" data-en="Services" data-ar="الخدمات">Services</a></li>
     <li><a href="#pricing" data-en="Pricing" data-ar="الأسعار">Pricing</a></li>
@@ -252,102 +308,165 @@ body.ar .chat-window{left:auto;right:2rem;}
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
+  <div class="hero-grid-lines"></div>
   <div class="hero-content">
     <p class="hero-eyebrow" data-en="Professional Bookkeeping — UAE" data-ar="محاسبة احترافية — الإمارات">Professional Bookkeeping — UAE</p>
     <h1 data-en="Clean books.<br><em>Clear numbers.</em><br>Better decisions." data-ar="دفاتر نظيفة.<br><em>أرقام واضحة.</em><br>قرارات أفضل.">Clean books.<br><em>Clear numbers.</em><br>Better decisions.</h1>
     <p class="hero-sub" data-en="Bookkeeping services built for businesses that need accurate records, zero surprises, and financial reports they can act on." data-ar="خدمات محاسبية للشركات التي تحتاج إلى سجلات دقيقة وتقارير مالية شفافة كل شهر.">Bookkeeping services built for businesses that need accurate records, zero surprises, and financial reports they can act on.</p>
     <div class="hero-actions">
-      <a href="#contact" class="btn-primary" data-en="Get in touch" data-ar="تواصل معنا">Get in touch</a>
+      <a href="#contact" class="btn-primary" data-en="Get in touch →" data-ar="تواصل معنا →">Get in touch →</a>
       <a href="#services" class="btn-ghost" data-en="Explore services" data-ar="استكشف الخدمات">Explore services</a>
     </div>
   </div>
   <div class="hero-sidebar">
     <div class="stat"><span class="stat-num">100%</span><span class="stat-lbl" data-en="Reconciliation accuracy" data-ar="دقة في المطابقة">Reconciliation accuracy</span></div>
+    <div class="stat-divider"></div>
     <div class="stat"><span class="stat-num">10th</span><span class="stat-lbl" data-en="Reports delivered by" data-ar="موعد التقارير">Reports delivered by</span></div>
+    <div class="stat-divider"></div>
     <div class="stat"><span class="stat-num">Est.</span><span class="stat-lbl" data-en="2024 — Sharjah, UAE" data-ar="2024 — الشارقة">2024 — Sharjah, UAE</span></div>
   </div>
 </section>
 
 <!-- SERVICES -->
 <section id="services">
-  <div class="eyebrow fade-up" data-en="Services" data-ar="الخدمات">Services</div>
-  <h2 class="display fade-up" data-en="Everything you need<br><em>under one roof.</em>" data-ar="كل ما تحتاجه<br><em>تحت سقف واحد.</em>">Everything you need<br><em>under one roof.</em></h2>
-  <div class="services-grid" style="margin-top:4rem;">
+  <div class="section-header">
+    <div>
+      <div class="eyebrow fade-up" data-en="Services" data-ar="الخدمات">Services</div>
+      <h2 class="display fade-up" data-en="Everything you need<br><em>under one roof.</em>" data-ar="كل ما تحتاجه<br><em>تحت سقف واحد.</em>">Everything you need<br><em>under one roof.</em></h2>
+    </div>
+    <span class="services-count fade-up" data-en="06 services" data-ar="٠٦ خدمات">06 services</span>
+  </div>
+  <div class="services-grid">
     <div class="svc fade-up">
-      <div class="svc-img-wrap"><img class="svc-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Monthly Bookkeeping" loading="lazy"></div>
-      <div class="svc-body"><div class="svc-num">01</div><h3 data-en="Monthly Bookkeeping" data-ar="حفظ الدفاتر الشهري">Monthly Bookkeeping</h3><p data-en="Full transaction recording from banks, cards, and payment processors every month." data-ar="تسجيل كامل للمعاملات من البنوك والبطاقات وأنظمة الدفع كل شهر.">Full transaction recording from banks, cards, and payment processors every month.</p></div>
+      <div class="svc-img-wrap">
+        <img class="svc-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Monthly Bookkeeping" loading="lazy">
+        <div class="svc-num-overlay">01</div>
+      </div>
+      <div class="svc-body">
+        <h3 data-en="Monthly Bookkeeping" data-ar="حفظ الدفاتر الشهري">Monthly Bookkeeping</h3>
+        <p data-en="Full transaction recording from banks, cards, and payment processors every month." data-ar="تسجيل كامل للمعاملات من البنوك والبطاقات وأنظمة الدفع كل شهر.">Full transaction recording from banks, cards, and payment processors every month.</p>
+        <span class="svc-arrow" data-en="Learn more →" data-ar="اقرأ أكثر →">Learn more →</span>
+      </div>
     </div>
     <div class="svc fade-up">
-      <div class="svc-img-wrap"><img class="svc-img" src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600&q=80" alt="Bank Reconciliation" loading="lazy"></div>
-      <div class="svc-body"><div class="svc-num">02</div><h3 data-en="Bank Reconciliation" data-ar="مطابقة الحسابات">Bank Reconciliation</h3><p data-en="Monthly reconciliation until every balance ties to the cent." data-ar="مطابقة شهرية حتى يتطابق كل رصيد إلى آخر فلس.">Monthly reconciliation until every balance ties to the cent.</p></div>
+      <div class="svc-img-wrap">
+        <img class="svc-img" src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600&q=80" alt="Bank Reconciliation" loading="lazy">
+        <div class="svc-num-overlay">02</div>
+      </div>
+      <div class="svc-body">
+        <h3 data-en="Bank Reconciliation" data-ar="مطابقة الحسابات">Bank Reconciliation</h3>
+        <p data-en="Monthly reconciliation until every balance ties to the cent." data-ar="مطابقة شهرية حتى يتطابق كل رصيد إلى آخر فلس.">Monthly reconciliation until every balance ties to the cent.</p>
+        <span class="svc-arrow" data-en="Learn more →" data-ar="اقرأ أكثر →">Learn more →</span>
+      </div>
     </div>
     <div class="svc fade-up">
-      <div class="svc-img-wrap"><img class="svc-img" src="https://images.unsplash.com/photo-1543286386-713bdd548da4?w=600&q=80" alt="Financial Reporting" loading="lazy"></div>
-      <div class="svc-body"><div class="svc-num">03</div><h3 data-en="Financial Reporting" data-ar="التقارير المالية">Financial Reporting</h3><p data-en="P&L, balance sheet, and cash flow — delivered by the 10th of each month." data-ar="الأرباح والخسائر، الميزانية، والتدفق النقدي — بحلول العاشر من كل شهر.">P&L, balance sheet, and cash flow — delivered by the 10th of each month.</p></div>
+      <div class="svc-img-wrap">
+        <img class="svc-img" src="https://images.unsplash.com/photo-1543286386-713bdd548da4?w=600&q=80" alt="Financial Reporting" loading="lazy">
+        <div class="svc-num-overlay">03</div>
+      </div>
+      <div class="svc-body">
+        <h3 data-en="Financial Reporting" data-ar="التقارير المالية">Financial Reporting</h3>
+        <p data-en="P&L, balance sheet, and cash flow — delivered by the 10th of each month." data-ar="الأرباح والخسائر، الميزانية، والتدفق النقدي — بحلول العاشر من كل شهر.">P&L, balance sheet, and cash flow — delivered by the 10th of each month.</p>
+        <span class="svc-arrow" data-en="Learn more →" data-ar="اقرأ أكثر →">Learn more →</span>
+      </div>
     </div>
     <div class="svc fade-up">
-      <div class="svc-img-wrap"><img class="svc-img" src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&q=80" alt="VAT Preparation" loading="lazy"></div>
-      <div class="svc-body"><div class="svc-num">04</div><h3 data-en="VAT Preparation" data-ar="ضريبة القيمة المضافة">VAT Preparation</h3><p data-en="Filing-ready VAT returns compliant with UAE FTA requirements." data-ar="إقرارات ضريبة القيمة المضافة وفق متطلبات الهيئة الاتحادية للضرائب.">Filing-ready VAT returns compliant with UAE FTA requirements.</p></div>
+      <div class="svc-img-wrap">
+        <img class="svc-img" src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&q=80" alt="VAT Preparation" loading="lazy">
+        <div class="svc-num-overlay">04</div>
+      </div>
+      <div class="svc-body">
+        <h3 data-en="VAT Preparation" data-ar="ضريبة القيمة المضافة">VAT Preparation</h3>
+        <p data-en="Filing-ready VAT returns compliant with UAE FTA requirements." data-ar="إقرارات ضريبة القيمة المضافة وفق متطلبات الهيئة الاتحادية للضرائب.">Filing-ready VAT returns compliant with UAE FTA requirements.</p>
+        <span class="svc-arrow" data-en="Learn more →" data-ar="اقرأ أكثر →">Learn more →</span>
+      </div>
     </div>
     <div class="svc fade-up">
-      <div class="svc-img-wrap"><img class="svc-img" src="https://images.unsplash.com/photo-1568234928966-359c35dd8327?w=600&q=80" alt="Catch-Up Bookkeeping" loading="lazy"></div>
-      <div class="svc-body"><div class="svc-num">05</div><h3 data-en="Catch-Up Bookkeeping" data-ar="تنظيف السجلات المتراكمة">Catch-Up Bookkeeping</h3><p data-en="Backlog clean-up for disorganized or unrecorded transactions." data-ar="ترتيب وتصحيح السجلات المحاسبية المتراكمة بأثر رجعي.">Backlog clean-up for disorganized or unrecorded transactions.</p></div>
+      <div class="svc-img-wrap">
+        <img class="svc-img" src="https://images.unsplash.com/photo-1568234928966-359c35dd8327?w=600&q=80" alt="Catch-Up Bookkeeping" loading="lazy">
+        <div class="svc-num-overlay">05</div>
+      </div>
+      <div class="svc-body">
+        <h3 data-en="Catch-Up Bookkeeping" data-ar="تنظيف السجلات المتراكمة">Catch-Up Bookkeeping</h3>
+        <p data-en="Backlog clean-up for disorganized or unrecorded transactions." data-ar="ترتيب وتصحيح السجلات المحاسبية المتراكمة بأثر رجعي.">Backlog clean-up for disorganized or unrecorded transactions.</p>
+        <span class="svc-arrow" data-en="Learn more →" data-ar="اقرأ أكثر →">Learn more →</span>
+      </div>
     </div>
     <div class="svc fade-up">
-      <div class="svc-img-wrap"><img class="svc-img" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80" alt="Financial Advisory" loading="lazy"></div>
-      <div class="svc-body"><div class="svc-num">06</div><h3 data-en="Financial Advisory" data-ar="استشارات مالية">Financial Advisory</h3><p data-en="Performance analysis and recommendations to improve cash flow and reduce costs." data-ar="تحليل الأداء المالي وتقديم توصيات لتحسين التدفق النقدي.">Performance analysis and recommendations to improve cash flow and reduce costs.</p></div>
+      <div class="svc-img-wrap">
+        <img class="svc-img" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80" alt="Financial Advisory" loading="lazy">
+        <div class="svc-num-overlay">06</div>
+      </div>
+      <div class="svc-body">
+        <h3 data-en="Financial Advisory" data-ar="استشارات مالية">Financial Advisory</h3>
+        <p data-en="Performance analysis and recommendations to improve cash flow and reduce costs." data-ar="تحليل الأداء المالي وتقديم توصيات لتحسين التدفق النقدي.">Performance analysis and recommendations to improve cash flow and reduce costs.</p>
+        <span class="svc-arrow" data-en="Learn more →" data-ar="اقرأ أكثر →">Learn more →</span>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- PRICING -->
 <section id="pricing">
-  <div class="eyebrow fade-up" data-en="Pricing" data-ar="الأسعار">Pricing</div>
-  <h2 class="display fade-up" data-en="Simple, transparent<br><em>pricing.</em>" data-ar="أسعار واضحة<br><em>بدون مفاجآت.</em>">Simple, transparent<br><em>pricing.</em></h2>
-  <p class="pricing-sub fade-up" data-en="No hidden fees. No surprises. Cancel anytime." data-ar="لا رسوم مخفية. لا مفاجآت. إلغاء في أي وقت.">No hidden fees. No surprises. Cancel anytime.</p>
+  <div class="pricing-header fade-up">
+    <div>
+      <div class="eyebrow" data-en="Pricing" data-ar="الأسعار">Pricing</div>
+      <h2 class="display" data-en="Simple, transparent<br><em>pricing.</em>" data-ar="أسعار واضحة<br><em>بدون مفاجآت.</em>">Simple, transparent<br><em>pricing.</em></h2>
+    </div>
+    <p class="pricing-note" data-en="No hidden fees. No surprises. Cancel anytime. All packages include a free onboarding call to understand your business and set up your chart of accounts." data-ar="لا رسوم مخفية. لا مفاجآت. إلغاء في أي وقت. جميع الباقات تشمل مكالمة تأهيل مجانية لفهم نشاطك وإعداد دليل الحسابات.">No hidden fees. No surprises. Cancel anytime. All packages include a free onboarding call to understand your business and set up your chart of accounts.</p>
+  </div>
   <div class="pricing-grid">
+
+    <!-- BASIC -->
     <div class="plan fade-up">
       <p class="plan-name" data-en="Basic" data-ar="الأساسية">Basic</p>
-      <p class="plan-price">AED 500<span data-en=" /month" data-ar=" /شهر"> /month</span></p>
+      <p class="plan-price">AED 500<span class="plan-price-sub" data-en=" /month" data-ar=" /شهر"> /month</span></p>
       <hr class="plan-divider">
       <ul class="plan-features">
-        <li data-en="Monthly bookkeeping" data-ar="حفظ الدفاتر الشهري">Monthly bookkeeping</li>
-        <li data-en="Bank reconciliation" data-ar="مطابقة الحسابات">Bank reconciliation</li>
-        <li data-en="Monthly P&L report" data-ar="تقرير الأرباح والخسائر">Monthly P&L report</li>
-        <li class="off" data-en="VAT filing" data-ar="تقديم ضريبة القيمة المضافة">VAT filing</li>
-        <li class="off" data-en="Cash flow statement" data-ar="تقرير التدفق النقدي">Cash flow statement</li>
-        <li class="off" data-en="Financial advisory" data-ar="استشارات مالية">Financial advisory</li>
+        <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5"/><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Monthly bookkeeping" data-ar="حفظ الدفاتر الشهري">Monthly bookkeeping</span></li>
+        <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Bank reconciliation" data-ar="مطابقة الحسابات">Bank reconciliation</span></li>
+        <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Monthly P&L report" data-ar="تقرير الأرباح والخسائر">Monthly P&L report</span></li>
+        <li class="off"><span class="feat-check off"><svg viewBox="0 0 12 12"><path d="M3 6h6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></span><span data-en="VAT filing" data-ar="تقديم ضريبة القيمة المضافة">VAT filing</span></li>
+        <li class="off"><span class="feat-check off"><svg viewBox="0 0 12 12"><path d="M3 6h6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></span><span data-en="Cash flow statement" data-ar="تقرير التدفق النقدي">Cash flow statement</span></li>
+        <li class="off"><span class="feat-check off"><svg viewBox="0 0 12 12"><path d="M3 6h6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></span><span data-en="Financial advisory" data-ar="استشارات مالية">Financial advisory</span></li>
       </ul>
       <a href="#" onclick="selectPlan('basic');return false;" class="plan-btn" data-en="Get started" data-ar="ابدأ الآن">Get started</a>
+      <p class="plan-value" data-en="Ideal for startups & freelancers" data-ar="مثالي للشركات الناشئة والمستقلين">Ideal for startups & freelancers</p>
     </div>
+
+    <!-- PROFESSIONAL -->
     <div class="plan featured fade-up">
       <div class="plan-badge" data-en="Most popular" data-ar="الأكثر طلباً">Most popular</div>
       <p class="plan-name" data-en="Professional" data-ar="الاحترافية">Professional</p>
-      <p class="plan-price">AED 950<span data-en=" /month" data-ar=" /شهر"> /month</span></p>
+      <p class="plan-price">AED 1,000<span class="plan-price-sub" data-en=" /month" data-ar=" /شهر"> /month</span></p>
       <hr class="plan-divider">
       <ul class="plan-features">
-        <li data-en="Monthly bookkeeping" data-ar="حفظ الدفاتر الشهري">Monthly bookkeeping</li>
-        <li data-en="Bank reconciliation" data-ar="مطابقة الحسابات">Bank reconciliation</li>
-        <li data-en="Full financial reports" data-ar="تقارير مالية كاملة">Full financial reports</li>
-        <li data-en="VAT filing (quarterly)" data-ar="ضريبة القيمة المضافة (ربع سنوي)">VAT filing (quarterly)</li>
-        <li data-en="Cash flow statement" data-ar="تقرير التدفق النقدي">Cash flow statement</li>
-        <li class="off" data-en="Financial advisory" data-ar="استشارات مالية">Financial advisory</li>
+        <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Monthly bookkeeping" data-ar="حفظ الدفاتر الشهري">Monthly bookkeeping</span></li>
+        <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Bank reconciliation" data-ar="مطابقة الحسابات">Bank reconciliation</span></li>
+        <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Full financial reports" data-ar="تقارير مالية كاملة">Full financial reports</span></li>
+        <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="VAT filing (quarterly)" data-ar="ضريبة القيمة المضافة (ربع سنوي)">VAT filing (quarterly)</span></li>
+        <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Cash flow statement" data-ar="تقرير التدفق النقدي">Cash flow statement</span></li>
+        <li class="off"><span class="feat-check off"><svg viewBox="0 0 12 12"><path d="M3 6h6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></span><span data-en="Financial advisory" data-ar="استشارات مالية">Financial advisory</span></li>
       </ul>
       <a href="#" onclick="selectPlan('professional');return false;" class="plan-btn" data-en="Get started" data-ar="ابدأ الآن">Get started</a>
+      <p class="plan-value" data-en="Best for growing SMEs" data-ar="الأفضل للشركات المتنامية">Best for growing SMEs</p>
     </div>
+
+    <!-- COMPLETE -->
     <div class="plan fade-up">
       <p class="plan-name" data-en="Complete" data-ar="الشاملة">Complete</p>
-      <p class="plan-price">AED 1,500<span data-en=" /month" data-ar=" /شهر"> /month</span></p>
+      <p class="plan-price">AED 1,500<span class="plan-price-sub" data-en=" /month" data-ar=" /شهر"> /month</span></p>
       <hr class="plan-divider">
       <ul class="plan-features">
-        <li data-en="Monthly bookkeeping" data-ar="حفظ الدفاتر الشهري">Monthly bookkeeping</li>
-        <li data-en="Bank reconciliation" data-ar="مطابقة الحسابات">Bank reconciliation</li>
-        <li data-en="Full financial reports" data-ar="تقارير مالية كاملة">Full financial reports</li>
-        <li data-en="VAT filing (monthly)" data-ar="ضريبة القيمة المضافة (شهري)">VAT filing (monthly)</li>
-        <li data-en="Cash flow statement" data-ar="تقرير التدفق النقدي">Cash flow statement</li>
-        <li data-en="Financial advisory" data-ar="استشارات مالية">Financial advisory</li>
+        <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Monthly bookkeeping" data-ar="حفظ الدفاتر الشهري">Monthly bookkeeping</span></li>
+        <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Bank reconciliation" data-ar="مطابقة الحسابات">Bank reconciliation</span></li>
+        <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Full financial reports" data-ar="تقارير مالية كاملة">Full financial reports</span></li>
+        <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="VAT filing (monthly)" data-ar="ضريبة القيمة المضافة (شهري)">VAT filing (monthly)</span></li>
+        <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Cash flow statement" data-ar="تقرير التدفق النقدي">Cash flow statement</span></li>
+        <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Financial advisory" data-ar="استشارات مالية">Financial advisory</span></li>
       </ul>
       <a href="#" onclick="selectPlan('complete');return false;" class="plan-btn" data-en="Get started" data-ar="ابدأ الآن">Get started</a>
+      <p class="plan-value" data-en="Full-service for established businesses" data-ar="خدمة كاملة للشركات الراسخة">Full-service for established businesses</p>
     </div>
   </div>
 </section>
@@ -359,12 +478,12 @@ body.ar .chat-window{left:auto;right:2rem;}
   <p class="aml-intro fade-up" data-en="We support businesses in meeting their Anti-Money Laundering and Combating the Financing of Terrorism obligations under UAE law — including registration with the FIU and Executive Office." data-ar="ندعم الشركات في الوفاء بالتزاماتها بموجب قوانين مكافحة غسل الأموال وتمويل الإرهاب في الإمارات.">We support businesses in meeting their Anti-Money Laundering and Combating the Financing of Terrorism obligations under UAE law — including registration with the FIU and Executive Office.</p>
   <div class="aml-grid fade-up">
     <div class="aml-card">
-      <div class="aml-card-icon">🏛️</div>
+      <span class="aml-card-icon">🏛️</span>
       <h3 data-en="FIU Registration" data-ar="التسجيل في وحدة المعلومات المالية">FIU Registration</h3>
       <p data-en="Registration and reporting on the UAE Financial Intelligence Unit (goAML) platform. Full assistance with Suspicious Transaction Reports (STRs) and Suspicious Activity Reports (SARs)." data-ar="التسجيل وتقديم التقارير على منصة وحدة المعلومات المالية الإماراتية (goAML). مساعدة كاملة في تقارير المعاملات المشبوهة.">Registration and reporting on the UAE Financial Intelligence Unit (goAML) platform. Full assistance with Suspicious Transaction Reports (STRs) and Suspicious Activity Reports (SARs).</p>
     </div>
     <div class="aml-card">
-      <div class="aml-card-icon">⚖️</div>
+      <span class="aml-card-icon">⚖️</span>
       <h3 data-en="Executive Office Registration" data-ar="التسجيل في المكتب التنفيذي">Executive Office Registration</h3>
       <p data-en="Registration with the Executive Office for Control & Non-Proliferation (EOCN) for DNFBPs. Compliance with UAE Cabinet Decision No. 10 of 2019." data-ar="التسجيل في المكتب التنفيذي للرقابة وعدم الانتشار للأعمال والمهن غير المالية المحددة. الامتثال لقرار مجلس الوزراء رقم 10 لسنة 2019.">Registration with the Executive Office for Control & Non-Proliferation (EOCN) for DNFBPs. Compliance with UAE Cabinet Decision No. 10 of 2019.</p>
     </div>
@@ -392,47 +511,87 @@ body.ar .chat-window{left:auto;right:2rem;}
 <section id="methodology">
   <div class="eyebrow fade-up" data-en="Methodology" data-ar="المنهجية">Methodology</div>
   <h2 class="display fade-up" data-en="Four steps.<br><em>Zero ambiguity.</em>" data-ar="أربع خطوات.<br><em>صفر غموض.</em>">Four steps.<br><em>Zero ambiguity.</em></h2>
-  <div class="steps" style="margin-top:1rem;">
-    <div class="step fade-up"><div class="step-tag" data-en="Step 01" data-ar="الخطوة 01">Step 01</div><div><h3 data-en="Capture" data-ar="التسجيل">Capture</h3><p data-en="All transactions pulled directly from banks, cards, and payment processors." data-ar="جمع جميع المعاملات مباشرةً من البنوك والبطاقات وأنظمة الدفع.">All transactions pulled directly from banks, cards, and payment processors.</p></div></div>
-    <div class="step fade-up"><div class="step-tag" data-en="Step 02" data-ar="الخطوة 02">Step 02</div><div><h3 data-en="Classify" data-ar="التصنيف">Classify</h3><p data-en="Every entry coded against a chart of accounts tailored to your industry." data-ar="ترميز كل إدخال وفق دليل الحسابات المصمَّم خصيصاً لطبيعة عملك.">Every entry coded against a chart of accounts tailored to your industry.</p></div></div>
-    <div class="step fade-up"><div class="step-tag" data-en="Step 03" data-ar="الخطوة 03">Step 03</div><div><h3 data-en="Reconcile" data-ar="المطابقة">Reconcile</h3><p data-en="Monthly bank reconciliation until every balance ties to the cent." data-ar="مطابقة شهرية دقيقة حتى يتطابق كل رصيد إلى آخر فلس.">Monthly bank reconciliation until every balance ties to the cent.</p></div></div>
-    <div class="step fade-up"><div class="step-tag" data-en="Step 04" data-ar="الخطوة 04">Step 04</div><div><h3 data-en="Report" data-ar="التقرير">Report</h3><p data-en="Plain-English financial statements delivered by the 10th of the following month." data-ar="تقارير مالية واضحة تُسلَّم بحلول العاشر من الشهر التالي.">Plain-English financial statements delivered by the 10th of the following month.</p></div></div>
+  <div class="steps" style="margin-top:2rem;">
+    <div class="step fade-up">
+      <div class="step-tag" data-en="Step 01" data-ar="الخطوة 01">Step 01</div>
+      <div><h3 data-en="Capture" data-ar="التسجيل">Capture</h3><p data-en="All transactions pulled directly from banks, cards, and payment processors." data-ar="جمع جميع المعاملات مباشرةً من البنوك والبطاقات وأنظمة الدفع.">All transactions pulled directly from banks, cards, and payment processors.</p></div>
+    </div>
+    <div class="step fade-up">
+      <div class="step-tag" data-en="Step 02" data-ar="الخطوة 02">Step 02</div>
+      <div><h3 data-en="Classify" data-ar="التصنيف">Classify</h3><p data-en="Every entry coded against a chart of accounts tailored to your industry." data-ar="ترميز كل إدخال وفق دليل الحسابات المصمَّم خصيصاً لطبيعة عملك.">Every entry coded against a chart of accounts tailored to your industry.</p></div>
+    </div>
+    <div class="step fade-up">
+      <div class="step-tag" data-en="Step 03" data-ar="الخطوة 03">Step 03</div>
+      <div><h3 data-en="Reconcile" data-ar="المطابقة">Reconcile</h3><p data-en="Monthly bank reconciliation until every balance ties to the cent." data-ar="مطابقة شهرية دقيقة حتى يتطابق كل رصيد إلى آخر فلس.">Monthly bank reconciliation until every balance ties to the cent.</p></div>
+    </div>
+    <div class="step fade-up">
+      <div class="step-tag" data-en="Step 04" data-ar="الخطوة 04">Step 04</div>
+      <div><h3 data-en="Report" data-ar="التقرير">Report</h3><p data-en="Plain-English financial statements delivered by the 10th of the following month." data-ar="تقارير مالية واضحة تُسلَّم بحلول العاشر من الشهر التالي.">Plain-English financial statements delivered by the 10th of the following month.</p></div>
+    </div>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
-  <div class="eyebrow fade-up" data-en="About" data-ar="عني">About</div>
-  <h2 class="display fade-up" data-en="Built on the<br><em>double-entry standard.</em>" data-ar="مبنية على معيار<br><em>القيد المزدوج.</em>">Built on the<br><em>double-entry standard.</em></h2>
-  <p class="fade-up" data-en="Every transaction recorded across balanced columns — debits matching credits to the cent. The oldest discipline in finance, and still the only one that scales without error." data-ar="كل معاملة تُسجَّل عبر أعمدة متوازنة — المدين يساوي الدائن بدقة تامة. هذا هو الأساس الذي يضمن دفاتر خالية من الأخطاء.">Every transaction recorded across balanced columns — debits matching credits to the cent. The oldest discipline in finance, and still the only one that scales without error.</p>
-  <p class="fade-up" data-en="I work with businesses across the UAE to turn their financial data from a daily burden into a strategic asset." data-ar="أعمل مع شركات في الإمارات لتحويل بياناتها المالية من عبء يومي إلى أداة استراتيجية حقيقية.">I work with businesses across the UAE to turn their financial data from a daily burden into a strategic asset.</p>
-  <div class="badges fade-up">
-    <div class="badge" data-en="Est. 2024" data-ar="تأسست 2024">Est. 2024</div>
-    <div class="badge" data-en="Sharjah, UAE" data-ar="الشارقة، الإمارات">Sharjah, UAE</div>
-    <div class="badge" data-en="Odoo" data-ar="Odoo">Odoo</div>
-    <div class="badge" data-en="Zoho Books" data-ar="Zoho Books">Zoho Books</div>
-    <div class="badge" data-en="Xero" data-ar="Xero">Xero</div>
-    <div class="badge" data-en="QuickBooks" data-ar="QuickBooks">QuickBooks</div>
-    <div class="badge" data-en="UAE VAT Compliant" data-ar="متوافق مع ضريبة القيمة المضافة">UAE VAT Compliant</div>
+  <div class="about-inner">
+    <div>
+      <div class="eyebrow fade-up" data-en="About" data-ar="عني">About</div>
+      <h2 class="display fade-up" data-en="Built on the<br><em>double-entry standard.</em>" data-ar="مبنية على معيار<br><em>القيد المزدوج.</em>">Built on the<br><em>double-entry standard.</em></h2>
+      <div class="about-stats fade-up">
+        <div class="about-stat-item">
+          <span class="about-stat-num">100%</span>
+          <span class="about-stat-lbl" data-en="Accuracy guaranteed" data-ar="دقة مضمونة">Accuracy guaranteed</span>
+        </div>
+        <div class="about-stat-item">
+          <span class="about-stat-num">10th</span>
+          <span class="about-stat-lbl" data-en="Reports every month" data-ar="تقارير كل شهر">Reports every month</span>
+        </div>
+        <div class="about-stat-item">
+          <span class="about-stat-num">UAE</span>
+          <span class="about-stat-lbl" data-en="VAT compliant" data-ar="متوافق مع ضريبة القيمة المضافة">VAT compliant</span>
+        </div>
+        <div class="about-stat-item">
+          <span class="about-stat-num">Est.</span>
+          <span class="about-stat-lbl" data-en="2024, Sharjah" data-ar="2024، الشارقة">2024, Sharjah</span>
+        </div>
+      </div>
+    </div>
+    <div class="about-text">
+      <p class="fade-up" data-en="Every transaction recorded across balanced columns — debits matching credits to the cent. The oldest discipline in finance, and still the only one that scales without error." data-ar="كل معاملة تُسجَّل عبر أعمدة متوازنة — المدين يساوي الدائن بدقة تامة. هذا هو الأساس الذي يضمن دفاتر خالية من الأخطاء.">Every transaction recorded across balanced columns — debits matching credits to the cent. The oldest discipline in finance, and still the only one that scales without error.</p>
+      <p class="fade-up" data-en="I work with businesses across the UAE to turn their financial data from a daily burden into a strategic asset." data-ar="أعمل مع شركات في الإمارات لتحويل بياناتها المالية من عبء يومي إلى أداة استراتيجية حقيقية.">I work with businesses across the UAE to turn their financial data from a daily burden into a strategic asset.</p>
+      <div class="badges fade-up">
+        <span class="badge" data-en="Odoo" data-ar="Odoo">Odoo</span>
+        <span class="badge" data-en="Zoho Books" data-ar="Zoho Books">Zoho Books</span>
+        <span class="badge" data-en="Xero" data-ar="Xero">Xero</span>
+        <span class="badge" data-en="QuickBooks" data-ar="QuickBooks">QuickBooks</span>
+        <span class="badge" data-en="UAE VAT Compliant" data-ar="متوافق مع ضريبة القيمة المضافة">UAE VAT Compliant</span>
+        <span class="badge" data-en="AML Registered" data-ar="مسجل AML">AML Registered</span>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="eyebrow fade-up" data-en="Contact" data-ar="تواصل">Contact</div>
-  <h2 class="display fade-up" data-en="Ready for clarity?" data-ar="هل أنت جاهز للوضوح؟">Ready for clarity?</h2>
-  <p class="contact-lead fade-up" data-en="Let's discuss how organized bookkeeping can become your strongest competitive advantage." data-ar="لنتحدث عن كيفية تحويل محاسبتك المنظمة إلى ميزتك التنافسية الأقوى.">Let's discuss how organized bookkeeping can become your strongest competitive advantage.</p>
-  <div class="contact-grid fade-up">
-    <div class="citem"><label data-en="Email" data-ar="البريد الإلكتروني">Email</label><a href="mailto:amr.bookkeeping@outlook.com">amr.bookkeeping@outlook.com</a></div>
-    <div class="citem"><label data-en="Phone / WhatsApp" data-ar="الهاتف / واتساب">Phone / WhatsApp</label><a href="https://wa.me/971501337192" target="_blank">+971 50 133 7192</a></div>
-    <div class="citem"><label data-en="Location" data-ar="الموقع">Location</label><span data-en="Sharjah, United Arab Emirates" data-ar="الشارقة، الإمارات العربية المتحدة">Sharjah, United Arab Emirates</span></div>
-    <div class="citem"><label data-en="Working Hours" data-ar="ساعات العمل">Working Hours</label><span data-en="Sun – Thu, 9 AM – 6 PM" data-ar="الأحد – الخميس، 9ص – 6م">Sun – Thu, 9 AM – 6 PM</span></div>
+  <div class="contact-inner">
+    <div class="contact-left">
+      <div class="eyebrow fade-up" data-en="Contact" data-ar="تواصل">Contact</div>
+      <h2 class="display fade-up" data-en="Ready for <em>clarity?</em>" data-ar="هل أنت جاهز<br><em>للوضوح؟</em>">Ready for <em>clarity?</em></h2>
+      <p class="contact-lead fade-up" data-en="Let's discuss how organized bookkeeping can become your strongest competitive advantage." data-ar="لنتحدث عن كيفية تحويل محاسبتك المنظمة إلى ميزتك التنافسية الأقوى.">Let's discuss how organized bookkeeping can become your strongest competitive advantage.</p>
+      <a href="https://wa.me/971501337192" target="_blank" class="contact-cta fade-up" data-en="💬 WhatsApp us" data-ar="💬 تواصل على واتساب">💬 WhatsApp us</a>
+    </div>
+    <div class="contact-right fade-up">
+      <div class="citem"><label data-en="Email" data-ar="البريد الإلكتروني">Email</label><a href="mailto:amr.bookkeeping@outlook.com">amr.bookkeeping@outlook.com</a></div>
+      <div class="citem"><label data-en="Phone / WhatsApp" data-ar="الهاتف / واتساب">Phone / WhatsApp</label><a href="https://wa.me/971501337192" target="_blank">+971 50 133 7192</a></div>
+      <div class="citem"><label data-en="Location" data-ar="الموقع">Location</label><span data-en="Sharjah, United Arab Emirates" data-ar="الشارقة، الإمارات العربية المتحدة">Sharjah, United Arab Emirates</span></div>
+      <div class="citem"><label data-en="Working Hours" data-ar="ساعات العمل">Working Hours</label><span data-en="Sun – Thu, 9 AM – 6 PM" data-ar="الأحد – الخميس، 9ص – 6م">Sun – Thu, 9 AM – 6 PM</span></div>
+    </div>
   </div>
 </section>
 
 <footer>
-  <span class="f-brand">Amr Mohamed — Bookkeeping & Accounting</span>
-  <span class="f-copy">© 2025 — Sharjah, UAE</span>
+  <span class="f-brand">Amr Mohamed — <span>Bookkeeping & Accounting</span></span>
+  <span class="f-copy">© 2025 · Sharjah, UAE</span>
 </footer>
 
 <!-- AI CHAT -->
@@ -442,7 +601,6 @@ body.ar .chat-window{left:auto;right:2rem;}
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
   </button>
 </div>
-
 <div class="chat-window" id="chatWindow">
   <div class="chat-header">
     <div class="chat-avatar">A</div>
@@ -453,7 +611,7 @@ body.ar .chat-window{left:auto;right:2rem;}
     <button class="chat-close" onclick="toggleChat()">✕</button>
   </div>
   <div class="chat-messages" id="chatMessages">
-    <div class="msg bot" id="welcomeMsg">Hello! 👋 I'm Amr's assistant. Tell me about your business and I'll recommend the right package for you. / مرحباً! أخبرني عن نشاطك التجاري وسأرشح لك الباقة المناسبة.</div>
+    <div class="msg bot">Hello! 👋 I'm Amr's assistant. Tell me about your business and I'll recommend the right package for you. / مرحباً! أخبرني عن نشاطك التجاري وسأرشح لك الباقة المناسبة.</div>
   </div>
   <div class="chat-suggestions" id="chatSuggestions">
     <button class="suggestion" onclick="sendSuggestion(this)">What packages do you offer?</button>
@@ -470,25 +628,28 @@ body.ar .chat-window{left:auto;right:2rem;}
 </div>
 
 <script>
+// NAV SCROLL
+window.addEventListener('scroll', () => {
+  document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 50);
+});
+
 // PLAN SELECTION → WHATSAPP
 const planMessages = {
   en: {
     basic: "Hello Amr, I'm interested in the *Basic Package* (AED 500/month).\n\nIncludes:\n• Monthly bookkeeping\n• Bank reconciliation\n• Monthly P&L report\n\nCould we discuss further?",
-    professional: "Hello Amr, I'm interested in the *Professional Package* (AED 950/month).\n\nIncludes:\n• Monthly bookkeeping\n• Bank reconciliation\n• Full financial reports\n• VAT filing (quarterly)\n• Cash flow statement\n\nCould we discuss further?",
+    professional: "Hello Amr, I'm interested in the *Professional Package* (AED 1,000/month).\n\nIncludes:\n• Monthly bookkeeping\n• Bank reconciliation\n• Full financial reports\n• VAT filing (quarterly)\n• Cash flow statement\n\nCould we discuss further?",
     complete: "Hello Amr, I'm interested in the *Complete Package* (AED 1,500/month).\n\nIncludes:\n• Monthly bookkeeping\n• Bank reconciliation\n• Full financial reports\n• VAT filing (monthly)\n• Cash flow statement\n• Financial advisory\n\nCould we discuss further?"
   },
   ar: {
     basic: "مرحباً عمرو، أنا مهتم بـ *الباقة الأساسية* (500 درهم/شهر).\n\nتشمل:\n• حفظ الدفاتر الشهري\n• مطابقة الحسابات\n• تقرير الأرباح والخسائر الشهري\n\nهل يمكننا مناقشة التفاصيل؟",
-    professional: "مرحباً عمرو، أنا مهتم بـ *الباقة الاحترافية* (950 درهم/شهر).\n\nتشمل:\n• حفظ الدفاتر الشهري\n• مطابقة الحسابات\n• تقارير مالية كاملة\n• ضريبة القيمة المضافة (ربع سنوي)\n• تقرير التدفق النقدي\n\nهل يمكننا مناقشة التفاصيل؟",
+    professional: "مرحباً عمرو، أنا مهتم بـ *الباقة الاحترافية* (1,000 درهم/شهر).\n\nتشمل:\n• حفظ الدفاتر الشهري\n• مطابقة الحسابات\n• تقارير مالية كاملة\n• ضريبة القيمة المضافة (ربع سنوي)\n• تقرير التدفق النقدي\n\nهل يمكننا مناقشة التفاصيل؟",
     complete: "مرحباً عمرو، أنا مهتم بـ *الباقة الشاملة* (1,500 درهم/شهر).\n\nتشمل:\n• حفظ الدفاتر الشهري\n• مطابقة الحسابات\n• تقارير مالية كاملة\n• ضريبة القيمة المضافة (شهري)\n• تقرير التدفق النقدي\n• استشارات مالية\n\nهل يمكننا مناقشة التفاصيل؟"
   }
 };
-
 function selectPlan(plan) {
   const lang = document.documentElement.lang === 'ar' ? 'ar' : 'en';
   const msg = planMessages[lang][plan];
-  const url = 'https://wa.me/971501337192?text=' + encodeURIComponent(msg);
-  window.open(url, '_blank');
+  window.open('https://wa.me/971501337192?text=' + encodeURIComponent(msg), '_blank');
 }
 
 // LANG
@@ -512,7 +673,6 @@ function setLang(lang) {
 function toggleChat() {
   document.getElementById('chatWindow').classList.toggle('open');
 }
-
 function sendSuggestion(el) {
   document.getElementById('chatInput').value = el.textContent;
   sendMessage();
@@ -520,19 +680,19 @@ function sendSuggestion(el) {
 
 const responses = {
   en: {
-    packages: "We offer 3 packages:\n\n• **Basic** — AED 500/mo: bookkeeping + reconciliation + P&L report\n• **Professional** — AED 950/mo: + VAT filing + cash flow (most popular)\n• **Complete** — AED 1,500/mo: everything + financial advisory\n\nWhat type of business do you run?",
-    retail: "For a retail shop, the **Professional package (AED 950/mo)** is ideal — it covers your monthly bookkeeping, bank reconciliation, VAT filing, and full financial reports. Ready to get started? 👇",
-    restaurant: "For restaurants, I recommend the **Professional package (AED 950/mo)** — handles your daily transactions, VAT, and gives you clean monthly reports to track your profitability.",
-    freelance: "For freelancers, the **Basic package (AED 500/mo)** works perfectly — monthly bookkeeping, reconciliation, and a P&L report to track your income.",
-    trading: "For a trading company, the **Complete package (AED 1,500/mo)** is the best fit — you'll need full reports, monthly VAT filing, and financial advisory to manage your margins.",
-    default: "Great! To recommend the best package, could you tell me:\n1. What industry are you in?\n2. Roughly how many transactions per month?\n\nOr you can reach Amr directly on WhatsApp: +971 50 133 7192"
+    packages: "We offer 3 packages:\n\n• **Basic** — AED 500/mo: bookkeeping + reconciliation + P&L\n• **Professional** — AED 1,000/mo: + VAT filing + cash flow (most popular)\n• **Complete** — AED 1,500/mo: everything + financial advisory\n\nWhat type of business do you run?",
+    retail: "For a retail shop, the **Professional package (AED 1,000/mo)** is ideal — covers monthly bookkeeping, bank reconciliation, VAT filing, and full reports.",
+    restaurant: "For restaurants, I recommend the **Professional package (AED 1,000/mo)** — handles your daily transactions, VAT, and gives you clean monthly reports.",
+    freelance: "For freelancers, the **Basic package (AED 500/mo)** works perfectly — monthly bookkeeping, reconciliation, and a P&L report.",
+    trading: "For a trading company, the **Complete package (AED 1,500/mo)** is the best fit — full reports, monthly VAT filing, and financial advisory.",
+    default: "To recommend the best package, could you tell me:\n1. What industry are you in?\n2. Roughly how many transactions per month?\n\nOr reach Amr directly on WhatsApp: +971 50 133 7192"
   },
   ar: {
-    packages: "لدينا 3 باقات:\n\n• **الأساسية** — 500 درهم/شهر: حفظ دفاتر + مطابقة + تقرير أرباح\n• **الاحترافية** — 950 درهم/شهر: + ضريبة القيمة المضافة + تدفق نقدي (الأكثر طلباً)\n• **الشاملة** — 1,500 درهم/شهر: كل شيء + استشارات مالية\n\nما نوع نشاطك التجاري؟",
-    retail: "لمحل التجزئة، **الباقة الاحترافية (950 درهم/شهر)** هي المثالية — تشمل حفظ الدفاتر الشهري، مطابقة البنك، ضريبة القيمة المضافة، والتقارير الكاملة. هل أنت مستعد للبدء؟",
-    trading: "للشركات التجارية، **الباقة الشاملة (1,500 درهم/شهر)** هي الأنسب — ستحصل على تقارير كاملة، ضريبة القيمة المضافة الشهرية، واستشارات مالية لإدارة هوامش ربحك.",
-    freelance: "للمستقلين، **الباقة الأساسية (500 درهم/شهر)** تكفي تماماً — حفظ دفاتر شهري، مطابقة حسابات، وتقرير أرباح وخسائر.",
-    default: "رائع! لأنصحك بأفضل باقة، هل يمكنك إخباري:\n1. ما مجال عملك؟\n2. ما حجم معاملاتك الشهرية تقريباً؟\n\nأو تواصل مع عمرو مباشرة على واتساب: 971501337192+"
+    packages: "لدينا 3 باقات:\n\n• **الأساسية** — 500 درهم/شهر: حفظ دفاتر + مطابقة + أرباح\n• **الاحترافية** — 1,000 درهم/شهر: + ضريبة القيمة المضافة (الأكثر طلباً)\n• **الشاملة** — 1,500 درهم/شهر: كل شيء + استشارات مالية\n\nما نوع نشاطك التجاري؟",
+    retail: "لمحل التجزئة، **الباقة الاحترافية (1,000 درهم/شهر)** هي المثالية — تشمل حفظ الدفاتر، مطابقة البنك، ضريبة القيمة المضافة، والتقارير الكاملة.",
+    trading: "للشركات التجارية، **الباقة الشاملة (1,500 درهم/شهر)** هي الأنسب — تقارير كاملة، ضريبة القيمة المضافة الشهرية، واستشارات مالية.",
+    freelance: "للمستقلين، **الباقة الأساسية (500 درهم/شهر)** تكفي تماماً — حفظ دفاتر، مطابقة حسابات، وتقرير أرباح وخسائر.",
+    default: "لأنصحك بأفضل باقة، هل يمكنك إخباري:\n1. ما مجال عملك؟\n2. ما حجم معاملاتك الشهرية؟\n\nأو تواصل مع عمرو على واتساب: 971501337192+"
   }
 };
 
@@ -542,10 +702,10 @@ function getResponse(msg) {
   const r = responses[lang];
   if (m.includes('package') || m.includes('باقة') || m.includes('price') || m.includes('سعر') || m.includes('offer') || m.includes('خدمات')) return r.packages;
   if (m.includes('retail') || m.includes('shop') || m.includes('store') || m.includes('محل') || m.includes('تجزئة')) return r.retail;
-  if (m.includes('restaurant') || m.includes('cafe') || m.includes('food') || m.includes('مطعم') || m.includes('كافيه')) return r.restaurant || r.retail;
-  if (m.includes('freelance') || m.includes('consultant') || m.includes('مستقل') || m.includes('استشار')) return r.freelance;
-  if (m.includes('trading') || m.includes('import') || m.includes('export') || m.includes('تجار') || m.includes('استيراد') || m.includes('تصدير')) return r.trading;
-  if (m.includes('whatsapp') || m.includes('واتساب') || m.includes('contact') || m.includes('تواصل') || m.includes('call') || m.includes('اتصال')) return (lang === 'ar' ? 'تواصل مع عمرو الآن على واتساب 👉 ' : 'Contact Amr now on WhatsApp 👉 ') + 'https://wa.me/971501337192';
+  if (m.includes('restaurant') || m.includes('cafe') || m.includes('food') || m.includes('مطعم')) return r.restaurant || r.retail;
+  if (m.includes('freelance') || m.includes('consultant') || m.includes('مستقل')) return r.freelance;
+  if (m.includes('trading') || m.includes('import') || m.includes('export') || m.includes('تجار') || m.includes('استيراد')) return r.trading;
+  if (m.includes('whatsapp') || m.includes('واتساب') || m.includes('contact') || m.includes('تواصل')) return (lang === 'ar' ? 'تواصل مع عمرو الآن على واتساب 👉 ' : 'Contact Amr on WhatsApp 👉 ') + 'https://wa.me/971501337192';
   return r.default;
 }
 
@@ -557,13 +717,11 @@ function sendMessage() {
   const container = document.getElementById('chatMessages');
   document.getElementById('chatSuggestions').style.display = 'none';
 
-  // user msg
   const u = document.createElement('div');
   u.className = 'msg user';
   u.textContent = msg;
   container.appendChild(u);
 
-  // typing
   const t = document.createElement('div');
   t.className = 'msg bot typing';
   t.innerHTML = '<span></span><span></span><span></span>';
@@ -576,31 +734,29 @@ function sendMessage() {
     const b = document.createElement('div');
     b.className = 'msg bot';
     b.style.whiteSpace = 'pre-line';
-    // handle bold **text**
-    b.innerHTML = reply.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/(https:\/\/wa\.me\/\S+)/g, '<a href="$1" target="_blank" style="color:var(--mint)">WhatsApp ↗</a>');
+    b.innerHTML = reply.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/(https:\/\/wa\.me\/\S+)/g,'<a href="$1" target="_blank" style="color:var(--mint)">WhatsApp ↗</a>');
     container.appendChild(b);
 
-    // add whatsapp button if package mentioned
     if (reply.includes('package') || reply.includes('باقة') || reply.includes('درهم') || reply.includes('AED')) {
       const wa = document.createElement('a');
       wa.href = 'https://wa.me/971501337192';
       wa.target = '_blank';
-      wa.style.cssText = 'display:inline-block;margin-top:8px;padding:0.5rem 1rem;background:var(--mint);color:var(--navy);text-decoration:none;font-size:0.8rem;font-weight:600;border-radius:6px;';
+      wa.style.cssText = 'display:inline-flex;align-items:center;gap:6px;margin-top:8px;padding:0.5rem 1rem;background:var(--mint);color:var(--navy);text-decoration:none;font-size:0.78rem;font-weight:600;border-radius:8px;';
       wa.innerHTML = '💬 ' + (document.documentElement.lang === 'ar' ? 'تواصل على واتساب' : 'Chat on WhatsApp');
       container.appendChild(wa);
     }
     container.scrollTop = container.scrollHeight;
-  }, 1200);
+  }, 1100);
 }
 
 // SCROLL ANIMATIONS
 const observer = new IntersectionObserver(entries => {
   entries.forEach((e, i) => {
     if (e.isIntersecting) {
-      setTimeout(() => e.target.classList.add('visible'), i * 80);
+      setTimeout(() => e.target.classList.add('visible'), i * 70);
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.08 });
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 </script>
 </body>
