@@ -543,48 +543,118 @@ body.ar .chat-window{left:auto;right:2rem;}
   </div>
 </section>
 
-<!-- PRICE CALCULATOR -->
+<!-- SERVICE SELECTOR -->
 <section id="calculator">
-  <div class="eyebrow fade-up" data-en="Price Calculator" data-ar="حاسبة السعر">Price Calculator</div>
-  <h2 class="display fade-up" data-en="Build your own<br><em>package.</em>" data-ar="صمّم باقتك<br><em>بنفسك.</em>">Build your own<br><em>package.</em></h2>
+  <div class="eyebrow fade-up" data-en="Custom Package" data-ar="باقة مخصصة">Custom Package</div>
+  <h2 class="display fade-up" data-en="Pick your services.<br><em>We'll agree on the price.</em>" data-ar="اختر خدماتك.<br><em>ونتفق على السعر.</em>">Pick your services.<br><em>We'll agree on the price.</em></h2>
   <div class="calc-inner" style="margin-top:3rem;">
     <div class="calc-left">
-      <p class="fade-up" data-en="Select the services you need and see your price instantly. No calls required." data-ar="حدِّد الخدمات التي تحتاجها وشاهد سعرك فوراً — لا حاجة لأي مكالمة.">Select the services you need and see your price instantly. No calls required.</p>
+      <p class="fade-up" data-en="Select the services your business needs. Amr will review your selection and send you a tailored quote on WhatsApp." data-ar="حدِّد الخدمات التي يحتاجها نشاطك التجاري. سيراجع عمرو اختياراتك ويرسل لك عرضاً مخصصاً على واتساب.">Select the services your business needs. Amr will review your selection and send you a tailored quote on WhatsApp.</p>
       <div class="calc-form fade-up" id="calcForm">
-        <div class="calc-item" data-price="200" data-key="bookkeeping" onclick="toggleCalc(this)">
-          <div class="calc-item-left"><span class="calc-item-icon">📒</span><div><div class="calc-item-name" data-en="Monthly Bookkeeping" data-ar="حفظ الدفاتر الشهري">Monthly Bookkeeping</div><div class="calc-item-sub">AED 200/mo</div></div></div>
+        <div class="calc-item" data-key="bookkeeping" onclick="toggleCalc(this)">
+          <div class="calc-item-left">
+            <span class="calc-item-icon">📒</span>
+            <div>
+              <div class="calc-item-name" data-en="Monthly Bookkeeping" data-ar="مسك الدفاتر الشهري">Monthly Bookkeeping</div>
+              <div class="calc-item-sub" data-en="Record all transactions every month" data-ar="تسجيل جميع المعاملات كل شهر">Record all transactions every month</div>
+            </div>
+          </div>
           <div class="calc-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         </div>
-        <div class="calc-item" data-price="100" data-key="reconciliation" onclick="toggleCalc(this)">
-          <div class="calc-item-left"><span class="calc-item-icon">🏦</span><div><div class="calc-item-name" data-en="Bank Reconciliation" data-ar="مطابقة الحسابات">Bank Reconciliation</div><div class="calc-item-sub">AED 100/mo</div></div></div>
+        <div class="calc-item" data-key="reconciliation" onclick="toggleCalc(this)">
+          <div class="calc-item-left">
+            <span class="calc-item-icon">🏦</span>
+            <div>
+              <div class="calc-item-name" data-en="Bank Reconciliation" data-ar="مطابقة الحسابات البنكية">Bank Reconciliation</div>
+              <div class="calc-item-sub" data-en="Match your records to your bank statement" data-ar="مطابقة سجلاتك مع كشف الحساب البنكي">Match your records to your bank statement</div>
+            </div>
+          </div>
           <div class="calc-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         </div>
-        <div class="calc-item" data-price="150" data-key="reporting" onclick="toggleCalc(this)">
-          <div class="calc-item-left"><span class="calc-item-icon">📊</span><div><div class="calc-item-name" data-en="Financial Reports" data-ar="التقارير المالية">Financial Reports</div><div class="calc-item-sub">AED 150/mo</div></div></div>
+        <div class="calc-item" data-key="reporting" onclick="toggleCalc(this)">
+          <div class="calc-item-left">
+            <span class="calc-item-icon">📊</span>
+            <div>
+              <div class="calc-item-name" data-en="Financial Reports" data-ar="التقارير المالية">Financial Reports</div>
+              <div class="calc-item-sub" data-en="P&L, balance sheet & cash flow monthly" data-ar="أرباح وخسائر، ميزانية وتدفق نقدي شهرياً">P&L, balance sheet & cash flow monthly</div>
+            </div>
+          </div>
           <div class="calc-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         </div>
-        <div class="calc-item" data-price="200" data-key="vat" onclick="toggleCalc(this)">
-          <div class="calc-item-left"><span class="calc-item-icon">🧾</span><div><div class="calc-item-name" data-en="VAT Filing" data-ar="تقديم ضريبة القيمة المضافة">VAT Filing</div><div class="calc-item-sub">AED 200/mo</div></div></div>
+        <div class="calc-item" data-key="vat" onclick="toggleCalc(this)">
+          <div class="calc-item-left">
+            <span class="calc-item-icon">🧾</span>
+            <div>
+              <div class="calc-item-name" data-en="VAT Filing" data-ar="تقديم ضريبة القيمة المضافة">VAT Filing</div>
+              <div class="calc-item-sub" data-en="Prepare & submit UAE FTA returns" data-ar="إعداد وتقديم الإقرارات للهيئة الاتحادية للضرائب">Prepare & submit UAE FTA returns</div>
+            </div>
+          </div>
           <div class="calc-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         </div>
-        <div class="calc-item" data-price="150" data-key="cashflow" onclick="toggleCalc(this)">
-          <div class="calc-item-left"><span class="calc-item-icon">💵</span><div><div class="calc-item-name" data-en="Cash Flow Statement" data-ar="تقرير التدفق النقدي">Cash Flow Statement</div><div class="calc-item-sub">AED 150/mo</div></div></div>
+        <div class="calc-item" data-key="cashflow" onclick="toggleCalc(this)">
+          <div class="calc-item-left">
+            <span class="calc-item-icon">💵</span>
+            <div>
+              <div class="calc-item-name" data-en="Cash Flow Statement" data-ar="قائمة التدفق النقدي">Cash Flow Statement</div>
+              <div class="calc-item-sub" data-en="Track how money moves in & out" data-ar="تتبّع حركة الأموال داخلاً وخارجاً">Track how money moves in & out</div>
+            </div>
+          </div>
           <div class="calc-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         </div>
-        <div class="calc-item" data-price="200" data-key="advisory" onclick="toggleCalc(this)">
-          <div class="calc-item-left"><span class="calc-item-icon">💡</span><div><div class="calc-item-name" data-en="Financial Advisory" data-ar="استشارات مالية">Financial Advisory</div><div class="calc-item-sub">AED 200/mo</div></div></div>
+        <div class="calc-item" data-key="advisory" onclick="toggleCalc(this)">
+          <div class="calc-item-left">
+            <span class="calc-item-icon">💡</span>
+            <div>
+              <div class="calc-item-name" data-en="Financial Advisory" data-ar="الاستشارات المالية">Financial Advisory</div>
+              <div class="calc-item-sub" data-en="Analysis & recommendations to grow profits" data-ar="تحليل وتوصيات لتحسين الأرباح">Analysis & recommendations to grow profits</div>
+            </div>
+          </div>
           <div class="calc-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         </div>
       </div>
     </div>
+
     <div class="calc-result fade-up">
-      <div class="calc-result-label" data-en="Your estimated monthly price" data-ar="سعرك الشهري التقديري">Your estimated monthly price</div>
-      <div class="calc-result-price" id="calcPrice">AED 0</div>
-      <div class="calc-result-sub" data-en="/ month · no hidden fees" data-ar="/ شهر · بدون رسوم مخفية">/ month · no hidden fees</div>
-      <div class="calc-breakdown" id="calcBreakdown">
-        <p class="calc-empty" data-en="Select services above to build your price." data-ar="حدِّد الخدمات أعلاه لمعرفة سعرك.">Select services above to build your price.</p>
+      <!-- Header -->
+      <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.75rem;">
+        <div style="width:42px;height:42px;border-radius:50%;background:var(--mint);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy);flex-shrink:0;">A</div>
+        <div>
+          <div style="font-size:0.88rem;font-weight:500;color:#fff;" data-en="Amr Mohamed" data-ar="عمرو محمد">Amr Mohamed</div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.4);display:flex;align-items:center;gap:4px;"><span style="width:6px;height:6px;border-radius:50%;background:#2ecc71;display:inline-block;"></span><span data-en="Replies within a few hours" data-ar="يرد في غضون ساعات">Replies within a few hours</span></div>
+        </div>
       </div>
-      <a href="#" id="calcCta" onclick="sendCalcToWhatsApp();return false;" class="calc-cta" data-en="📲 Send quote to WhatsApp" data-ar="📲 أرسل العرض على واتساب">📲 Send quote to WhatsApp</a>
+
+      <!-- Selected services summary -->
+      <div style="margin-bottom:1.5rem;">
+        <div style="font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:0.75rem;" data-en="Your selected services" data-ar="الخدمات التي اخترتها">Your selected services</div>
+        <div id="calcBreakdown">
+          <p class="calc-empty" style="font-size:0.85rem;color:rgba(255,255,255,0.2);font-style:italic;" data-en="No services selected yet." data-ar="لم تختر أي خدمة بعد.">No services selected yet.</p>
+        </div>
+      </div>
+
+      <!-- Count badge -->
+      <div id="calcCountWrap" style="display:none;margin-bottom:1.5rem;">
+        <div style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(46,196,182,0.12);border:1px solid rgba(46,196,182,0.25);border-radius:20px;padding:0.4rem 1rem;">
+          <span id="calcCount" style="font-size:0.88rem;font-weight:600;color:var(--mint);">0</span>
+          <span style="font-size:0.78rem;color:rgba(255,255,255,0.45);" data-en="services selected" data-ar="خدمات مختارة">services selected</span>
+        </div>
+      </div>
+
+      <!-- Message preview -->
+      <div id="calcMsgPreview" style="display:none;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:1rem;margin-bottom:1.5rem;">
+        <div style="font-size:0.6rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:0.5rem;" data-en="Message preview" data-ar="معاينة الرسالة">Message preview</div>
+        <p id="calcPreviewText" style="font-size:0.8rem;color:rgba(255,255,255,0.45);line-height:1.65;white-space:pre-line;"></p>
+      </div>
+
+      <!-- Empty state -->
+      <div id="calcEmptyState" style="text-align:center;padding:1.5rem 0;">
+        <div style="font-size:2rem;margin-bottom:0.75rem;">☝️</div>
+        <p style="font-size:0.85rem;color:rgba(255,255,255,0.25);" data-en="Select at least one service to send a request." data-ar="اختر خدمة واحدة على الأقل لإرسال طلبك.">Select at least one service to send a request.</p>
+      </div>
+
+      <!-- CTA -->
+      <a href="#" id="calcCta" onclick="sendCalcToWhatsApp();return false;" class="calc-cta" data-en="💬 Request a custom quote" data-ar="💬 اطلب عرض سعر مخصص">💬 Request a custom quote</a>
+      <p style="text-align:center;margin-top:0.75rem;font-size:0.72rem;color:rgba(255,255,255,0.2);" data-en="Free consultation · No commitment" data-ar="استشارة مجانية · بدون التزام">Free consultation · No commitment</p>
     </div>
   </div>
 </section>
@@ -1078,40 +1148,58 @@ function setLang(lang){
   document.getElementById('chatStatus').textContent=isAr?'متصل — يرد فوراً':'Online — replies instantly';
 }
 
-// CALCULATOR
+// SERVICE SELECTOR (no prices)
 const calcState={};
+const calcNames={
+  bookkeeping:{en:'Monthly Bookkeeping',ar:'مسك الدفاتر الشهري'},
+  reconciliation:{en:'Bank Reconciliation',ar:'مطابقة الحسابات البنكية'},
+  reporting:{en:'Financial Reports',ar:'التقارير المالية'},
+  vat:{en:'VAT Filing',ar:'تقديم ضريبة القيمة المضافة'},
+  cashflow:{en:'Cash Flow Statement',ar:'قائمة التدفق النقدي'},
+  advisory:{en:'Financial Advisory',ar:'الاستشارات المالية'}
+};
 function toggleCalc(el){
   el.classList.toggle('selected');
   const key=el.dataset.key;
-  const price=parseInt(el.dataset.price);
-  calcState[key]=el.classList.contains('selected')?price:0;
+  calcState[key]=el.classList.contains('selected');
   updateCalc();
 }
 function updateCalc(){
-  const total=Object.values(calcState).reduce((a,b)=>a+b,0);
-  document.getElementById('calcPrice').textContent='AED '+(total>0?total.toLocaleString():0);
-  const breakdown=document.getElementById('calcBreakdown');
   const lang=document.documentElement.lang==='ar'?'ar':'en';
-  if(total===0){
-    breakdown.innerHTML='<p class="calc-empty">'+(lang==='ar'?'حدِّد الخدمات أعلاه لمعرفة سعرك.':'Select services above to build your price.')+'</p>';
+  const selected=Object.entries(calcState).filter(([k,v])=>v);
+  const count=selected.length;
+  const breakdown=document.getElementById('calcBreakdown');
+  const countWrap=document.getElementById('calcCountWrap');
+  const msgPreview=document.getElementById('calcMsgPreview');
+  const emptyState=document.getElementById('calcEmptyState');
+  if(count===0){
+    breakdown.innerHTML=`<p style="font-size:0.85rem;color:rgba(255,255,255,0.2);font-style:italic;">${lang==='ar'?'لم تختر أي خدمة بعد.':'No services selected yet.'}</p>`;
+    countWrap.style.display='none';
+    msgPreview.style.display='none';
+    emptyState.style.display='block';
     return;
   }
-  const names={bookkeeping:{en:'Monthly Bookkeeping',ar:'حفظ الدفاتر الشهري'},reconciliation:{en:'Bank Reconciliation',ar:'مطابقة الحسابات'},reporting:{en:'Financial Reports',ar:'التقارير المالية'},vat:{en:'VAT Filing',ar:'ضريبة القيمة المضافة'},cashflow:{en:'Cash Flow',ar:'التدفق النقدي'},advisory:{en:'Financial Advisory',ar:'استشارات مالية'}};
-  let html='';
-  for(const[k,v]of Object.entries(calcState)){
-    if(v>0)html+=`<div class="calc-breakdown-item"><span class="calc-breakdown-name">${names[k][lang]}</span><span class="calc-breakdown-val">AED ${v}</span></div>`;
-  }
-  html+=`<div class="calc-breakdown-item" style="border-top:1px solid rgba(255,255,255,0.1);margin-top:0.5rem;padding-top:0.75rem;"><span class="calc-breakdown-name" style="color:#fff;font-weight:500;">${lang==='ar'?'الإجمالي الشهري':'Total'}</span><span class="calc-breakdown-val" style="font-size:1rem;font-weight:700;">AED ${total.toLocaleString()}</span></div>`;
-  breakdown.innerHTML=html;
+  breakdown.innerHTML=selected.map(([k])=>
+    `<div style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(46,196,182,0.1);border:1px solid rgba(46,196,182,0.2);border-radius:6px;padding:0.35rem 0.75rem;margin:0.2rem;font-size:0.8rem;color:var(--mint);">✓ ${calcNames[k][lang]}</div>`
+  ).join('');
+  countWrap.style.display='block';
+  document.getElementById('calcCount').textContent=count;
+  const serviceList=selected.map(([k])=>`• ${calcNames[k][lang]}`).join('\n');
+  const previewMsg=lang==='ar'
+    ?`مرحباً عمرو،\n\nأودّ الحصول على عرض سعر للخدمات التالية:\n${serviceList}\n\nهل يمكننا مناقشة التفاصيل؟`
+    :`Hello Amr,\n\nI'd like a quote for the following services:\n${serviceList}\n\nCould we discuss further?`;
+  document.getElementById('calcPreviewText').textContent=previewMsg;
+  msgPreview.style.display='block';
+  emptyState.style.display='none';
 }
 function sendCalcToWhatsApp(){
-  const total=Object.values(calcState).reduce((a,b)=>a+b,0);
-  if(total===0){alert('Please select at least one service first.');return;}
   const lang=document.documentElement.lang==='ar'?'ar':'en';
-  const names={bookkeeping:{en:'Monthly Bookkeeping',ar:'حفظ الدفاتر الشهري'},reconciliation:{en:'Bank Reconciliation',ar:'مطابقة الحسابات'},reporting:{en:'Financial Reports',ar:'التقارير المالية'},vat:{en:'VAT Filing',ar:'ضريبة القيمة المضافة'},cashflow:{en:'Cash Flow Statement',ar:'تقرير التدفق النقدي'},advisory:{en:'Financial Advisory',ar:'استشارات مالية'}};
-  let services='';
-  for(const[k,v]of Object.entries(calcState)){if(v>0)services+=`\n• ${names[k][lang]}: AED ${v}`;}
-  const msg=lang==='ar'?`مرحباً عمرو، أودّ الحصول على عرض سعر مخصص للخدمات التالية:\n${services}\n\n*الإجمالي الشهري: ${total.toLocaleString()} درهم إماراتي*\n\nهل يمكننا مناقشة التفاصيل؟`:`Hello Amr, I'd like a custom quote for:\n${services}\n\n*Total: AED ${total.toLocaleString()}/month*\n\nCould we discuss further?`;
+  const selected=Object.entries(calcState).filter(([k,v])=>v);
+  if(selected.length===0){alert(lang==='ar'?'يرجى اختيار خدمة واحدة على الأقل.':'Please select at least one service.');return;}
+  const serviceList=selected.map(([k])=>`• ${calcNames[k][lang]}`).join('\n');
+  const msg=lang==='ar'
+    ?`مرحباً عمرو،\n\nأودّ الحصول على عرض سعر مخصص للخدمات التالية:\n${serviceList}\n\nهل يمكننا مناقشة التفاصيل؟`
+    :`Hello Amr,\n\nI'd like a custom quote for the following services:\n${serviceList}\n\nCould we discuss the details?`;
   window.open('https://wa.me/971501337192?text='+encodeURIComponent(msg),'_blank');
 }
 
