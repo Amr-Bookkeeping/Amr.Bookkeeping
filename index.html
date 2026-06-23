@@ -614,47 +614,47 @@ body.ar .chat-window{left:auto;right:2rem;}
       </div>
     </div>
 
-    <div class="calc-result fade-up">
-      <!-- Header -->
-      <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.75rem;">
-        <div style="width:42px;height:42px;border-radius:50%;background:var(--mint);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy);flex-shrink:0;">A</div>
-        <div>
-          <div style="font-size:0.88rem;font-weight:500;color:#fff;" data-en="Amr Mohamed" data-ar="عمرو محمد">Amr Mohamed</div>
-          <div style="font-size:0.7rem;color:rgba(255,255,255,0.4);display:flex;align-items:center;gap:4px;"><span style="width:6px;height:6px;border-radius:50%;background:#2ecc71;display:inline-block;"></span><span data-en="Replies within a few hours" data-ar="يرد في غضون ساعات">Replies within a few hours</span></div>
+    <div class="calc-result fade-up" id="calcResult">
+
+      <!-- EMPTY STATE -->
+      <div id="calcEmptyState" style="text-align:center;padding:3rem 1rem;">
+        <div style="font-size:2.5rem;margin-bottom:1rem;">📋</div>
+        <p style="font-size:0.9rem;color:rgba(255,255,255,0.25);line-height:1.7;" data-en="Select services on the left to see your recommended package and price." data-ar="اختر الخدمات على اليسار لمعرفة الباقة الموصى بها وسعرها.">Select services on the left to see your recommended package and price.</p>
+      </div>
+
+      <!-- ACTIVE STATE -->
+      <div id="calcActiveState" style="display:none;">
+
+        <!-- Package badge -->
+        <div style="margin-bottom:1.5rem;">
+          <div style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:0.6rem;" data-en="Recommended package" data-ar="الباقة الموصى بها">Recommended package</div>
+          <div id="calcPlanBadge" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.45rem 1.25rem;border-radius:20px;font-size:0.78rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;"></div>
         </div>
-      </div>
 
-      <!-- Selected services summary -->
-      <div style="margin-bottom:1.5rem;">
-        <div style="font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:0.75rem;" data-en="Your selected services" data-ar="الخدمات التي اخترتها">Your selected services</div>
-        <div id="calcBreakdown">
-          <p class="calc-empty" style="font-size:0.85rem;color:rgba(255,255,255,0.2);font-style:italic;" data-en="No services selected yet." data-ar="لم تختر أي خدمة بعد.">No services selected yet.</p>
+        <!-- Price -->
+        <div id="calcPrice" style="font-family:'Playfair Display',serif;font-size:3.2rem;font-weight:700;color:var(--mint);line-height:1;margin-bottom:0.3rem;"></div>
+        <div style="font-size:0.82rem;color:rgba(255,255,255,0.3);margin-bottom:1.75rem;" data-en="/ month · no hidden fees" data-ar="/ شهر · بدون رسوم مخفية">/ month · no hidden fees</div>
+
+        <!-- Package note -->
+        <div id="calcPlanNote" style="background:rgba(46,196,182,0.07);border:1px solid rgba(46,196,182,0.15);border-radius:10px;padding:1rem 1.1rem;margin-bottom:1.5rem;font-size:0.82rem;color:rgba(255,255,255,0.45);line-height:1.7;"></div>
+
+        <!-- Selected services tags -->
+        <div style="margin-bottom:1.5rem;">
+          <div style="font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:0.6rem;" data-en="Your selected services" data-ar="الخدمات التي اخترتها">Your selected services</div>
+          <div id="calcBreakdown" style="display:flex;flex-wrap:wrap;gap:0.35rem;"></div>
         </div>
-      </div>
 
-      <!-- Count badge -->
-      <div id="calcCountWrap" style="display:none;margin-bottom:1.5rem;">
-        <div style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(46,196,182,0.12);border:1px solid rgba(46,196,182,0.25);border-radius:20px;padding:0.4rem 1rem;">
-          <span id="calcCount" style="font-size:0.88rem;font-weight:600;color:var(--mint);">0</span>
-          <span style="font-size:0.78rem;color:rgba(255,255,255,0.45);" data-en="services selected" data-ar="خدمات مختارة">services selected</span>
+        <!-- Upgrade hint -->
+        <div id="calcUpgradeHint" style="display:none;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:1rem 1.1rem;margin-bottom:1.5rem;">
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.3);margin-bottom:0.4rem;">💡 <span data-en="You might also consider" data-ar="قد تفكر أيضاً في">You might also consider</span></div>
+          <p id="calcUpgradeText" style="font-size:0.8rem;color:rgba(255,255,255,0.4);line-height:1.65;"></p>
         </div>
+
+        <!-- CTA -->
+        <a href="#" onclick="sendCalcToWhatsApp();return false;" class="calc-cta" data-en="💬 Confirm package on WhatsApp" data-ar="💬 تأكيد الباقة على واتساب">💬 Confirm package on WhatsApp</a>
+        <p style="text-align:center;margin-top:0.75rem;font-size:0.72rem;color:rgba(255,255,255,0.2);" data-en="Free consultation · No commitment" data-ar="استشارة مجانية · بدون التزام">Free consultation · No commitment</p>
       </div>
 
-      <!-- Message preview -->
-      <div id="calcMsgPreview" style="display:none;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:1rem;margin-bottom:1.5rem;">
-        <div style="font-size:0.6rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:0.5rem;" data-en="Message preview" data-ar="معاينة الرسالة">Message preview</div>
-        <p id="calcPreviewText" style="font-size:0.8rem;color:rgba(255,255,255,0.45);line-height:1.65;white-space:pre-line;"></p>
-      </div>
-
-      <!-- Empty state -->
-      <div id="calcEmptyState" style="text-align:center;padding:1.5rem 0;">
-        <div style="font-size:2rem;margin-bottom:0.75rem;">☝️</div>
-        <p style="font-size:0.85rem;color:rgba(255,255,255,0.25);" data-en="Select at least one service to send a request." data-ar="اختر خدمة واحدة على الأقل لإرسال طلبك.">Select at least one service to send a request.</p>
-      </div>
-
-      <!-- CTA -->
-      <a href="#" id="calcCta" onclick="sendCalcToWhatsApp();return false;" class="calc-cta" data-en="💬 Request a custom quote" data-ar="💬 اطلب عرض سعر مخصص">💬 Request a custom quote</a>
-      <p style="text-align:center;margin-top:0.75rem;font-size:0.72rem;color:rgba(255,255,255,0.2);" data-en="Free consultation · No commitment" data-ar="استشارة مجانية · بدون التزام">Free consultation · No commitment</p>
     </div>
   </div>
 </section>
@@ -1148,7 +1148,7 @@ function setLang(lang){
   document.getElementById('chatStatus').textContent=isAr?'متصل — يرد فوراً':'Online — replies instantly';
 }
 
-// SERVICE SELECTOR (no prices)
+// SERVICE SELECTOR — smart package matcher
 const calcState={};
 const calcNames={
   bookkeeping:{en:'Monthly Bookkeeping',ar:'مسك الدفاتر الشهري'},
@@ -1158,48 +1158,97 @@ const calcNames={
   cashflow:{en:'Cash Flow Statement',ar:'قائمة التدفق النقدي'},
   advisory:{en:'Financial Advisory',ar:'الاستشارات المالية'}
 };
+// Package logic: 1-3 services = Basic (500), 4-5 = Professional (1000), 6 = Complete (1500)
+const packages={
+  basic:{
+    name:{en:'Basic',ar:'الأساسية'},
+    price:'AED 500',
+    color:'#5a6a7a',
+    note:{
+      en:'Great starting point. Covers your core bookkeeping needs up to 3 services.',
+      ar:'نقطة بداية ممتازة. تغطي احتياجاتك المحاسبية الأساسية حتى 3 خدمات.'
+    },
+    upgrade:{
+      en:'Add VAT Filing or Cash Flow Statement to unlock the Professional package (AED 1,000/mo).',
+      ar:'أضف تقديم ضريبة القيمة المضافة أو قائمة التدفق النقدي للانتقال إلى الباقة الاحترافية (1,000 درهم/شهر).'
+    }
+  },
+  professional:{
+    name:{en:'Professional',ar:'الاحترافية'},
+    price:'AED 1,000',
+    color:'#2ec4b6',
+    note:{
+      en:'Our most popular package. Handles your bookkeeping, reports, and VAT compliance.',
+      ar:'باقتنا الأكثر طلباً. تتولى مسك الدفاتر والتقارير والامتثال الضريبي.'
+    },
+    upgrade:{
+      en:'Add Financial Advisory to get the Complete package (AED 1,500/mo) with expert insights every month.',
+      ar:'أضف الاستشارات المالية للحصول على الباقة الشاملة (1,500 درهم/شهر) مع توصيات خبير كل شهر.'
+    }
+  },
+  complete:{
+    name:{en:'Complete',ar:'الشاملة'},
+    price:'AED 1,500',
+    color:'#c9a84c',
+    note:{
+      en:'Full-service package. Everything included — bookkeeping, reports, VAT, and financial advisory.',
+      ar:'الباقة الشاملة بالكامل. كل شيء متضمَّن — مسك الدفاتر، التقارير، الضريبة، والاستشارات المالية.'
+    },
+    upgrade:null
+  }
+};
+function getPackage(count){
+  if(count===0) return null;
+  if(count<=3) return 'basic';
+  if(count<=5) return 'professional';
+  return 'complete';
+}
 function toggleCalc(el){
   el.classList.toggle('selected');
-  const key=el.dataset.key;
-  calcState[key]=el.classList.contains('selected');
+  calcState[el.dataset.key]=el.classList.contains('selected');
   updateCalc();
 }
 function updateCalc(){
   const lang=document.documentElement.lang==='ar'?'ar':'en';
   const selected=Object.entries(calcState).filter(([k,v])=>v);
   const count=selected.length;
-  const breakdown=document.getElementById('calcBreakdown');
-  const countWrap=document.getElementById('calcCountWrap');
-  const msgPreview=document.getElementById('calcMsgPreview');
   const emptyState=document.getElementById('calcEmptyState');
-  if(count===0){
-    breakdown.innerHTML=`<p style="font-size:0.85rem;color:rgba(255,255,255,0.2);font-style:italic;">${lang==='ar'?'لم تختر أي خدمة بعد.':'No services selected yet.'}</p>`;
-    countWrap.style.display='none';
-    msgPreview.style.display='none';
-    emptyState.style.display='block';
-    return;
-  }
-  breakdown.innerHTML=selected.map(([k])=>
-    `<div style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(46,196,182,0.1);border:1px solid rgba(46,196,182,0.2);border-radius:6px;padding:0.35rem 0.75rem;margin:0.2rem;font-size:0.8rem;color:var(--mint);">✓ ${calcNames[k][lang]}</div>`
-  ).join('');
-  countWrap.style.display='block';
-  document.getElementById('calcCount').textContent=count;
-  const serviceList=selected.map(([k])=>`• ${calcNames[k][lang]}`).join('\n');
-  const previewMsg=lang==='ar'
-    ?`مرحباً عمرو،\n\nأودّ الحصول على عرض سعر للخدمات التالية:\n${serviceList}\n\nهل يمكننا مناقشة التفاصيل؟`
-    :`Hello Amr,\n\nI'd like a quote for the following services:\n${serviceList}\n\nCould we discuss further?`;
-  document.getElementById('calcPreviewText').textContent=previewMsg;
-  msgPreview.style.display='block';
+  const activeState=document.getElementById('calcActiveState');
+  if(count===0){emptyState.style.display='block';activeState.style.display='none';return;}
   emptyState.style.display='none';
+  activeState.style.display='block';
+  const pkgKey=getPackage(count);
+  const pkg=packages[pkgKey];
+  // Badge
+  const badge=document.getElementById('calcPlanBadge');
+  badge.textContent=pkg.name[lang];
+  badge.style.background=pkg.color==='#2ec4b6'?'rgba(46,196,182,0.15)':pkg.color==='#c9a84c'?'rgba(201,168,76,0.15)':'rgba(90,106,122,0.15)';
+  badge.style.color=pkg.color;
+  badge.style.border=`1px solid ${pkg.color}40`;
+  // Price
+  document.getElementById('calcPrice').textContent=pkg.price;
+  // Note
+  document.getElementById('calcPlanNote').textContent=pkg.note[lang];
+  // Services tags
+  document.getElementById('calcBreakdown').innerHTML=selected.map(([k])=>
+    `<div style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(46,196,182,0.08);border:1px solid rgba(46,196,182,0.18);border-radius:6px;padding:0.3rem 0.7rem;font-size:0.78rem;color:var(--mint);">✓ ${calcNames[k][lang]}</div>`
+  ).join('');
+  // Upgrade hint
+  const hint=document.getElementById('calcUpgradeHint');
+  const hintText=document.getElementById('calcUpgradeText');
+  if(pkg.upgrade){hint.style.display='block';hintText.textContent=pkg.upgrade[lang];}
+  else{hint.style.display='none';}
 }
 function sendCalcToWhatsApp(){
   const lang=document.documentElement.lang==='ar'?'ar':'en';
   const selected=Object.entries(calcState).filter(([k,v])=>v);
-  if(selected.length===0){alert(lang==='ar'?'يرجى اختيار خدمة واحدة على الأقل.':'Please select at least one service.');return;}
+  if(!selected.length){alert(lang==='ar'?'يرجى اختيار خدمة واحدة على الأقل.':'Please select at least one service.');return;}
+  const pkgKey=getPackage(selected.length);
+  const pkg=packages[pkgKey];
   const serviceList=selected.map(([k])=>`• ${calcNames[k][lang]}`).join('\n');
   const msg=lang==='ar'
-    ?`مرحباً عمرو،\n\nأودّ الحصول على عرض سعر مخصص للخدمات التالية:\n${serviceList}\n\nهل يمكننا مناقشة التفاصيل؟`
-    :`Hello Amr,\n\nI'd like a custom quote for the following services:\n${serviceList}\n\nCould we discuss the details?`;
+    ?`مرحباً عمرو،\n\nأودّ تأكيد *الباقة ${pkg.name[lang]}* (${pkg.price}/شهر).\n\nالخدمات المطلوبة:\n${serviceList}\n\nهل يمكننا مناقشة التفاصيل؟`
+    :`Hello Amr,\n\nI'd like to confirm the *${pkg.name[lang]} Package* (${pkg.price}/month).\n\nServices needed:\n${serviceList}\n\nCould we discuss the details?`;
   window.open('https://wa.me/971501337192?text='+encodeURIComponent(msg),'_blank');
 }
 
