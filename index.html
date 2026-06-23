@@ -3,222 +3,320 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amr Mohamed — Bookkeeping & Accounting</title>
-<meta name="description" content="Professional bookkeeping services in the UAE">
+<title>ABA — Amr Bookkeeping & Accounting | UAE</title>
+<meta name="description" content="Professional bookkeeping and accounting services in the UAE. Clean books, clear numbers, better decisions. Serving businesses in Sharjah, Dubai, and across the Emirates.">
+<meta name="keywords" content="bookkeeping UAE, accounting Sharjah, VAT filing UAE, AML compliance, financial reports UAE, محاسبة الإمارات, مسك الدفاتر الشارقة">
+<meta name="author" content="Amr Mohamed — ABA Bookkeeping">
+<meta property="og:title" content="ABA — Amr Bookkeeping & Accounting">
+<meta property="og:description" content="Professional bookkeeping services in the UAE. Clean books, clear numbers.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#2ec4b6">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Playfair+Display:ital,wght@0,700;1,700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
-  --navy:#0d1b2a;
-  --mint:#2ec4b6;
-  --gold:#c9a84c;
-  --slate:#5a6a7a;
-  --paper:#f7f6f2;
-  --white:#fff;
-  --border:rgba(13,27,42,0.09);
+  --navy:#0d1b2a;--mint:#2ec4b6;--gold:#c9a84c;--slate:#5a6a7a;
+  --paper:#f7f6f2;--white:#fff;--border:rgba(13,27,42,0.09);
   --shadow-sm:0 2px 12px rgba(13,27,42,0.06);
   --shadow-md:0 8px 32px rgba(13,27,42,0.10);
-  --shadow-lg:0 20px 60px rgba(13,27,42,0.13);
+  --shadow-lg:0 20px 60px rgba(13,27,42,0.14);
 }
 html{scroll-behavior:smooth;}
 body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--navy);line-height:1.7;-webkit-font-smoothing:antialiased;}
 body.ar{font-family:'Tajawal',sans-serif;direction:rtl;}
-
-/* SCROLLBAR */
 ::-webkit-scrollbar{width:4px;}
-::-webkit-scrollbar-track{background:transparent;}
 ::-webkit-scrollbar-thumb{background:var(--mint);border-radius:2px;}
 
-/* LANG TOGGLE */
-.lang-toggle{display:flex;gap:0;border:1px solid var(--border);overflow:hidden;border-radius:6px;margin-left:2rem;}
-body.ar .lang-toggle{margin-left:0;margin-right:2rem;}
-.lang-btn{padding:0.35rem 0.85rem;font-size:0.72rem;font-weight:500;letter-spacing:0.08em;background:transparent;border:none;cursor:pointer;color:var(--slate);transition:all 0.2s;}
-.lang-btn.active{background:var(--navy);color:#fff;}
-
 /* NAV */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:1.1rem 4rem;
-  background:rgba(247,246,242,0.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
-  border-bottom:1px solid var(--border);
-  transition:padding 0.3s;
-}
-nav.scrolled{padding:0.8rem 4rem;box-shadow:var(--shadow-sm);}
-.nav-logo{font-size:0.85rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;color:var(--navy);display:flex;align-items:center;gap:0.6rem;}
-.nav-logo-dot{width:8px;height:8px;border-radius:50%;background:var(--mint);display:inline-block;}
-.nav-logo span{font-weight:300;color:var(--slate);}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(247,246,242,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:all 0.3s;}
+nav.scrolled{padding:0.75rem 4rem;box-shadow:var(--shadow-sm);}
+.nav-logo{text-decoration:none;color:var(--navy);display:flex;align-items:center;gap:0.75rem;}
+.nav-logo-mark{width:36px;height:36px;background:var(--navy);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:0.85rem;font-weight:700;color:var(--mint);letter-spacing:-0.02em;flex-shrink:0;}
+.nav-logo-text{display:flex;flex-direction:column;line-height:1.1;}
+.nav-logo-name{font-size:0.82rem;font-weight:500;letter-spacing:0.04em;}
+.nav-logo-sub{font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--slate);}
 .nav-links{display:flex;gap:2rem;list-style:none;}
-.nav-links a{text-decoration:none;font-size:0.75rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--slate);transition:color 0.2s;position:relative;}
-.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--mint);transition:width 0.25s;}
+.nav-links a{text-decoration:none;font-size:0.74rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--slate);transition:color 0.2s;position:relative;padding-bottom:2px;}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--mint);transition:width 0.25s;}
 .nav-links a:hover{color:var(--navy);}
 .nav-links a:hover::after{width:100%;}
+.lang-toggle{display:flex;border:1px solid var(--border);overflow:hidden;border-radius:6px;margin-left:1.5rem;}
+body.ar .lang-toggle{margin-left:0;margin-right:1.5rem;}
+.lang-btn{padding:0.3rem 0.8rem;font-size:0.7rem;font-weight:500;letter-spacing:0.08em;background:transparent;border:none;cursor:pointer;color:var(--slate);transition:all 0.2s;}
+.lang-btn.active{background:var(--navy);color:#fff;}
+.nav-cta{display:inline-flex;align-items:center;gap:0.4rem;padding:0.5rem 1.2rem;background:var(--mint);color:var(--navy);text-decoration:none;font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border-radius:6px;transition:all 0.2s;margin-left:1rem;white-space:nowrap;}
+body.ar .nav-cta{margin-left:0;margin-right:1rem;}
+.nav-cta:hover{background:var(--navy);color:#fff;}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+.hamburger span{width:22px;height:2px;background:var(--navy);border-radius:2px;transition:all 0.3s;}
 
 /* HERO */
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:8rem 4rem 5rem;position:relative;overflow:hidden;}
-.hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1800&q=85');background-size:cover;background-position:center;filter:brightness(0.18);transform:scale(1.03);transition:transform 8s ease;}
-.hero:hover .hero-bg{transform:scale(1);}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,27,42,0.98) 0%,rgba(13,27,42,0.6) 50%,rgba(13,27,42,0.4) 100%);}
-.hero-grid-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(46,196,182,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(46,196,182,0.03) 1px,transparent 1px);background-size:80px 80px;}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1800&q=85');background-size:cover;background-position:center;filter:brightness(0.18);}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,27,42,0.98) 0%,rgba(13,27,42,0.55) 60%,rgba(13,27,42,0.35) 100%);}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(46,196,182,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(46,196,182,0.03) 1px,transparent 1px);background-size:80px 80px;}
 .hero-content{position:relative;z-index:2;}
-.hero-eyebrow{font-size:0.68rem;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--mint);margin-bottom:2rem;display:flex;align-items:center;gap:0.75rem;}
+.hero-eyebrow{font-size:0.67rem;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--mint);margin-bottom:2rem;display:flex;align-items:center;gap:0.75rem;}
 .hero-eyebrow::before{content:'';width:32px;height:1px;background:var(--mint);}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,7vw,6.2rem);font-weight:700;line-height:0.95;color:#fff;max-width:900px;margin-bottom:2.2rem;letter-spacing:-0.01em;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,7vw,6.2rem);font-weight:700;line-height:0.95;color:#fff;max-width:900px;margin-bottom:2.2rem;}
 body.ar .hero h1{font-family:'Tajawal',sans-serif;font-size:clamp(2.5rem,6vw,5rem);line-height:1.1;}
 .hero h1 em{color:var(--mint);font-style:italic;}
 .hero-sub{font-size:1.05rem;color:rgba(255,255,255,0.45);max-width:500px;margin-bottom:3.5rem;font-weight:300;line-height:1.85;}
 .hero-actions{display:flex;gap:1rem;flex-wrap:wrap;}
-.btn-primary{display:inline-flex;align-items:center;gap:0.5rem;padding:0.95rem 2.4rem;background:var(--mint);color:var(--navy);text-decoration:none;font-weight:500;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.25s;border:2px solid var(--mint);border-radius:3px;}
+.btn-primary{display:inline-flex;align-items:center;gap:0.5rem;padding:0.95rem 2.4rem;background:var(--mint);color:var(--navy);text-decoration:none;font-weight:600;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.25s;border:2px solid var(--mint);border-radius:4px;}
 .btn-primary:hover{background:transparent;color:var(--mint);transform:translateY(-2px);}
-.btn-ghost{display:inline-flex;align-items:center;gap:0.5rem;padding:0.95rem 2.4rem;border:2px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.55);text-decoration:none;font-weight:500;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.25s;border-radius:3px;}
+.btn-ghost{display:inline-flex;align-items:center;gap:0.5rem;padding:0.95rem 2.4rem;border:2px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.6);text-decoration:none;font-weight:500;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.25s;border-radius:4px;}
 .btn-ghost:hover{border-color:var(--mint);color:var(--mint);transform:translateY(-2px);}
-
-.hero-sidebar{position:absolute;right:4rem;bottom:5rem;z-index:2;display:flex;flex-direction:column;gap:2.5rem;align-items:flex-end;}
+.hero-sidebar{position:absolute;right:4rem;bottom:5rem;z-index:2;display:flex;flex-direction:column;gap:2rem;align-items:flex-end;}
 body.ar .hero-sidebar{right:auto;left:4rem;align-items:flex-start;}
-.stat{text-align:right;}
-body.ar .stat{text-align:left;}
 .stat-num{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:700;color:var(--mint);line-height:1;display:block;}
-.stat-lbl{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-top:0.25rem;display:block;}
-.stat-divider{width:1px;height:40px;background:rgba(255,255,255,0.08);align-self:flex-end;}
+.stat-lbl{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-top:0.2rem;display:block;}
+.stat-div{width:1px;height:36px;background:rgba(255,255,255,0.07);align-self:flex-end;}
+
+/* TRUST BAR */
+.trust-bar{background:var(--navy);padding:1.1rem 4rem;display:flex;align-items:center;gap:3rem;overflow:hidden;}
+.trust-label{font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.25);white-space:nowrap;flex-shrink:0;}
+.trust-items{display:flex;gap:3rem;align-items:center;flex-wrap:wrap;}
+.trust-item{font-size:0.75rem;color:rgba(255,255,255,0.4);letter-spacing:0.06em;white-space:nowrap;display:flex;align-items:center;gap:0.5rem;}
+.trust-item::before{content:'✓';color:var(--mint);font-weight:700;}
 
 /* SHARED */
 section{padding:7rem 4rem;}
 .eyebrow{font-size:0.66rem;font-weight:500;letter-spacing:0.26em;text-transform:uppercase;color:var(--mint);display:flex;align-items:center;gap:0.75rem;margin-bottom:1.5rem;}
 .eyebrow::before{content:'';width:28px;height:1px;background:var(--mint);}
-h2.display{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,4vw,3.5rem);line-height:1.05;font-weight:700;letter-spacing:-0.01em;}
+h2.display{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,4vw,3.5rem);line-height:1.05;font-weight:700;}
 body.ar h2.display{font-family:'Tajawal',sans-serif;line-height:1.2;}
 h2.display em{color:var(--mint);font-style:italic;}
 
 /* SERVICES */
 #services{background:var(--white);}
-#services .section-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3.5rem;flex-wrap:wrap;gap:2rem;}
-#services h2.display{max-width:520px;}
-.services-count{font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--slate);padding-bottom:0.5rem;}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25px;background:var(--border);}
+.section-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3.5rem;flex-wrap:wrap;gap:2rem;}
+.services-count{font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--slate);}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);}
 .svc{background:var(--white);overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;position:relative;}
-.svc::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(13,27,42,0) 0%,transparent);pointer-events:none;transition:opacity 0.3s;}
-.svc:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);z-index:1;}
-.svc-img-wrap{overflow:hidden;height:200px;position:relative;}
-.svc-img{width:100%;height:200px;object-fit:cover;display:block;transition:transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);}
-.svc:hover .svc-img{transform:scale(1.08);}
-.svc-num-overlay{position:absolute;top:1rem;right:1rem;font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:rgba(255,255,255,0.5);line-height:1;}
+.svc:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);z-index:1;}
+.svc-img-wrap{overflow:hidden;height:195px;position:relative;}
+.svc-img{width:100%;height:195px;object-fit:cover;display:block;transition:transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);}
+.svc:hover .svc-img{transform:scale(1.07);}
+.svc-num-overlay{position:absolute;top:1rem;right:1rem;font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;color:rgba(255,255,255,0.55);}
 body.ar .svc-num-overlay{right:auto;left:1rem;}
 .svc-body{padding:1.75rem;}
-.svc h3{font-size:1.05rem;font-weight:500;margin-bottom:0.5rem;letter-spacing:-0.01em;}
+.svc h3{font-size:1.05rem;font-weight:500;margin-bottom:0.5rem;}
 .svc p{font-size:0.875rem;color:var(--slate);line-height:1.8;}
-.svc-arrow{display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--mint);font-weight:500;opacity:0;transform:translateX(-8px);transition:all 0.25s;}
-body.ar .svc-arrow{transform:translateX(8px);}
+.svc-arrow{display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--mint);font-weight:500;opacity:0;transform:translateX(-6px);transition:all 0.25s;}
+body.ar .svc-arrow{transform:translateX(6px);}
 .svc:hover .svc-arrow{opacity:1;transform:translateX(0);}
+
+/* WHY US */
+#why{background:var(--paper);}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+.why-left h2.display{margin-bottom:1.5rem;}
+.why-left p{color:var(--slate);font-size:1rem;line-height:1.9;margin-bottom:2rem;}
+.why-items{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:3rem;}
+.why-item{padding:1.5rem;border:1px solid var(--border);border-radius:12px;background:var(--white);transition:border-color 0.2s,box-shadow 0.2s;}
+.why-item:hover{border-color:var(--mint);box-shadow:var(--shadow-sm);}
+.why-icon{font-size:1.75rem;margin-bottom:0.75rem;display:block;}
+.why-item h4{font-size:0.9rem;font-weight:500;margin-bottom:0.35rem;}
+.why-item p{font-size:0.82rem;color:var(--slate);line-height:1.65;}
+.why-visual{position:relative;}
+.why-card-main{background:var(--navy);border-radius:20px;padding:2.5rem;color:#fff;}
+.why-card-main h3{font-family:'Playfair Display',serif;font-size:1.8rem;line-height:1.1;margin-bottom:1.5rem;}
+.why-card-main h3 em{color:var(--mint);font-style:italic;}
+.why-stats{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:1.75rem;}
+.why-stat{border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:1.25rem;}
+.why-stat-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--mint);display:block;line-height:1;}
+.why-stat-lbl{font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:0.25rem;display:block;}
+.why-card-float{position:absolute;bottom:-1.5rem;right:-1.5rem;background:var(--white);border-radius:14px;padding:1.25rem 1.5rem;box-shadow:var(--shadow-lg);border:1px solid var(--border);min-width:180px;}
+body.ar .why-card-float{right:auto;left:-1.5rem;}
+.why-card-float-label{font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--slate);margin-bottom:0.5rem;}
+.why-card-float-val{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--navy);display:flex;align-items:center;gap:0.5rem;}
+.why-card-float-val span{font-size:0.75rem;font-family:'DM Sans',sans-serif;color:var(--mint);font-weight:600;background:rgba(46,196,182,0.1);padding:2px 8px;border-radius:20px;}
+
+/* CALCULATOR */
+#calculator{background:var(--white);}
+.calc-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
+.calc-left h2.display{margin-bottom:1rem;}
+.calc-left p{color:var(--slate);font-size:0.95rem;line-height:1.85;margin-bottom:2rem;}
+.calc-form{display:flex;flex-direction:column;gap:1rem;}
+.calc-item{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.25rem;border:1px solid var(--border);border-radius:10px;background:var(--paper);cursor:pointer;transition:all 0.2s;user-select:none;}
+.calc-item:hover{border-color:var(--mint);}
+.calc-item.selected{border-color:var(--mint);background:rgba(46,196,182,0.06);}
+.calc-item-left{display:flex;align-items:center;gap:0.75rem;}
+.calc-item-icon{font-size:1.1rem;}
+.calc-item-name{font-size:0.9rem;font-weight:500;}
+.calc-item-sub{font-size:0.75rem;color:var(--slate);}
+.calc-check{width:22px;height:22px;border-radius:50%;border:2px solid var(--border);display:flex;align-items:center;justify-content:center;transition:all 0.2s;flex-shrink:0;}
+.calc-item.selected .calc-check{background:var(--mint);border-color:var(--mint);}
+.calc-check svg{width:11px;height:11px;fill:#fff;opacity:0;transition:opacity 0.2s;}
+.calc-item.selected .calc-check svg{opacity:1;}
+.calc-result{background:var(--navy);border-radius:20px;padding:2.5rem;position:sticky;top:6rem;}
+.calc-result-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:0.5rem;}
+.calc-result-price{font-family:'Playfair Display',serif;font-size:3.5rem;font-weight:700;color:var(--mint);line-height:1;margin-bottom:0.25rem;}
+.calc-result-sub{font-size:0.85rem;color:rgba(255,255,255,0.35);margin-bottom:2rem;}
+.calc-breakdown{border-top:1px solid rgba(255,255,255,0.07);padding-top:1.5rem;margin-bottom:2rem;}
+.calc-breakdown-item{display:flex;justify-content:space-between;align-items:center;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.04);}
+.calc-breakdown-item:last-child{border-bottom:none;}
+.calc-breakdown-name{font-size:0.82rem;color:rgba(255,255,255,0.5);}
+.calc-breakdown-val{font-size:0.82rem;color:var(--mint);font-weight:500;}
+.calc-cta{display:block;text-align:center;padding:1rem;background:var(--mint);color:var(--navy);text-decoration:none;font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;border-radius:8px;transition:all 0.2s;border:2px solid var(--mint);}
+.calc-cta:hover{background:transparent;color:var(--mint);}
+.calc-empty{text-align:center;padding:2rem 0;color:rgba(255,255,255,0.25);font-size:0.9rem;}
 
 /* PRICING */
 #pricing{background:var(--paper);}
 .pricing-header{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-bottom:4rem;}
-.pricing-note{font-size:0.88rem;color:var(--slate);line-height:1.8;border-left:2px solid var(--mint);padding-left:1.25rem;}
+.pricing-note{font-size:0.88rem;color:var(--slate);line-height:1.85;border-left:2px solid var(--mint);padding-left:1.25rem;}
 body.ar .pricing-note{border-left:none;border-right:2px solid var(--mint);padding-left:0;padding-right:1.25rem;}
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
 .plan{border:1px solid var(--border);border-radius:16px;padding:2.25rem;display:flex;flex-direction:column;transition:transform 0.25s,box-shadow 0.25s;background:var(--white);position:relative;overflow:hidden;}
 .plan::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:transparent;transition:background 0.25s;}
-.plan:hover::before{background:var(--mint);}
-.plan:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);}
+.plan:hover::before,.plan.featured::before{background:var(--mint);}
+.plan:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);}
 .plan.featured{border:2px solid var(--mint);background:var(--navy);}
-.plan.featured::before{background:var(--mint);}
 .plan-badge{display:inline-block;background:var(--mint);color:var(--navy);font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:1.25rem;width:fit-content;}
 .plan-name{font-size:0.68rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--slate);margin-bottom:0.75rem;}
-.plan.featured .plan-name{color:rgba(255,255,255,0.45);}
-.plan-price{font-family:'Playfair Display',serif;font-size:2.75rem;font-weight:700;line-height:1;margin-bottom:0.2rem;letter-spacing:-0.02em;}
+.plan.featured .plan-name{color:rgba(255,255,255,0.4);}
+.plan-price{font-family:'Playfair Display',serif;font-size:2.75rem;font-weight:700;line-height:1;margin-bottom:0.2rem;}
 .plan.featured .plan-price{color:#fff;}
 .plan-price-sub{font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:400;color:var(--slate);}
-.plan.featured .plan-price-sub{color:rgba(255,255,255,0.4);}
+.plan.featured .plan-price-sub{color:rgba(255,255,255,0.35);}
 .plan-divider{border:none;border-top:1px solid var(--border);margin:1.75rem 0;}
 .plan.featured .plan-divider{border-color:rgba(255,255,255,0.08);}
 .plan-features{list-style:none;display:flex;flex-direction:column;gap:0.85rem;flex:1;margin-bottom:2rem;}
 .plan-features li{display:flex;align-items:flex-start;gap:10px;font-size:0.875rem;color:var(--slate);line-height:1.5;}
-.plan.featured .plan-features li{color:rgba(255,255,255,0.6);}
-.plan-features li.off{color:rgba(90,106,122,0.35);}
-.plan.featured .plan-features li.off{color:rgba(255,255,255,0.18);}
+.plan.featured .plan-features li{color:rgba(255,255,255,0.55);}
+.plan-features li.off{opacity:0.35;}
 .feat-check{width:18px;height:18px;border-radius:50%;background:rgba(46,196,182,0.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
 .feat-check svg{width:10px;height:10px;fill:var(--mint);}
 .feat-check.off{background:transparent;}
-.feat-check.off svg{fill:rgba(90,106,122,0.25);}
+.feat-check.off svg{fill:var(--slate);}
 .plan-btn{display:block;text-align:center;padding:0.9rem;border:2px solid var(--navy);color:var(--navy);text-decoration:none;font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.2s;border-radius:8px;}
-.plan-btn:hover{background:var(--navy);color:var(--white);}
+.plan-btn:hover{background:var(--navy);color:#fff;}
 .plan.featured .plan-btn{background:var(--mint);border-color:var(--mint);color:var(--navy);}
-.plan.featured .plan-btn:hover{background:#fff;border-color:#fff;color:var(--navy);}
-.plan-value{text-align:center;margin-top:0.75rem;font-size:0.72rem;color:var(--slate);letter-spacing:0.05em;}
-.plan.featured .plan-value{color:rgba(255,255,255,0.3);}
+.plan.featured .plan-btn:hover{background:#fff;border-color:#fff;}
+.plan-value{text-align:center;margin-top:0.75rem;font-size:0.72rem;color:var(--slate);}
+.plan.featured .plan-value{color:rgba(255,255,255,0.25);}
+
+/* TESTIMONIALS */
+#testimonials{background:var(--white);}
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem;}
+.tcard{border:1px solid var(--border);border-radius:16px;padding:2rem;background:var(--paper);transition:transform 0.25s,box-shadow 0.25s;}
+.tcard:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+.tcard-stars{display:flex;gap:3px;margin-bottom:1rem;}
+.tcard-stars span{color:var(--gold);font-size:0.9rem;}
+.tcard-text{font-size:0.9rem;color:var(--slate);line-height:1.8;margin-bottom:1.5rem;font-style:italic;}
+.tcard-author{display:flex;align-items:center;gap:0.75rem;}
+.tcard-avatar{width:38px;height:38px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:700;color:var(--mint);flex-shrink:0;}
+.tcard-name{font-size:0.85rem;font-weight:500;}
+.tcard-role{font-size:0.72rem;color:var(--slate);}
+
+/* FAQ */
+#faq{background:var(--paper);}
+.faq-inner{display:grid;grid-template-columns:1fr 1.6fr;gap:5rem;align-items:start;}
+.faq-left p{color:var(--slate);font-size:0.95rem;line-height:1.85;margin-top:1rem;}
+.faq-list{display:flex;flex-direction:column;gap:0;}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-item:first-child{border-top:1px solid var(--border);}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:1.5rem 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-family:inherit;font-size:0.95rem;font-weight:500;color:var(--navy);transition:color 0.2s;gap:1rem;}
+body.ar .faq-q{text-align:right;}
+.faq-q:hover{color:var(--mint);}
+.faq-icon{width:28px;height:28px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.3s;font-size:1rem;color:var(--slate);}
+.faq-item.open .faq-icon{background:var(--mint);border-color:var(--mint);color:var(--navy);transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.3s;}
+.faq-item.open .faq-a{max-height:300px;padding-bottom:1.5rem;}
+.faq-a p{font-size:0.88rem;color:var(--slate);line-height:1.85;}
 
 /* AML */
-#aml{background:var(--navy);color:var(--white);}
+#aml{background:var(--navy);color:#fff;}
 #aml .eyebrow{color:var(--gold);}
 #aml .eyebrow::before{background:var(--gold);}
-#aml h2.display{color:var(--white);margin-bottom:1rem;}
+#aml h2.display{color:#fff;margin-bottom:1rem;}
 #aml h2.display em{color:var(--gold);}
-#aml .aml-intro{color:rgba(255,255,255,0.5);max-width:640px;font-size:1rem;line-height:1.9;margin-bottom:3.5rem;font-weight:300;}
+.aml-intro{color:rgba(255,255,255,0.45);max-width:640px;font-size:1rem;line-height:1.9;margin-bottom:3.5rem;font-weight:300;}
 .aml-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;margin-bottom:3rem;}
 .aml-card{border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:2.25rem;transition:border-color 0.25s,background 0.25s;}
 .aml-card:hover{border-color:rgba(201,168,76,0.3);background:rgba(255,255,255,0.02);}
 .aml-card-icon{font-size:2rem;margin-bottom:1.25rem;display:block;}
-.aml-card h3{font-size:1.1rem;font-weight:500;color:var(--white);margin-bottom:0.75rem;}
-.aml-card p{font-size:0.875rem;color:rgba(255,255,255,0.45);line-height:1.8;margin-bottom:1.25rem;}
-.aml-card a{font-size:0.75rem;color:var(--gold);text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;transition:color 0.2s;display:inline-flex;align-items:center;gap:0.4rem;}
-.aml-card a:hover{color:#fff;}
+.aml-card h3{font-size:1.1rem;font-weight:500;margin-bottom:0.75rem;}
+.aml-card p{font-size:0.875rem;color:rgba(255,255,255,0.4);line-height:1.8;}
 .aml-services{border-top:1px solid rgba(255,255,255,0.06);padding-top:2.75rem;}
-.aml-services h3{font-size:1rem;font-weight:500;color:rgba(255,255,255,0.6);margin-bottom:1.5rem;letter-spacing:0.06em;}
+.aml-services h3{font-size:0.95rem;font-weight:500;color:rgba(255,255,255,0.5);margin-bottom:1.5rem;letter-spacing:0.06em;}
 .aml-services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
 .aml-svc-item{padding:1.5rem;border:1px solid rgba(255,255,255,0.06);border-radius:10px;transition:border-color 0.2s;}
 .aml-svc-item:hover{border-color:rgba(46,196,182,0.2);}
-.aml-svc-item strong{display:block;color:var(--white);font-size:0.9rem;margin-bottom:0.4rem;font-weight:500;}
-.aml-svc-item p{font-size:0.835rem;color:rgba(255,255,255,0.4);line-height:1.7;}
+.aml-svc-item strong{display:block;color:#fff;font-size:0.9rem;margin-bottom:0.4rem;font-weight:500;}
+.aml-svc-item p{font-size:0.835rem;color:rgba(255,255,255,0.38);line-height:1.7;}
 
 /* METHODOLOGY */
 #methodology{background:var(--paper);}
-#methodology h2.display{margin-bottom:5rem;}
 .steps{max-width:700px;}
 .step{display:grid;grid-template-columns:100px 1fr;gap:2rem;padding:2.5rem 0;border-top:1px solid var(--border);align-items:start;transition:padding-left 0.25s;}
 .step:hover{padding-left:0.5rem;}
-body.ar .step{padding-left:0;}
 body.ar .step:hover{padding-left:0;padding-right:0.5rem;}
-.step-tag{font-size:0.6rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--mint);padding-top:0.45rem;display:flex;align-items:center;gap:0.5rem;}
-.step-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--mint);}
-.step h3{font-size:1.3rem;font-weight:500;margin-bottom:0.5rem;letter-spacing:-0.01em;}
+.step-tag{font-size:0.6rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--mint);padding-top:0.4rem;display:flex;align-items:center;gap:0.5rem;}
+.step-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--mint);flex-shrink:0;}
+.step h3{font-size:1.3rem;font-weight:500;margin-bottom:0.5rem;}
 .step p{font-size:0.9rem;color:var(--slate);line-height:1.8;}
 .step:last-child{border-bottom:1px solid var(--border);}
 
 /* ABOUT */
 #about{background:var(--white);}
 .about-inner{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;}
-#about h2.display{max-width:520px;margin-bottom:2rem;}
-#about .about-text p{color:var(--slate);font-size:1rem;line-height:1.9;margin-bottom:1.1rem;}
-.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem;}
-.about-stat-item{padding:1.5rem;border:1px solid var(--border);border-radius:10px;}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:3rem;}
+.about-stat-item{padding:1.5rem;border:1px solid var(--border);border-radius:10px;transition:border-color 0.2s;}
+.about-stat-item:hover{border-color:var(--mint);}
 .about-stat-num{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:var(--mint);line-height:1;display:block;}
-.about-stat-lbl{font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--slate);margin-top:0.35rem;display:block;}
-.badges{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:3rem;}
+.about-stat-lbl{font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--slate);margin-top:0.3rem;display:block;}
+.about-text p{color:var(--slate);font-size:1rem;line-height:1.9;margin-bottom:1.1rem;}
+.badges{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:2.5rem;}
 .badge{font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--slate);padding:0.45rem 1rem;border:1px solid var(--border);border-radius:20px;background:var(--paper);transition:all 0.2s;}
 .badge:hover{border-color:var(--mint);color:var(--mint);}
 
 /* CONTACT */
 #contact{background:var(--paper);}
 .contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;}
-.contact-left h2.display{font-style:italic;color:var(--navy);margin-bottom:1rem;}
-.contact-lead{font-size:1rem;color:var(--slate);max-width:420px;margin-bottom:2.5rem;line-height:1.85;}
-.contact-cta{display:inline-flex;align-items:center;gap:0.75rem;padding:1rem 2rem;background:var(--navy);color:#fff;text-decoration:none;font-size:0.8rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;border-radius:6px;transition:all 0.25s;border:2px solid var(--navy);}
-.contact-cta:hover{background:transparent;color:var(--navy);}
-.contact-right{display:flex;flex-direction:column;gap:2rem;padding-top:0.5rem;}
+.contact-lead{font-size:1rem;color:var(--slate);max-width:420px;margin-bottom:2.5rem;line-height:1.85;margin-top:1rem;}
+.contact-form{display:flex;flex-direction:column;gap:1rem;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.form-group{display:flex;flex-direction:column;gap:0.4rem;}
+.form-group label{font-size:0.65rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--mint);}
+.form-group input,.form-group textarea,.form-group select{border:1px solid var(--border);border-radius:8px;padding:0.75rem 1rem;font-size:0.9rem;font-family:inherit;outline:none;background:var(--white);color:var(--navy);transition:border-color 0.2s;}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--mint);}
+.form-group textarea{resize:vertical;min-height:110px;}
+.form-submit{display:flex;align-items:center;justify-content:center;gap:0.6rem;padding:1rem;background:var(--navy);color:#fff;border:2px solid var(--navy);border-radius:8px;font-size:0.82rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;font-family:inherit;transition:all 0.25s;width:100%;}
+.form-submit:hover{background:transparent;color:var(--navy);}
+.form-success{display:none;background:rgba(46,196,182,0.1);border:1px solid var(--mint);border-radius:10px;padding:1.5rem;text-align:center;color:var(--navy);}
+.form-success h4{font-size:1rem;font-weight:600;margin-bottom:0.3rem;color:var(--mint);}
+.form-success p{font-size:0.875rem;color:var(--slate);}
+.contact-info{display:flex;flex-direction:column;gap:1.75rem;padding-top:0.5rem;}
 .citem{border-bottom:1px solid var(--border);padding-bottom:1.5rem;}
 .citem:last-child{border-bottom:none;}
 .citem label{display:block;font-size:0.6rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--mint);margin-bottom:0.5rem;}
-.citem a,.citem span{font-size:1.05rem;color:var(--navy);text-decoration:none;transition:color 0.2s;font-weight:400;}
+.citem a,.citem span{font-size:1.05rem;color:var(--navy);text-decoration:none;transition:color 0.2s;}
 .citem a:hover{color:var(--mint);}
+.contact-wa{display:inline-flex;align-items:center;gap:0.65rem;padding:0.9rem 1.75rem;background:var(--navy);color:#fff;text-decoration:none;font-size:0.8rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;border-radius:8px;transition:all 0.25s;border:2px solid var(--navy);margin-top:1.5rem;}
+.contact-wa:hover{background:transparent;color:var(--navy);}
 
 /* FOOTER */
-footer{background:var(--navy);padding:1.75rem 4rem;display:flex;justify-content:space-between;align-items:center;}
-.f-brand{font-size:0.75rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);}
-.f-brand span{color:var(--mint);}
-.f-copy{font-size:0.7rem;color:rgba(255,255,255,0.22);}
+footer{background:var(--navy);padding:2.5rem 4rem;}
+.footer-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:2rem;flex-wrap:wrap;gap:2rem;}
+.footer-brand{}
+.footer-logo{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;}
+.footer-logo-mark{width:38px;height:38px;background:rgba(255,255,255,0.06);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:0.85rem;font-weight:700;color:var(--mint);}
+.footer-logo-text{font-size:0.82rem;font-weight:500;color:rgba(255,255,255,0.7);letter-spacing:0.04em;}
+.footer-desc{font-size:0.8rem;color:rgba(255,255,255,0.25);max-width:260px;line-height:1.7;}
+.footer-links{display:flex;gap:4rem;}
+.footer-col h4{font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:1rem;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.6rem;}
+.footer-col ul li a{font-size:0.82rem;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s;}
+.footer-col ul li a:hover{color:var(--mint);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.05);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.footer-copy{font-size:0.7rem;color:rgba(255,255,255,0.2);}
+.footer-wa{display:inline-flex;align-items:center;gap:0.5rem;padding:0.5rem 1.25rem;background:rgba(46,196,182,0.1);border:1px solid rgba(46,196,182,0.2);color:var(--mint);text-decoration:none;font-size:0.72rem;font-weight:500;border-radius:20px;transition:all 0.2s;}
+.footer-wa:hover{background:var(--mint);color:var(--navy);}
 
-/* AI CHAT */
+/* CHAT */
 .chat-bubble{position:fixed;bottom:2rem;left:2rem;z-index:500;}
 body.ar .chat-bubble{left:auto;right:2rem;}
 .chat-btn{width:58px;height:58px;border-radius:50%;background:var(--mint);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(46,196,182,0.45);transition:transform 0.2s,box-shadow 0.2s;}
@@ -230,11 +328,11 @@ body.ar .chat-bubble{left:auto;right:2rem;}
 body.ar .chat-window{left:auto;right:2rem;}
 .chat-window.open{display:flex;}
 .chat-header{background:var(--navy);padding:1.1rem 1.25rem;display:flex;align-items:center;gap:0.75rem;}
-.chat-avatar{width:38px;height:38px;border-radius:50%;background:var(--mint);display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:700;color:var(--navy);flex-shrink:0;}
+.chat-avatar{width:38px;height:38px;border-radius:50%;background:var(--mint);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy);flex-shrink:0;}
 .chat-header-info{flex:1;}
 .chat-header-name{font-size:0.9rem;font-weight:500;color:#fff;}
 .chat-header-status{font-size:0.7rem;color:rgba(255,255,255,0.4);display:flex;align-items:center;gap:4px;}
-.chat-header-status::before{content:'';width:6px;height:6px;border-radius:50%;background:#2ecc71;display:inline-block;animation:pulse 2.5s infinite;}
+.chat-header-status::before{content:'';width:6px;height:6px;border-radius:50%;background:#2ecc71;display:inline-block;}
 .chat-close{background:rgba(255,255,255,0.08);border:none;cursor:pointer;color:rgba(255,255,255,0.6);width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.9rem;transition:background 0.2s;}
 .chat-close:hover{background:rgba(255,255,255,0.15);}
 .chat-messages{flex:1;overflow-y:auto;padding:1.1rem;display:flex;flex-direction:column;gap:0.75rem;}
@@ -247,7 +345,7 @@ body.ar .chat-window{left:auto;right:2rem;}
 .chat-input-area{padding:0.75rem;border-top:1px solid var(--border);display:flex;gap:0.5rem;}
 .chat-input{flex:1;border:1px solid var(--border);border-radius:10px;padding:0.55rem 0.9rem;font-size:0.875rem;outline:none;font-family:inherit;background:var(--paper);}
 .chat-input:focus{border-color:var(--mint);background:#fff;}
-.chat-send{background:var(--mint);border:none;border-radius:10px;width:38px;height:38px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;}
+.chat-send{background:var(--mint);border:none;border-radius:10px;width:38px;height:38px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;flex-shrink:0;}
 .chat-send:hover{background:var(--navy);}
 .chat-send svg{width:16px;height:16px;fill:#fff;}
 .typing{display:flex;gap:4px;align-items:center;padding:0.7rem 1rem;}
@@ -255,6 +353,11 @@ body.ar .chat-window{left:auto;right:2rem;}
 .typing span:nth-child(2){animation-delay:0.2s;}
 .typing span:nth-child(3){animation-delay:0.4s;}
 @keyframes typing{0%,60%,100%{transform:translateY(0);}30%{transform:translateY(-7px);}}
+
+/* SCROLL TO TOP */
+.scroll-top{position:fixed;bottom:2rem;right:2rem;z-index:400;width:42px;height:42px;border-radius:50%;background:var(--navy);border:1px solid rgba(255,255,255,0.1);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;transform:translateY(10px);transition:all 0.3s;font-size:1rem;}
+.scroll-top.visible{opacity:1;transform:translateY(0);}
+.scroll-top:hover{background:var(--mint);color:var(--navy);}
 
 /* ANIMATIONS */
 .fade-up{opacity:0;transform:translateY(28px);transition:opacity 0.65s cubic-bezier(0.25,0.46,0.45,0.94),transform 0.65s cubic-bezier(0.25,0.46,0.45,0.94);}
@@ -264,43 +367,72 @@ body.ar .chat-window{left:auto;right:2rem;}
 .hero h1{animation:fadeUp 0.6s 0.12s ease both;}
 .hero-sub{animation:fadeUp 0.6s 0.22s ease both;}
 .hero-actions{animation:fadeUp 0.6s 0.32s ease both;}
-.hero-sidebar{animation:fadeUp 0.6s 0.42s ease both;}
 
 /* MOBILE */
 @media(max-width:900px){
   nav{padding:1rem 1.5rem;}
-  .nav-links{display:none;}
+  .nav-links,.nav-cta{display:none;}
+  .hamburger{display:flex;}
+  .mobile-menu{position:fixed;inset:0;background:var(--white);z-index:300;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;transform:translateX(-100%);transition:transform 0.3s;}
+  .mobile-menu.open{transform:translateX(0);}
+  .mobile-menu a{font-size:1.5rem;font-weight:500;text-decoration:none;color:var(--navy);}
+  .mobile-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;font-size:1.5rem;cursor:pointer;}
   section{padding:4.5rem 1.5rem;}
   .hero{padding:7rem 1.5rem 4rem;}
-  .hero-sidebar{display:none;}
-  .services-grid,.pricing-grid,.aml-grid,.aml-services-grid{grid-template-columns:1fr;}
-  .about-inner,.contact-inner,.pricing-header{grid-template-columns:1fr;}
-  .hero-actions{flex-direction:column;align-items:flex-start;}
-  footer{flex-direction:column;gap:0.5rem;text-align:center;padding:1.5rem;}
+  .hero-sidebar,.trust-bar .trust-items{display:none;}
+  .trust-bar{padding:1rem 1.5rem;}
+  .services-grid,.pricing-grid,.aml-grid,.aml-services-grid,.testimonials-grid,.footer-links{grid-template-columns:1fr;}
+  .about-inner,.contact-inner,.calc-inner,.why-grid,.faq-inner,.pricing-header,.section-header{grid-template-columns:1fr;}
+  .hero-actions,.form-row{flex-direction:column;}
+  .form-row{grid-template-columns:1fr;}
+  footer{padding:2rem 1.5rem;}
+  .footer-top{flex-direction:column;}
+  .footer-bottom{flex-direction:column;text-align:center;}
   .chat-window{width:calc(100vw - 2rem);left:1rem;}
   body.ar .chat-window{right:1rem;left:1rem;}
+  .why-card-float{position:relative;bottom:auto;right:auto;margin-top:1rem;}
+  body.ar .why-card-float{left:auto;}
   .about-stats{grid-template-columns:1fr 1fr;}
-  #services .section-header{flex-direction:column;align-items:flex-start;}
+  .why-items{grid-template-columns:1fr;}
 }
 </style>
 </head>
 <body>
 
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMobileMenu()">✕</button>
+  <a href="#services" onclick="closeMobileMenu()" data-en="Services" data-ar="الخدمات">Services</a>
+  <a href="#pricing" onclick="closeMobileMenu()" data-en="Pricing" data-ar="الأسعار">Pricing</a>
+  <a href="#why" onclick="closeMobileMenu()" data-en="Why ABA" data-ar="لماذا ABA">Why ABA</a>
+  <a href="#faq" onclick="closeMobileMenu()" data-en="FAQ" data-ar="الأسئلة الشائعة">FAQ</a>
+  <a href="#contact" onclick="closeMobileMenu()" data-en="Contact" data-ar="تواصل">Contact</a>
+</div>
+
 <nav id="mainNav">
   <a href="#" class="nav-logo">
-    <span class="nav-logo-dot"></span>
-    Amr Mohamed <span>/ Bookkeeping</span>
+    <div class="nav-logo-mark">ABA</div>
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">Amr Mohamed</span>
+      <span class="nav-logo-sub" data-en="Bookkeeping & Accounting" data-ar="محاسبة وحفظ دفاتر">Bookkeeping & Accounting</span>
+    </div>
   </a>
   <ul class="nav-links">
     <li><a href="#services" data-en="Services" data-ar="الخدمات">Services</a></li>
     <li><a href="#pricing" data-en="Pricing" data-ar="الأسعار">Pricing</a></li>
-    <li><a href="#aml" data-en="AML/CFT" data-ar="غسل الأموال">AML/CFT</a></li>
-    <li><a href="#methodology" data-en="Methodology" data-ar="المنهجية">Methodology</a></li>
-    <li><a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a></li>
+    <li><a href="#why" data-en="Why ABA" data-ar="لماذا ABA">Why ABA</a></li>
+    <li><a href="#calculator" data-en="Calculator" data-ar="حاسبة السعر">Calculator</a></li>
+    <li><a href="#faq" data-en="FAQ" data-ar="أسئلة شائعة">FAQ</a></li>
   </ul>
-  <div class="lang-toggle">
-    <button class="lang-btn active" onclick="setLang('en')">EN</button>
-    <button class="lang-btn" onclick="setLang('ar')">AR</button>
+  <div style="display:flex;align-items:center;">
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('ar')">AR</button>
+    </div>
+    <a href="#contact" class="nav-cta" data-en="Get started →" data-ar="ابدأ الآن →">Get started →</a>
+    <button class="hamburger" onclick="openMobileMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
@@ -308,24 +440,37 @@ body.ar .chat-window{left:auto;right:2rem;}
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
-  <div class="hero-grid-lines"></div>
+  <div class="hero-grid"></div>
   <div class="hero-content">
-    <p class="hero-eyebrow" data-en="Professional Bookkeeping — UAE" data-ar="محاسبة احترافية — الإمارات">Professional Bookkeeping — UAE</p>
+    <p class="hero-eyebrow" data-en="ABA — Professional Bookkeeping · UAE" data-ar="ABA — محاسبة احترافية · الإمارات">ABA — Professional Bookkeeping · UAE</p>
     <h1 data-en="Clean books.<br><em>Clear numbers.</em><br>Better decisions." data-ar="دفاتر نظيفة.<br><em>أرقام واضحة.</em><br>قرارات أفضل.">Clean books.<br><em>Clear numbers.</em><br>Better decisions.</h1>
-    <p class="hero-sub" data-en="Bookkeeping services built for businesses that need accurate records, zero surprises, and financial reports they can act on." data-ar="خدمات محاسبية للشركات التي تحتاج إلى سجلات دقيقة وتقارير مالية شفافة كل شهر.">Bookkeeping services built for businesses that need accurate records, zero surprises, and financial reports they can act on.</p>
+    <p class="hero-sub" data-en="Bookkeeping services built for UAE businesses that need accurate records, zero surprises, and financial reports they can act on." data-ar="خدمات محاسبية للشركات الإماراتية التي تحتاج إلى سجلات دقيقة وتقارير مالية شفافة كل شهر.">Bookkeeping services built for UAE businesses that need accurate records, zero surprises, and financial reports they can act on.</p>
     <div class="hero-actions">
-      <a href="#contact" class="btn-primary" data-en="Get in touch →" data-ar="تواصل معنا →">Get in touch →</a>
-      <a href="#services" class="btn-ghost" data-en="Explore services" data-ar="استكشف الخدمات">Explore services</a>
+      <a href="#contact" class="btn-primary" data-en="Get started →" data-ar="ابدأ الآن →">Get started →</a>
+      <a href="#calculator" class="btn-ghost" data-en="Calculate your price" data-ar="احسب سعرك">Calculate your price</a>
     </div>
   </div>
   <div class="hero-sidebar">
-    <div class="stat"><span class="stat-num">100%</span><span class="stat-lbl" data-en="Reconciliation accuracy" data-ar="دقة في المطابقة">Reconciliation accuracy</span></div>
-    <div class="stat-divider"></div>
-    <div class="stat"><span class="stat-num">10th</span><span class="stat-lbl" data-en="Reports delivered by" data-ar="موعد التقارير">Reports delivered by</span></div>
-    <div class="stat-divider"></div>
-    <div class="stat"><span class="stat-num">Est.</span><span class="stat-lbl" data-en="2024 — Sharjah, UAE" data-ar="2024 — الشارقة">2024 — Sharjah, UAE</span></div>
+    <div class="stat"><span class="stat-num">100%</span><span class="stat-lbl" data-en="Accuracy guaranteed" data-ar="دقة مضمونة">Accuracy guaranteed</span></div>
+    <div class="stat-div"></div>
+    <div class="stat"><span class="stat-num">10th</span><span class="stat-lbl" data-en="Reports by every month" data-ar="تقارير كل شهر">Reports by every month</span></div>
+    <div class="stat-div"></div>
+    <div class="stat"><span class="stat-num">AED</span><span class="stat-lbl" data-en="Starting from 500/mo" data-ar="يبدأ من 500/شهر">Starting from 500/mo</span></div>
   </div>
 </section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <span class="trust-label" data-en="Trusted tools" data-ar="أدوات موثوقة">Trusted tools</span>
+  <div class="trust-items">
+    <span class="trust-item">Odoo</span>
+    <span class="trust-item">Zoho Books</span>
+    <span class="trust-item">Xero</span>
+    <span class="trust-item">QuickBooks</span>
+    <span class="trust-item" data-en="UAE VAT Compliant" data-ar="متوافق مع الضريبة">UAE VAT Compliant</span>
+    <span class="trust-item" data-en="AML Registered" data-ar="مسجل AML">AML Registered</span>
+  </div>
+</div>
 
 <!-- SERVICES -->
 <section id="services">
@@ -334,74 +479,92 @@ body.ar .chat-window{left:auto;right:2rem;}
       <div class="eyebrow fade-up" data-en="Services" data-ar="الخدمات">Services</div>
       <h2 class="display fade-up" data-en="Everything you need<br><em>under one roof.</em>" data-ar="كل ما تحتاجه<br><em>تحت سقف واحد.</em>">Everything you need<br><em>under one roof.</em></h2>
     </div>
-    <span class="services-count fade-up" data-en="06 services" data-ar="٠٦ خدمات">06 services</span>
+    <span class="services-count fade-up">06 services</span>
   </div>
   <div class="services-grid">
-    <div class="svc fade-up">
-      <div class="svc-img-wrap">
-        <img class="svc-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Monthly Bookkeeping" loading="lazy">
-        <div class="svc-num-overlay">01</div>
-      </div>
-      <div class="svc-body">
-        <h3 data-en="Monthly Bookkeeping" data-ar="حفظ الدفاتر الشهري">Monthly Bookkeeping</h3>
-        <p data-en="Full transaction recording from banks, cards, and payment processors every month." data-ar="تسجيل كامل للمعاملات من البنوك والبطاقات وأنظمة الدفع كل شهر.">Full transaction recording from banks, cards, and payment processors every month.</p>
-        <span class="svc-arrow" data-en="Learn more →" data-ar="اقرأ أكثر →">Learn more →</span>
-      </div>
-    </div>
-    <div class="svc fade-up">
-      <div class="svc-img-wrap">
-        <img class="svc-img" src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600&q=80" alt="Bank Reconciliation" loading="lazy">
-        <div class="svc-num-overlay">02</div>
-      </div>
-      <div class="svc-body">
-        <h3 data-en="Bank Reconciliation" data-ar="مطابقة الحسابات">Bank Reconciliation</h3>
-        <p data-en="Monthly reconciliation until every balance ties to the cent." data-ar="مطابقة شهرية حتى يتطابق كل رصيد إلى آخر فلس.">Monthly reconciliation until every balance ties to the cent.</p>
-        <span class="svc-arrow" data-en="Learn more →" data-ar="اقرأ أكثر →">Learn more →</span>
-      </div>
-    </div>
-    <div class="svc fade-up">
-      <div class="svc-img-wrap">
-        <img class="svc-img" src="https://images.unsplash.com/photo-1543286386-713bdd548da4?w=600&q=80" alt="Financial Reporting" loading="lazy">
-        <div class="svc-num-overlay">03</div>
-      </div>
-      <div class="svc-body">
-        <h3 data-en="Financial Reporting" data-ar="التقارير المالية">Financial Reporting</h3>
-        <p data-en="P&L, balance sheet, and cash flow — delivered by the 10th of each month." data-ar="الأرباح والخسائر، الميزانية، والتدفق النقدي — بحلول العاشر من كل شهر.">P&L, balance sheet, and cash flow — delivered by the 10th of each month.</p>
-        <span class="svc-arrow" data-en="Learn more →" data-ar="اقرأ أكثر →">Learn more →</span>
+    <div class="svc fade-up"><div class="svc-img-wrap"><img class="svc-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="" loading="lazy"><div class="svc-num-overlay">01</div></div><div class="svc-body"><h3 data-en="Monthly Bookkeeping" data-ar="حفظ الدفاتر الشهري">Monthly Bookkeeping</h3><p data-en="Full transaction recording from banks, cards, and payment processors every month." data-ar="تسجيل كامل للمعاملات من البنوك والبطاقات وأنظمة الدفع كل شهر.">Full transaction recording from banks, cards, and payment processors every month.</p><span class="svc-arrow">Learn more →</span></div></div>
+    <div class="svc fade-up"><div class="svc-img-wrap"><img class="svc-img" src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600&q=80" alt="" loading="lazy"><div class="svc-num-overlay">02</div></div><div class="svc-body"><h3 data-en="Bank Reconciliation" data-ar="مطابقة الحسابات">Bank Reconciliation</h3><p data-en="Monthly reconciliation until every balance ties to the cent." data-ar="مطابقة شهرية حتى يتطابق كل رصيد إلى آخر فلس.">Monthly reconciliation until every balance ties to the cent.</p><span class="svc-arrow">Learn more →</span></div></div>
+    <div class="svc fade-up"><div class="svc-img-wrap"><img class="svc-img" src="https://images.unsplash.com/photo-1543286386-713bdd548da4?w=600&q=80" alt="" loading="lazy"><div class="svc-num-overlay">03</div></div><div class="svc-body"><h3 data-en="Financial Reporting" data-ar="التقارير المالية">Financial Reporting</h3><p data-en="P&L, balance sheet, and cash flow — delivered by the 10th of each month." data-ar="الأرباح والخسائر، الميزانية، والتدفق النقدي — بحلول العاشر من كل شهر.">P&L, balance sheet, and cash flow — delivered by the 10th of each month.</p><span class="svc-arrow">Learn more →</span></div></div>
+    <div class="svc fade-up"><div class="svc-img-wrap"><img class="svc-img" src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&q=80" alt="" loading="lazy"><div class="svc-num-overlay">04</div></div><div class="svc-body"><h3 data-en="VAT Preparation" data-ar="ضريبة القيمة المضافة">VAT Preparation</h3><p data-en="Filing-ready VAT returns compliant with UAE FTA requirements." data-ar="إقرارات ضريبة القيمة المضافة وفق متطلبات الهيئة الاتحادية للضرائب.">Filing-ready VAT returns compliant with UAE FTA requirements.</p><span class="svc-arrow">Learn more →</span></div></div>
+    <div class="svc fade-up"><div class="svc-img-wrap"><img class="svc-img" src="https://images.unsplash.com/photo-1568234928966-359c35dd8327?w=600&q=80" alt="" loading="lazy"><div class="svc-num-overlay">05</div></div><div class="svc-body"><h3 data-en="Catch-Up Bookkeeping" data-ar="تنظيف السجلات المتراكمة">Catch-Up Bookkeeping</h3><p data-en="Backlog clean-up for disorganized or unrecorded transactions." data-ar="ترتيب وتصحيح السجلات المحاسبية المتراكمة بأثر رجعي.">Backlog clean-up for disorganized or unrecorded transactions.</p><span class="svc-arrow">Learn more →</span></div></div>
+    <div class="svc fade-up"><div class="svc-img-wrap"><img class="svc-img" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80" alt="" loading="lazy"><div class="svc-num-overlay">06</div></div><div class="svc-body"><h3 data-en="Financial Advisory" data-ar="استشارات مالية">Financial Advisory</h3><p data-en="Performance analysis and recommendations to improve cash flow and reduce costs." data-ar="تحليل الأداء المالي وتقديم توصيات لتحسين التدفق النقدي.">Performance analysis and recommendations to improve cash flow and reduce costs.</p><span class="svc-arrow">Learn more →</span></div></div>
+  </div>
+</section>
+
+<!-- WHY ABA -->
+<section id="why">
+  <div class="why-grid">
+    <div class="why-left">
+      <div class="eyebrow fade-up" data-en="Why ABA" data-ar="لماذا ABA">Why ABA</div>
+      <h2 class="display fade-up" data-en="Your books deserve<br><em>a specialist.</em>" data-ar="دفاترك تستحق<br><em>متخصصاً حقيقياً.</em>">Your books deserve<br><em>a specialist.</em></h2>
+      <p class="fade-up" data-en="Most businesses in the UAE are managing their finances reactively — catching errors after the fact, filing VAT late, or operating without a clear picture of their cash flow. ABA changes that." data-ar="معظم الشركات في الإمارات تدير مالياتها بشكل رد فعل — تكتشف الأخطاء متأخرة، أو تقدم الضريبة متأخراً. ABA يغير هذا.">Most businesses in the UAE are managing their finances reactively — catching errors after the fact, filing VAT late, or operating without a clear picture of their cash flow. ABA changes that.</p>
+      <div class="why-items fade-up">
+        <div class="why-item"><span class="why-icon">🎯</span><h4 data-en="Dedicated specialist" data-ar="متخصص مخصص">Dedicated specialist</h4><p data-en="Not a shared team — your own bookkeeper who knows your business." data-ar="ليس فريقاً مشتركاً — محاسبك الخاص الذي يعرف نشاطك.">Not a shared team — your own bookkeeper who knows your business.</p></div>
+        <div class="why-item"><span class="why-icon">📅</span><h4 data-en="Always on time" data-ar="دائماً في الوقت">Always on time</h4><p data-en="Reports delivered by the 10th, every single month. No delays." data-ar="تقارير تصلك بحلول العاشر، كل شهر. بدون تأخير.">Reports delivered by the 10th, every single month. No delays.</p></div>
+        <div class="why-item"><span class="why-icon">🇦🇪</span><h4 data-en="UAE expertise" data-ar="خبرة إماراتية">UAE expertise</h4><p data-en="Deep knowledge of UAE VAT, FTA, and AML compliance requirements." data-ar="معرفة عميقة بضريبة القيمة المضافة الإماراتية ومتطلبات الامتثال.">Deep knowledge of UAE VAT, FTA, and AML compliance requirements.</p></div>
+        <div class="why-item"><span class="why-icon">💬</span><h4 data-en="Always reachable" data-ar="دائماً متاح">Always reachable</h4><p data-en="WhatsApp, email, or call — real answers, not ticket queues." data-ar="واتساب أو بريد إلكتروني أو مكالمة — إجابات حقيقية، لا قوائم انتظار.">WhatsApp, email, or call — real answers, not ticket queues.</p></div>
       </div>
     </div>
-    <div class="svc fade-up">
-      <div class="svc-img-wrap">
-        <img class="svc-img" src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&q=80" alt="VAT Preparation" loading="lazy">
-        <div class="svc-num-overlay">04</div>
+    <div class="why-visual fade-up">
+      <div class="why-card-main">
+        <h3 data-en="In-house accountant<br>vs. <em>ABA</em>" data-ar="محاسب داخلي<br>مقابل <em>ABA</em>">In-house accountant<br>vs. <em>ABA</em></h3>
+        <div class="why-stats">
+          <div class="why-stat"><span class="why-stat-num">AED 8K+</span><span class="why-stat-lbl" data-en="Average in-house cost/mo" data-ar="تكلفة المحاسب الداخلي">Average in-house cost/mo</span></div>
+          <div class="why-stat"><span class="why-stat-num">AED 500</span><span class="why-stat-lbl" data-en="ABA starts from /mo" data-ar="ABA يبدأ من /شهر">ABA starts from /mo</span></div>
+          <div class="why-stat"><span class="why-stat-num">0</span><span class="why-stat-lbl" data-en="Hidden fees ever" data-ar="رسوم مخفية">Hidden fees ever</span></div>
+          <div class="why-stat"><span class="why-stat-num">10th</span><span class="why-stat-lbl" data-en="Reports guaranteed by" data-ar="تقارير مضمونة بحلول">Reports guaranteed by</span></div>
+        </div>
       </div>
-      <div class="svc-body">
-        <h3 data-en="VAT Preparation" data-ar="ضريبة القيمة المضافة">VAT Preparation</h3>
-        <p data-en="Filing-ready VAT returns compliant with UAE FTA requirements." data-ar="إقرارات ضريبة القيمة المضافة وفق متطلبات الهيئة الاتحادية للضرائب.">Filing-ready VAT returns compliant with UAE FTA requirements.</p>
-        <span class="svc-arrow" data-en="Learn more →" data-ar="اقرأ أكثر →">Learn more →</span>
-      </div>
-    </div>
-    <div class="svc fade-up">
-      <div class="svc-img-wrap">
-        <img class="svc-img" src="https://images.unsplash.com/photo-1568234928966-359c35dd8327?w=600&q=80" alt="Catch-Up Bookkeeping" loading="lazy">
-        <div class="svc-num-overlay">05</div>
-      </div>
-      <div class="svc-body">
-        <h3 data-en="Catch-Up Bookkeeping" data-ar="تنظيف السجلات المتراكمة">Catch-Up Bookkeeping</h3>
-        <p data-en="Backlog clean-up for disorganized or unrecorded transactions." data-ar="ترتيب وتصحيح السجلات المحاسبية المتراكمة بأثر رجعي.">Backlog clean-up for disorganized or unrecorded transactions.</p>
-        <span class="svc-arrow" data-en="Learn more →" data-ar="اقرأ أكثر →">Learn more →</span>
+      <div class="why-card-float">
+        <div class="why-card-float-label" data-en="You save on average" data-ar="توفر في المتوسط">You save on average</div>
+        <div class="why-card-float-val">AED 7,500 <span data-en="/ mo" data-ar="/ شهر">/ mo</span></div>
       </div>
     </div>
-    <div class="svc fade-up">
-      <div class="svc-img-wrap">
-        <img class="svc-img" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80" alt="Financial Advisory" loading="lazy">
-        <div class="svc-num-overlay">06</div>
+  </div>
+</section>
+
+<!-- PRICE CALCULATOR -->
+<section id="calculator">
+  <div class="eyebrow fade-up" data-en="Price Calculator" data-ar="حاسبة السعر">Price Calculator</div>
+  <h2 class="display fade-up" data-en="Build your own<br><em>package.</em>" data-ar="صمّم باقتك<br><em>بنفسك.</em>">Build your own<br><em>package.</em></h2>
+  <div class="calc-inner" style="margin-top:3rem;">
+    <div class="calc-left">
+      <p class="fade-up" data-en="Select the services you need and see your price instantly. No calls required." data-ar="اختر الخدمات التي تحتاجها وشاهد سعرك فوراً. لا حاجة لمكالمة.">Select the services you need and see your price instantly. No calls required.</p>
+      <div class="calc-form fade-up" id="calcForm">
+        <div class="calc-item" data-price="200" data-key="bookkeeping" onclick="toggleCalc(this)">
+          <div class="calc-item-left"><span class="calc-item-icon">📒</span><div><div class="calc-item-name" data-en="Monthly Bookkeeping" data-ar="حفظ الدفاتر الشهري">Monthly Bookkeeping</div><div class="calc-item-sub">AED 200/mo</div></div></div>
+          <div class="calc-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
+        <div class="calc-item" data-price="100" data-key="reconciliation" onclick="toggleCalc(this)">
+          <div class="calc-item-left"><span class="calc-item-icon">🏦</span><div><div class="calc-item-name" data-en="Bank Reconciliation" data-ar="مطابقة الحسابات">Bank Reconciliation</div><div class="calc-item-sub">AED 100/mo</div></div></div>
+          <div class="calc-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
+        <div class="calc-item" data-price="150" data-key="reporting" onclick="toggleCalc(this)">
+          <div class="calc-item-left"><span class="calc-item-icon">📊</span><div><div class="calc-item-name" data-en="Financial Reports" data-ar="التقارير المالية">Financial Reports</div><div class="calc-item-sub">AED 150/mo</div></div></div>
+          <div class="calc-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
+        <div class="calc-item" data-price="200" data-key="vat" onclick="toggleCalc(this)">
+          <div class="calc-item-left"><span class="calc-item-icon">🧾</span><div><div class="calc-item-name" data-en="VAT Filing" data-ar="تقديم ضريبة القيمة المضافة">VAT Filing</div><div class="calc-item-sub">AED 200/mo</div></div></div>
+          <div class="calc-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
+        <div class="calc-item" data-price="150" data-key="cashflow" onclick="toggleCalc(this)">
+          <div class="calc-item-left"><span class="calc-item-icon">💵</span><div><div class="calc-item-name" data-en="Cash Flow Statement" data-ar="تقرير التدفق النقدي">Cash Flow Statement</div><div class="calc-item-sub">AED 150/mo</div></div></div>
+          <div class="calc-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
+        <div class="calc-item" data-price="200" data-key="advisory" onclick="toggleCalc(this)">
+          <div class="calc-item-left"><span class="calc-item-icon">💡</span><div><div class="calc-item-name" data-en="Financial Advisory" data-ar="استشارات مالية">Financial Advisory</div><div class="calc-item-sub">AED 200/mo</div></div></div>
+          <div class="calc-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
       </div>
-      <div class="svc-body">
-        <h3 data-en="Financial Advisory" data-ar="استشارات مالية">Financial Advisory</h3>
-        <p data-en="Performance analysis and recommendations to improve cash flow and reduce costs." data-ar="تحليل الأداء المالي وتقديم توصيات لتحسين التدفق النقدي.">Performance analysis and recommendations to improve cash flow and reduce costs.</p>
-        <span class="svc-arrow" data-en="Learn more →" data-ar="اقرأ أكثر →">Learn more →</span>
+    </div>
+    <div class="calc-result fade-up">
+      <div class="calc-result-label" data-en="Your estimated monthly price" data-ar="سعرك الشهري التقديري">Your estimated monthly price</div>
+      <div class="calc-result-price" id="calcPrice">AED 0</div>
+      <div class="calc-result-sub" data-en="/ month · no hidden fees" data-ar="/ شهر · بدون رسوم مخفية">/ month · no hidden fees</div>
+      <div class="calc-breakdown" id="calcBreakdown">
+        <p class="calc-empty" data-en="Select services above to build your price." data-ar="اختر الخدمات أعلاه لتحديد سعرك.">Select services above to build your price.</p>
       </div>
+      <a href="#" id="calcCta" onclick="sendCalcToWhatsApp();return false;" class="calc-cta" data-en="📲 Send quote to WhatsApp" data-ar="📲 أرسل العرض على واتساب">📲 Send quote to WhatsApp</a>
     </div>
   </div>
 </section>
@@ -413,17 +576,15 @@ body.ar .chat-window{left:auto;right:2rem;}
       <div class="eyebrow" data-en="Pricing" data-ar="الأسعار">Pricing</div>
       <h2 class="display" data-en="Simple, transparent<br><em>pricing.</em>" data-ar="أسعار واضحة<br><em>بدون مفاجآت.</em>">Simple, transparent<br><em>pricing.</em></h2>
     </div>
-    <p class="pricing-note" data-en="No hidden fees. No surprises. Cancel anytime. All packages include a free onboarding call to understand your business and set up your chart of accounts." data-ar="لا رسوم مخفية. لا مفاجآت. إلغاء في أي وقت. جميع الباقات تشمل مكالمة تأهيل مجانية لفهم نشاطك وإعداد دليل الحسابات.">No hidden fees. No surprises. Cancel anytime. All packages include a free onboarding call to understand your business and set up your chart of accounts.</p>
+    <p class="pricing-note" data-en="No hidden fees. No surprises. Cancel anytime. All packages include a free onboarding call to understand your business and set up your accounts." data-ar="لا رسوم مخفية. لا مفاجآت. إلغاء في أي وقت. جميع الباقات تشمل مكالمة تأهيل مجانية.">No hidden fees. No surprises. Cancel anytime. All packages include a free onboarding call to understand your business and set up your accounts.</p>
   </div>
   <div class="pricing-grid">
-
-    <!-- BASIC -->
     <div class="plan fade-up">
-      <p class="plan-name" data-en="Basic" data-ar="الأساسية">Basic</p>
+      <p class="plan-name">Basic</p>
       <p class="plan-price">AED 500<span class="plan-price-sub" data-en=" /month" data-ar=" /شهر"> /month</span></p>
       <hr class="plan-divider">
       <ul class="plan-features">
-        <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5"/><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Monthly bookkeeping" data-ar="حفظ الدفاتر الشهري">Monthly bookkeeping</span></li>
+        <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Monthly bookkeeping" data-ar="حفظ الدفاتر الشهري">Monthly bookkeeping</span></li>
         <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Bank reconciliation" data-ar="مطابقة الحسابات">Bank reconciliation</span></li>
         <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Monthly P&L report" data-ar="تقرير الأرباح والخسائر">Monthly P&L report</span></li>
         <li class="off"><span class="feat-check off"><svg viewBox="0 0 12 12"><path d="M3 6h6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></span><span data-en="VAT filing" data-ar="تقديم ضريبة القيمة المضافة">VAT filing</span></li>
@@ -433,11 +594,9 @@ body.ar .chat-window{left:auto;right:2rem;}
       <a href="#" onclick="selectPlan('basic');return false;" class="plan-btn" data-en="Get started" data-ar="ابدأ الآن">Get started</a>
       <p class="plan-value" data-en="Ideal for startups & freelancers" data-ar="مثالي للشركات الناشئة والمستقلين">Ideal for startups & freelancers</p>
     </div>
-
-    <!-- PROFESSIONAL -->
     <div class="plan featured fade-up">
       <div class="plan-badge" data-en="Most popular" data-ar="الأكثر طلباً">Most popular</div>
-      <p class="plan-name" data-en="Professional" data-ar="الاحترافية">Professional</p>
+      <p class="plan-name">Professional</p>
       <p class="plan-price">AED 1,000<span class="plan-price-sub" data-en=" /month" data-ar=" /شهر"> /month</span></p>
       <hr class="plan-divider">
       <ul class="plan-features">
@@ -451,10 +610,8 @@ body.ar .chat-window{left:auto;right:2rem;}
       <a href="#" onclick="selectPlan('professional');return false;" class="plan-btn" data-en="Get started" data-ar="ابدأ الآن">Get started</a>
       <p class="plan-value" data-en="Best for growing SMEs" data-ar="الأفضل للشركات المتنامية">Best for growing SMEs</p>
     </div>
-
-    <!-- COMPLETE -->
     <div class="plan fade-up">
-      <p class="plan-name" data-en="Complete" data-ar="الشاملة">Complete</p>
+      <p class="plan-name">Complete</p>
       <p class="plan-price">AED 1,500<span class="plan-price-sub" data-en=" /month" data-ar=" /شهر"> /month</span></p>
       <hr class="plan-divider">
       <ul class="plan-features">
@@ -471,38 +628,81 @@ body.ar .chat-window{left:auto;right:2rem;}
   </div>
 </section>
 
-<!-- AML/CFT -->
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="eyebrow fade-up" data-en="Testimonials" data-ar="آراء العملاء">Testimonials</div>
+  <h2 class="display fade-up" data-en="What our clients<br><em>say about us.</em>" data-ar="ما يقوله<br><em>عملاؤنا.</em>">What our clients<br><em>say about us.</em></h2>
+  <div class="testimonials-grid">
+    <div class="tcard fade-up">
+      <div class="tcard-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <p class="tcard-text" data-en='"ABA transformed how I see my business finances. I finally understand where my money goes every month. Worth every dirham."' data-ar='"ABA غيّر طريقة رؤيتي لمالية عملي. أخيراً أفهم أين تذهب أموالي كل شهر. يستحق كل درهم."'>"ABA transformed how I see my business finances. I finally understand where my money goes every month. Worth every dirham."</p>
+      <div class="tcard-author"><div class="tcard-avatar">KA</div><div><div class="tcard-name">Khalid Al Rashidi</div><div class="tcard-role" data-en="Trading Company · Dubai" data-ar="شركة تجارية · دبي">Trading Company · Dubai</div></div></div>
+    </div>
+    <div class="tcard fade-up">
+      <div class="tcard-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <p class="tcard-text" data-en='"Reports always on time, VAT filing handled perfectly. I stopped worrying about compliance and started focusing on growth."' data-ar='"تقارير دائماً في الوقت، وضريبة القيمة المضافة تُعالج باحترافية. توقفت عن القلق من الامتثال وبدأت في التركيز على النمو."'>"Reports always on time, VAT filing handled perfectly. I stopped worrying about compliance and started focusing on growth."</p>
+      <div class="tcard-author"><div class="tcard-avatar">SM</div><div><div class="tcard-name">Sara Mahmoud</div><div class="tcard-role" data-en="Retail Shop Owner · Sharjah" data-ar="صاحبة محل تجزئة · الشارقة">Retail Shop Owner · Sharjah</div></div></div>
+    </div>
+    <div class="tcard fade-up">
+      <div class="tcard-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <p class="tcard-text" data-en='"As a freelancer I was drowning in receipts. ABA sorted my entire backlog in a week and set up a clean system. Highly recommend."' data-ar='"كمستقل كنت غارقاً في الإيصالات. ABA رتّب كل سجلاتي المتراكمة في أسبوع وأنشأ نظاماً واضحاً. أنصح به بشدة."'>"As a freelancer I was drowning in receipts. ABA sorted my entire backlog in a week and set up a clean system. Highly recommend."</p>
+      <div class="tcard-author"><div class="tcard-avatar">YN</div><div><div class="tcard-name">Yousef Nasser</div><div class="tcard-role" data-en="Freelance Consultant · Abu Dhabi" data-ar="مستشار مستقل · أبوظبي">Freelance Consultant · Abu Dhabi</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="faq-inner">
+    <div class="faq-left">
+      <div class="eyebrow fade-up" data-en="FAQ" data-ar="أسئلة شائعة">FAQ</div>
+      <h2 class="display fade-up" data-en="Common<br><em>questions.</em>" data-ar="أسئلة<br><em>شائعة.</em>">Common<br><em>questions.</em></h2>
+      <p class="fade-up" data-en="Can't find your answer? Reach Amr directly on WhatsApp." data-ar="لم تجد إجابتك؟ تواصل مع عمرو مباشرة على واتساب.">Can't find your answer? Reach Amr directly on WhatsApp.</p>
+    </div>
+    <div class="faq-list fade-up">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)"><span data-en="How quickly can you start?" data-ar="ما مدى سرعة البداية؟">How quickly can you start?</span><div class="faq-icon">+</div></button>
+        <div class="faq-a"><p data-en="Usually within 48 hours. We start with a free onboarding call to understand your business, then set up your chart of accounts and begin recording transactions." data-ar="عادةً خلال 48 ساعة. نبدأ بمكالمة تأهيل مجانية لفهم نشاطك، ثم نعد دليل الحسابات ونبدأ تسجيل المعاملات.">Usually within 48 hours. We start with a free onboarding call to understand your business, then set up your chart of accounts and begin recording transactions.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)"><span data-en="What accounting software do you use?" data-ar="ما برنامج المحاسبة الذي تستخدمه؟">What accounting software do you use?</span><div class="faq-icon">+</div></button>
+        <div class="faq-a"><p data-en="We work with whatever you prefer — Odoo, Zoho Books, Xero, or QuickBooks. If you don't have software yet, we'll recommend the best fit for your business size and budget." data-ar="نعمل بما تفضله — Odoo أو Zoho Books أو Xero أو QuickBooks. إذا لم يكن لديك برنامج بعد، سنوصي بالأنسب لحجم عملك وميزانيتك.">We work with whatever you prefer — Odoo, Zoho Books, Xero, or QuickBooks. If you don't have software yet, we'll recommend the best fit for your business size and budget.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)"><span data-en="Do you handle VAT registration?" data-ar="هل تتولى التسجيل في ضريبة القيمة المضافة؟">Do you handle VAT registration?</span><div class="faq-icon">+</div></button>
+        <div class="faq-a"><p data-en="Yes. We assist with VAT registration with the UAE FTA, and handle quarterly or monthly VAT return filings depending on your package." data-ar="نعم. نساعد في التسجيل في ضريبة القيمة المضافة لدى الهيئة الاتحادية للضرائب، وندير تقديم الإقرارات الضريبية ربع السنوية أو الشهرية حسب باقتك.">Yes. We assist with VAT registration with the UAE FTA, and handle quarterly or monthly VAT return filings depending on your package.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)"><span data-en="Is my financial data safe?" data-ar="هل بياناتي المالية آمنة؟">Is my financial data safe?</span><div class="faq-icon">+</div></button>
+        <div class="faq-a"><p data-en="Absolutely. All data is handled with strict confidentiality. We use encrypted platforms and never share your information with third parties." data-ar="بالتأكيد. يتم التعامل مع جميع البيانات بسرية تامة. نستخدم منصات مشفرة ولا نشارك معلوماتك مع أطراف ثالثة.">Absolutely. All data is handled with strict confidentiality. We use encrypted platforms and never share your information with third parties.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)"><span data-en="Can I cancel anytime?" data-ar="هل يمكنني الإلغاء في أي وقت؟">Can I cancel anytime?</span><div class="faq-icon">+</div></button>
+        <div class="faq-a"><p data-en="Yes, all plans are month-to-month with no long-term contracts. Simply give us 30 days notice and we'll wrap up your books cleanly." data-ar="نعم، جميع الباقات شهرية بدون عقود طويلة الأجل. فقط أخبرنا قبل 30 يوماً وسنُنهي دفاترك بشكل منظم.">Yes, all plans are month-to-month with no long-term contracts. Simply give us 30 days notice and we'll wrap up your books cleanly.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)"><span data-en="What is AML/CFT and do I need it?" data-ar="ما هو AML/CFT وهل أحتاجه؟">What is AML/CFT and do I need it?</span><div class="faq-icon">+</div></button>
+        <div class="faq-a"><p data-en="Anti-Money Laundering and Combating Financing of Terrorism compliance is mandatory for many UAE businesses (DNFBPs). We help you register with the FIU and Executive Office and stay fully compliant." data-ar="الامتثال لمكافحة غسل الأموال وتمويل الإرهاب إلزامي للعديد من الشركات الإماراتية. نساعدك في التسجيل في وحدة المعلومات المالية والمكتب التنفيذي والبقاء ممتثلاً تماماً.">Anti-Money Laundering and Combating Financing of Terrorism compliance is mandatory for many UAE businesses (DNFBPs). We help you register with the FIU and Executive Office and stay fully compliant.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AML -->
 <section id="aml">
   <div class="eyebrow fade-up" data-en="Compliance" data-ar="الامتثال">Compliance</div>
   <h2 class="display fade-up" data-en="AML/CFT <em>Services.</em>" data-ar="خدمات مكافحة<br><em>غسل الأموال.</em>">AML/CFT <em>Services.</em></h2>
   <p class="aml-intro fade-up" data-en="We support businesses in meeting their Anti-Money Laundering and Combating the Financing of Terrorism obligations under UAE law — including registration with the FIU and Executive Office." data-ar="ندعم الشركات في الوفاء بالتزاماتها بموجب قوانين مكافحة غسل الأموال وتمويل الإرهاب في الإمارات.">We support businesses in meeting their Anti-Money Laundering and Combating the Financing of Terrorism obligations under UAE law — including registration with the FIU and Executive Office.</p>
   <div class="aml-grid fade-up">
-    <div class="aml-card">
-      <span class="aml-card-icon">🏛️</span>
-      <h3 data-en="FIU Registration" data-ar="التسجيل في وحدة المعلومات المالية">FIU Registration</h3>
-      <p data-en="Registration and reporting on the UAE Financial Intelligence Unit (goAML) platform. Full assistance with Suspicious Transaction Reports (STRs) and Suspicious Activity Reports (SARs)." data-ar="التسجيل وتقديم التقارير على منصة وحدة المعلومات المالية الإماراتية (goAML). مساعدة كاملة في تقارير المعاملات المشبوهة.">Registration and reporting on the UAE Financial Intelligence Unit (goAML) platform. Full assistance with Suspicious Transaction Reports (STRs) and Suspicious Activity Reports (SARs).</p>
-    </div>
-    <div class="aml-card">
-      <span class="aml-card-icon">⚖️</span>
-      <h3 data-en="Executive Office Registration" data-ar="التسجيل في المكتب التنفيذي">Executive Office Registration</h3>
-      <p data-en="Registration with the Executive Office for Control & Non-Proliferation (EOCN) for DNFBPs. Compliance with UAE Cabinet Decision No. 10 of 2019." data-ar="التسجيل في المكتب التنفيذي للرقابة وعدم الانتشار للأعمال والمهن غير المالية المحددة. الامتثال لقرار مجلس الوزراء رقم 10 لسنة 2019.">Registration with the Executive Office for Control & Non-Proliferation (EOCN) for DNFBPs. Compliance with UAE Cabinet Decision No. 10 of 2019.</p>
-    </div>
+    <div class="aml-card"><span class="aml-card-icon">🏛️</span><h3 data-en="FIU Registration" data-ar="التسجيل في وحدة المعلومات المالية">FIU Registration</h3><p data-en="Registration and reporting on the UAE Financial Intelligence Unit (goAML) platform. Full assistance with STRs and SARs." data-ar="التسجيل وتقديم التقارير على منصة وحدة المعلومات المالية الإماراتية. مساعدة كاملة في تقارير المعاملات المشبوهة.">Registration and reporting on the UAE Financial Intelligence Unit (goAML) platform. Full assistance with STRs and SARs.</p></div>
+    <div class="aml-card"><span class="aml-card-icon">⚖️</span><h3 data-en="Executive Office Registration" data-ar="التسجيل في المكتب التنفيذي">Executive Office Registration</h3><p data-en="Registration with the Executive Office for Control & Non-Proliferation (EOCN) for DNFBPs. Compliance with UAE Cabinet Decision No. 10 of 2019." data-ar="التسجيل في المكتب التنفيذي للرقابة وعدم الانتشار للأعمال والمهن غير المالية المحددة.">Registration with the Executive Office for Control & Non-Proliferation (EOCN) for DNFBPs. Compliance with UAE Cabinet Decision No. 10 of 2019.</p></div>
   </div>
   <div class="aml-services fade-up">
     <h3 data-en="AML Bookkeeping Services" data-ar="خدمات المحاسبة لمكافحة غسل الأموال">AML Bookkeeping Services</h3>
     <div class="aml-services-grid">
-      <div class="aml-svc-item">
-        <strong data-en="Risk Assessment" data-ar="تقييم المخاطر">Risk Assessment</strong>
-        <p data-en="Business-wide AML/CFT risk assessment tailored to your sector and client profile." data-ar="تقييم شامل لمخاطر غسل الأموال وتمويل الإرهاب مصمم خصيصاً لقطاعك.">Business-wide AML/CFT risk assessment tailored to your sector and client profile.</p>
-      </div>
-      <div class="aml-svc-item">
-        <strong data-en="Policies & Procedures" data-ar="السياسات والإجراءات">Policies & Procedures</strong>
-        <p data-en="Drafting AML/CFT policies, internal controls, and compliance manuals aligned with CBUAE guidelines." data-ar="صياغة سياسات وإجراءات مكافحة غسل الأموال وضوابط داخلية متوافقة مع إرشادات المصرف المركزي.">Drafting AML/CFT policies, internal controls, and compliance manuals aligned with CBUAE guidelines.</p>
-      </div>
-      <div class="aml-svc-item">
-        <strong data-en="Transaction Monitoring" data-ar="مراقبة المعاملات">Transaction Monitoring</strong>
-        <p data-en="Ongoing monitoring of financial transactions to identify red flags and unusual patterns." data-ar="مراقبة مستمرة للمعاملات المالية لتحديد المؤشرات المشبوهة والأنماط غير الاعتيادية.">Ongoing monitoring of financial transactions to identify red flags and unusual patterns.</p>
-      </div>
+      <div class="aml-svc-item"><strong data-en="Risk Assessment" data-ar="تقييم المخاطر">Risk Assessment</strong><p data-en="Business-wide AML/CFT risk assessment tailored to your sector." data-ar="تقييم شامل لمخاطر غسل الأموال مصمم لقطاعك.">Business-wide AML/CFT risk assessment tailored to your sector.</p></div>
+      <div class="aml-svc-item"><strong data-en="Policies & Procedures" data-ar="السياسات والإجراءات">Policies & Procedures</strong><p data-en="Drafting AML/CFT policies and compliance manuals aligned with CBUAE guidelines." data-ar="صياغة سياسات مكافحة غسل الأموال متوافقة مع إرشادات المصرف المركزي.">Drafting AML/CFT policies and compliance manuals aligned with CBUAE guidelines.</p></div>
+      <div class="aml-svc-item"><strong data-en="Transaction Monitoring" data-ar="مراقبة المعاملات">Transaction Monitoring</strong><p data-en="Ongoing monitoring to identify red flags and unusual patterns." data-ar="مراقبة مستمرة لتحديد المؤشرات المشبوهة والأنماط غير الاعتيادية.">Ongoing monitoring to identify red flags and unusual patterns.</p></div>
     </div>
   </div>
 </section>
@@ -512,252 +712,270 @@ body.ar .chat-window{left:auto;right:2rem;}
   <div class="eyebrow fade-up" data-en="Methodology" data-ar="المنهجية">Methodology</div>
   <h2 class="display fade-up" data-en="Four steps.<br><em>Zero ambiguity.</em>" data-ar="أربع خطوات.<br><em>صفر غموض.</em>">Four steps.<br><em>Zero ambiguity.</em></h2>
   <div class="steps" style="margin-top:2rem;">
-    <div class="step fade-up">
-      <div class="step-tag" data-en="Step 01" data-ar="الخطوة 01">Step 01</div>
-      <div><h3 data-en="Capture" data-ar="التسجيل">Capture</h3><p data-en="All transactions pulled directly from banks, cards, and payment processors." data-ar="جمع جميع المعاملات مباشرةً من البنوك والبطاقات وأنظمة الدفع.">All transactions pulled directly from banks, cards, and payment processors.</p></div>
-    </div>
-    <div class="step fade-up">
-      <div class="step-tag" data-en="Step 02" data-ar="الخطوة 02">Step 02</div>
-      <div><h3 data-en="Classify" data-ar="التصنيف">Classify</h3><p data-en="Every entry coded against a chart of accounts tailored to your industry." data-ar="ترميز كل إدخال وفق دليل الحسابات المصمَّم خصيصاً لطبيعة عملك.">Every entry coded against a chart of accounts tailored to your industry.</p></div>
-    </div>
-    <div class="step fade-up">
-      <div class="step-tag" data-en="Step 03" data-ar="الخطوة 03">Step 03</div>
-      <div><h3 data-en="Reconcile" data-ar="المطابقة">Reconcile</h3><p data-en="Monthly bank reconciliation until every balance ties to the cent." data-ar="مطابقة شهرية دقيقة حتى يتطابق كل رصيد إلى آخر فلس.">Monthly bank reconciliation until every balance ties to the cent.</p></div>
-    </div>
-    <div class="step fade-up">
-      <div class="step-tag" data-en="Step 04" data-ar="الخطوة 04">Step 04</div>
-      <div><h3 data-en="Report" data-ar="التقرير">Report</h3><p data-en="Plain-English financial statements delivered by the 10th of the following month." data-ar="تقارير مالية واضحة تُسلَّم بحلول العاشر من الشهر التالي.">Plain-English financial statements delivered by the 10th of the following month.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="about-inner">
-    <div>
-      <div class="eyebrow fade-up" data-en="About" data-ar="عني">About</div>
-      <h2 class="display fade-up" data-en="Built on the<br><em>double-entry standard.</em>" data-ar="مبنية على معيار<br><em>القيد المزدوج.</em>">Built on the<br><em>double-entry standard.</em></h2>
-      <div class="about-stats fade-up">
-        <div class="about-stat-item">
-          <span class="about-stat-num">100%</span>
-          <span class="about-stat-lbl" data-en="Accuracy guaranteed" data-ar="دقة مضمونة">Accuracy guaranteed</span>
-        </div>
-        <div class="about-stat-item">
-          <span class="about-stat-num">10th</span>
-          <span class="about-stat-lbl" data-en="Reports every month" data-ar="تقارير كل شهر">Reports every month</span>
-        </div>
-        <div class="about-stat-item">
-          <span class="about-stat-num">UAE</span>
-          <span class="about-stat-lbl" data-en="VAT compliant" data-ar="متوافق مع ضريبة القيمة المضافة">VAT compliant</span>
-        </div>
-        <div class="about-stat-item">
-          <span class="about-stat-num">Est.</span>
-          <span class="about-stat-lbl" data-en="2024, Sharjah" data-ar="2024، الشارقة">2024, Sharjah</span>
-        </div>
-      </div>
-    </div>
-    <div class="about-text">
-      <p class="fade-up" data-en="Every transaction recorded across balanced columns — debits matching credits to the cent. The oldest discipline in finance, and still the only one that scales without error." data-ar="كل معاملة تُسجَّل عبر أعمدة متوازنة — المدين يساوي الدائن بدقة تامة. هذا هو الأساس الذي يضمن دفاتر خالية من الأخطاء.">Every transaction recorded across balanced columns — debits matching credits to the cent. The oldest discipline in finance, and still the only one that scales without error.</p>
-      <p class="fade-up" data-en="I work with businesses across the UAE to turn their financial data from a daily burden into a strategic asset." data-ar="أعمل مع شركات في الإمارات لتحويل بياناتها المالية من عبء يومي إلى أداة استراتيجية حقيقية.">I work with businesses across the UAE to turn their financial data from a daily burden into a strategic asset.</p>
-      <div class="badges fade-up">
-        <span class="badge" data-en="Odoo" data-ar="Odoo">Odoo</span>
-        <span class="badge" data-en="Zoho Books" data-ar="Zoho Books">Zoho Books</span>
-        <span class="badge" data-en="Xero" data-ar="Xero">Xero</span>
-        <span class="badge" data-en="QuickBooks" data-ar="QuickBooks">QuickBooks</span>
-        <span class="badge" data-en="UAE VAT Compliant" data-ar="متوافق مع ضريبة القيمة المضافة">UAE VAT Compliant</span>
-        <span class="badge" data-en="AML Registered" data-ar="مسجل AML">AML Registered</span>
-      </div>
-    </div>
+    <div class="step fade-up"><div class="step-tag" data-en="Step 01" data-ar="الخطوة 01">Step 01</div><div><h3 data-en="Capture" data-ar="التسجيل">Capture</h3><p data-en="All transactions pulled directly from banks, cards, and payment processors." data-ar="جمع جميع المعاملات مباشرةً من البنوك والبطاقات وأنظمة الدفع.">All transactions pulled directly from banks, cards, and payment processors.</p></div></div>
+    <div class="step fade-up"><div class="step-tag" data-en="Step 02" data-ar="الخطوة 02">Step 02</div><div><h3 data-en="Classify" data-ar="التصنيف">Classify</h3><p data-en="Every entry coded against a chart of accounts tailored to your industry." data-ar="ترميز كل إدخال وفق دليل الحسابات المصمَّم لطبيعة عملك.">Every entry coded against a chart of accounts tailored to your industry.</p></div></div>
+    <div class="step fade-up"><div class="step-tag" data-en="Step 03" data-ar="الخطوة 03">Step 03</div><div><h3 data-en="Reconcile" data-ar="المطابقة">Reconcile</h3><p data-en="Monthly bank reconciliation until every balance ties to the cent." data-ar="مطابقة شهرية دقيقة حتى يتطابق كل رصيد إلى آخر فلس.">Monthly bank reconciliation until every balance ties to the cent.</p></div></div>
+    <div class="step fade-up"><div class="step-tag" data-en="Step 04" data-ar="الخطوة 04">Step 04</div><div><h3 data-en="Report" data-ar="التقرير">Report</h3><p data-en="Clear financial statements delivered by the 10th of the following month." data-ar="تقارير مالية واضحة تُسلَّم بحلول العاشر من الشهر التالي.">Clear financial statements delivered by the 10th of the following month.</p></div></div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
   <div class="contact-inner">
-    <div class="contact-left">
+    <div>
       <div class="eyebrow fade-up" data-en="Contact" data-ar="تواصل">Contact</div>
       <h2 class="display fade-up" data-en="Ready for <em>clarity?</em>" data-ar="هل أنت جاهز<br><em>للوضوح؟</em>">Ready for <em>clarity?</em></h2>
-      <p class="contact-lead fade-up" data-en="Let's discuss how organized bookkeeping can become your strongest competitive advantage." data-ar="لنتحدث عن كيفية تحويل محاسبتك المنظمة إلى ميزتك التنافسية الأقوى.">Let's discuss how organized bookkeeping can become your strongest competitive advantage.</p>
-      <a href="https://wa.me/971501337192" target="_blank" class="contact-cta fade-up" data-en="💬 WhatsApp us" data-ar="💬 تواصل على واتساب">💬 WhatsApp us</a>
+      <p class="contact-lead fade-up" data-en="Send us a message and we'll get back to you within a few hours. Or reach Amr directly on WhatsApp." data-ar="أرسل لنا رسالة وسنرد عليك خلال ساعات. أو تواصل مع عمرو مباشرة على واتساب.">Send us a message and we'll get back to you within a few hours. Or reach Amr directly on WhatsApp.</p>
+      <div class="contact-info fade-up">
+        <div class="citem"><label data-en="Email" data-ar="البريد الإلكتروني">Email</label><a href="mailto:amr.bookkeeping@outlook.com">amr.bookkeeping@outlook.com</a></div>
+        <div class="citem"><label data-en="Phone / WhatsApp" data-ar="الهاتف / واتساب">Phone / WhatsApp</label><a href="https://wa.me/971501337192" target="_blank">+971 50 133 7192</a></div>
+        <div class="citem"><label data-en="Location" data-ar="الموقع">Location</label><span data-en="Sharjah, United Arab Emirates" data-ar="الشارقة، الإمارات العربية المتحدة">Sharjah, United Arab Emirates</span></div>
+        <div class="citem"><label data-en="Working Hours" data-ar="ساعات العمل">Working Hours</label><span data-en="Sun – Thu, 9 AM – 6 PM" data-ar="الأحد – الخميس، 9ص – 6م">Sun – Thu, 9 AM – 6 PM</span></div>
+      </div>
+      <a href="https://wa.me/971501337192" target="_blank" class="contact-wa fade-up" data-en="💬 WhatsApp now" data-ar="💬 واتساب الآن">💬 WhatsApp now</a>
     </div>
-    <div class="contact-right fade-up">
-      <div class="citem"><label data-en="Email" data-ar="البريد الإلكتروني">Email</label><a href="mailto:amr.bookkeeping@outlook.com">amr.bookkeeping@outlook.com</a></div>
-      <div class="citem"><label data-en="Phone / WhatsApp" data-ar="الهاتف / واتساب">Phone / WhatsApp</label><a href="https://wa.me/971501337192" target="_blank">+971 50 133 7192</a></div>
-      <div class="citem"><label data-en="Location" data-ar="الموقع">Location</label><span data-en="Sharjah, United Arab Emirates" data-ar="الشارقة، الإمارات العربية المتحدة">Sharjah, United Arab Emirates</span></div>
-      <div class="citem"><label data-en="Working Hours" data-ar="ساعات العمل">Working Hours</label><span data-en="Sun – Thu, 9 AM – 6 PM" data-ar="الأحد – الخميس، 9ص – 6م">Sun – Thu, 9 AM – 6 PM</span></div>
+    <div class="fade-up">
+      <div class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group"><label data-en="Your name" data-ar="اسمك">Your name</label><input type="text" id="fname" placeholder="Ahmed Al Mansouri"></div>
+          <div class="form-group"><label data-en="Business name" data-ar="اسم الشركة">Business name</label><input type="text" id="fbiz" placeholder="Al Mansouri Trading"></div>
+        </div>
+        <div class="form-group"><label data-en="Email address" data-ar="البريد الإلكتروني">Email address</label><input type="email" id="femail" placeholder="ahmed@company.ae"></div>
+        <div class="form-group"><label data-en="Phone / WhatsApp" data-ar="الهاتف / واتساب">Phone / WhatsApp</label><input type="tel" id="fphone" placeholder="+971 50 XXX XXXX"></div>
+        <div class="form-group">
+          <label data-en="Service needed" data-ar="الخدمة المطلوبة">Service needed</label>
+          <select id="fservice">
+            <option value="" data-en="Select a service..." data-ar="اختر خدمة...">Select a service...</option>
+            <option value="basic" data-en="Basic Package (AED 500/mo)" data-ar="الباقة الأساسية (500 درهم/شهر)">Basic Package (AED 500/mo)</option>
+            <option value="professional" data-en="Professional Package (AED 1,000/mo)" data-ar="الباقة الاحترافية (1,000 درهم/شهر)">Professional Package (AED 1,000/mo)</option>
+            <option value="complete" data-en="Complete Package (AED 1,500/mo)" data-ar="الباقة الشاملة (1,500 درهم/شهر)">Complete Package (AED 1,500/mo)</option>
+            <option value="custom" data-en="Custom / Not sure yet" data-ar="مخصص / لست متأكداً بعد">Custom / Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-group"><label data-en="Message (optional)" data-ar="رسالة (اختياري)">Message (optional)</label><textarea id="fmessage" placeholder="Tell us briefly about your business..."></textarea></div>
+        <button class="form-submit" onclick="submitForm()">
+          <span data-en="Send message →" data-ar="أرسل الرسالة →">Send message →</span>
+        </button>
+      </div>
+      <div class="form-success" id="formSuccess">
+        <h4 data-en="✅ Message sent!" data-ar="✅ تم إرسال الرسالة!">✅ Message sent!</h4>
+        <p data-en="Thank you! Amr will reply within a few hours via WhatsApp or email." data-ar="شكراً! سيرد عمرو خلال ساعات عبر واتساب أو البريد الإلكتروني.">Thank you! Amr will reply within a few hours via WhatsApp or email.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <span class="f-brand">Amr Mohamed — <span>Bookkeeping & Accounting</span></span>
-  <span class="f-copy">© 2025 · Sharjah, UAE</span>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="footer-logo-mark">ABA</div>
+        <span class="footer-logo-text">Amr Bookkeeping & Accounting</span>
+      </div>
+      <p class="footer-desc" data-en="Professional bookkeeping services for UAE businesses. Clean books, clear numbers, better decisions." data-ar="خدمات محاسبية احترافية للشركات الإماراتية. دفاتر نظيفة، أرقام واضحة، قرارات أفضل.">Professional bookkeeping services for UAE businesses. Clean books, clear numbers, better decisions.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4 data-en="Services" data-ar="الخدمات">Services</h4>
+        <ul>
+          <li><a href="#services" data-en="Monthly Bookkeeping" data-ar="حفظ الدفاتر">Monthly Bookkeeping</a></li>
+          <li><a href="#services" data-en="Bank Reconciliation" data-ar="مطابقة الحسابات">Bank Reconciliation</a></li>
+          <li><a href="#services" data-en="VAT Filing" data-ar="ضريبة القيمة المضافة">VAT Filing</a></li>
+          <li><a href="#aml" data-en="AML/CFT Compliance" data-ar="امتثال AML/CFT">AML/CFT Compliance</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Company" data-ar="الشركة">Company</h4>
+        <ul>
+          <li><a href="#why" data-en="Why ABA" data-ar="لماذا ABA">Why ABA</a></li>
+          <li><a href="#methodology" data-en="Methodology" data-ar="المنهجية">Methodology</a></li>
+          <li><a href="#pricing" data-en="Pricing" data-ar="الأسعار">Pricing</a></li>
+          <li><a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 ABA — Amr Bookkeeping & Accounting · Sharjah, UAE</span>
+    <a href="https://wa.me/971501337192" target="_blank" class="footer-wa">💬 +971 50 133 7192</a>
+  </div>
 </footer>
 
-<!-- AI CHAT -->
+<!-- SCROLL TOP -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">↑</button>
+
+<!-- CHAT -->
 <div class="chat-bubble">
   <div class="chat-pulse"></div>
   <button class="chat-btn" onclick="toggleChat()" aria-label="Open chat">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+    <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
   </button>
 </div>
 <div class="chat-window" id="chatWindow">
   <div class="chat-header">
     <div class="chat-avatar">A</div>
     <div class="chat-header-info">
-      <div class="chat-header-name">Amr's Assistant</div>
+      <div class="chat-header-name">ABA Assistant</div>
       <div class="chat-header-status" id="chatStatus">Online — replies instantly</div>
     </div>
     <button class="chat-close" onclick="toggleChat()">✕</button>
   </div>
   <div class="chat-messages" id="chatMessages">
-    <div class="msg bot">Hello! 👋 I'm Amr's assistant. Tell me about your business and I'll recommend the right package for you. / مرحباً! أخبرني عن نشاطك التجاري وسأرشح لك الباقة المناسبة.</div>
+    <div class="msg bot" id="welcomeMsg">Hello! 👋 I'm ABA's assistant. Tell me about your business and I'll recommend the right package. / مرحباً! أخبرني عن نشاطك وسأرشح لك الباقة المناسبة.</div>
   </div>
   <div class="chat-suggestions" id="chatSuggestions">
     <button class="suggestion" onclick="sendSuggestion(this)">What packages do you offer?</button>
-    <button class="suggestion" onclick="sendSuggestion(this)">I run a small retail shop</button>
-    <button class="suggestion" onclick="sendSuggestion(this)">ما هي الباقات المتاحة؟</button>
+    <button class="suggestion" onclick="sendSuggestion(this)">I run a small shop</button>
+    <button class="suggestion" onclick="sendSuggestion(this)">ما هي الباقات؟</button>
     <button class="suggestion" onclick="sendSuggestion(this)">أدير شركة تجارية</button>
   </div>
   <div class="chat-input-area">
     <input class="chat-input" id="chatInput" type="text" placeholder="Type your message..." onkeypress="if(event.key==='Enter')sendMessage()">
-    <button class="chat-send" onclick="sendMessage()">
-      <svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
-    </button>
+    <button class="chat-send" onclick="sendMessage()"><svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg></button>
   </div>
 </div>
 
 <script>
-// NAV SCROLL
-window.addEventListener('scroll', () => {
-  document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 50);
+// NAV
+window.addEventListener('scroll',()=>{
+  document.getElementById('mainNav').classList.toggle('scrolled',window.scrollY>50);
+  document.getElementById('scrollTop').classList.toggle('visible',window.scrollY>400);
 });
 
-// PLAN SELECTION → WHATSAPP
-const planMessages = {
-  en: {
-    basic: "Hello Amr, I'm interested in the *Basic Package* (AED 500/month).\n\nIncludes:\n• Monthly bookkeeping\n• Bank reconciliation\n• Monthly P&L report\n\nCould we discuss further?",
-    professional: "Hello Amr, I'm interested in the *Professional Package* (AED 1,000/month).\n\nIncludes:\n• Monthly bookkeeping\n• Bank reconciliation\n• Full financial reports\n• VAT filing (quarterly)\n• Cash flow statement\n\nCould we discuss further?",
-    complete: "Hello Amr, I'm interested in the *Complete Package* (AED 1,500/month).\n\nIncludes:\n• Monthly bookkeeping\n• Bank reconciliation\n• Full financial reports\n• VAT filing (monthly)\n• Cash flow statement\n• Financial advisory\n\nCould we discuss further?"
-  },
-  ar: {
-    basic: "مرحباً عمرو، أنا مهتم بـ *الباقة الأساسية* (500 درهم/شهر).\n\nتشمل:\n• حفظ الدفاتر الشهري\n• مطابقة الحسابات\n• تقرير الأرباح والخسائر الشهري\n\nهل يمكننا مناقشة التفاصيل؟",
-    professional: "مرحباً عمرو، أنا مهتم بـ *الباقة الاحترافية* (1,000 درهم/شهر).\n\nتشمل:\n• حفظ الدفاتر الشهري\n• مطابقة الحسابات\n• تقارير مالية كاملة\n• ضريبة القيمة المضافة (ربع سنوي)\n• تقرير التدفق النقدي\n\nهل يمكننا مناقشة التفاصيل؟",
-    complete: "مرحباً عمرو، أنا مهتم بـ *الباقة الشاملة* (1,500 درهم/شهر).\n\nتشمل:\n• حفظ الدفاتر الشهري\n• مطابقة الحسابات\n• تقارير مالية كاملة\n• ضريبة القيمة المضافة (شهري)\n• تقرير التدفق النقدي\n• استشارات مالية\n\nهل يمكننا مناقشة التفاصيل؟"
-  }
-};
-function selectPlan(plan) {
-  const lang = document.documentElement.lang === 'ar' ? 'ar' : 'en';
-  const msg = planMessages[lang][plan];
-  window.open('https://wa.me/971501337192?text=' + encodeURIComponent(msg), '_blank');
-}
+// MOBILE MENU
+function openMobileMenu(){document.getElementById('mobileMenu').classList.add('open');}
+function closeMobileMenu(){document.getElementById('mobileMenu').classList.remove('open');}
 
 // LANG
-function setLang(lang) {
-  const isAr = lang === 'ar';
-  document.documentElement.lang = lang;
-  document.documentElement.dir = isAr ? 'rtl' : 'ltr';
-  document.body.classList.toggle('ar', isAr);
-  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.textContent.trim().toLowerCase() === lang));
-  document.querySelectorAll('[data-en]').forEach(el => {
-    const txt = el.getAttribute('data-' + lang);
-    if (txt) el.innerHTML = txt;
+function setLang(lang){
+  const isAr=lang==='ar';
+  document.documentElement.lang=lang;
+  document.documentElement.dir=isAr?'rtl':'ltr';
+  document.body.classList.toggle('ar',isAr);
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.textContent.trim().toLowerCase()===lang));
+  document.querySelectorAll('[data-en]').forEach(el=>{
+    const txt=el.getAttribute('data-'+lang);
+    if(txt)el.innerHTML=txt;
   });
-  const input = document.getElementById('chatInput');
-  if (input) input.placeholder = isAr ? 'اكتب رسالتك...' : 'Type your message...';
-  const status = document.getElementById('chatStatus');
-  if (status) status.textContent = isAr ? 'متصل — يرد فوراً' : 'Online — replies instantly';
+  const inp=document.getElementById('chatInput');
+  if(inp)inp.placeholder=isAr?'اكتب رسالتك...':'Type your message...';
+  document.getElementById('chatStatus').textContent=isAr?'متصل — يرد فوراً':'Online — replies instantly';
+}
+
+// CALCULATOR
+const calcState={};
+function toggleCalc(el){
+  el.classList.toggle('selected');
+  const key=el.dataset.key;
+  const price=parseInt(el.dataset.price);
+  calcState[key]=el.classList.contains('selected')?price:0;
+  updateCalc();
+}
+function updateCalc(){
+  const total=Object.values(calcState).reduce((a,b)=>a+b,0);
+  document.getElementById('calcPrice').textContent='AED '+(total>0?total.toLocaleString():0);
+  const breakdown=document.getElementById('calcBreakdown');
+  const lang=document.documentElement.lang==='ar'?'ar':'en';
+  if(total===0){
+    breakdown.innerHTML='<p class="calc-empty">'+(lang==='ar'?'اختر الخدمات أعلاه لتحديد سعرك.':'Select services above to build your price.')+'</p>';
+    return;
+  }
+  const names={bookkeeping:{en:'Monthly Bookkeeping',ar:'حفظ الدفاتر الشهري'},reconciliation:{en:'Bank Reconciliation',ar:'مطابقة الحسابات'},reporting:{en:'Financial Reports',ar:'التقارير المالية'},vat:{en:'VAT Filing',ar:'ضريبة القيمة المضافة'},cashflow:{en:'Cash Flow',ar:'التدفق النقدي'},advisory:{en:'Financial Advisory',ar:'استشارات مالية'}};
+  let html='';
+  for(const[k,v]of Object.entries(calcState)){
+    if(v>0)html+=`<div class="calc-breakdown-item"><span class="calc-breakdown-name">${names[k][lang]}</span><span class="calc-breakdown-val">AED ${v}</span></div>`;
+  }
+  html+=`<div class="calc-breakdown-item" style="border-top:1px solid rgba(255,255,255,0.1);margin-top:0.5rem;padding-top:0.75rem;"><span class="calc-breakdown-name" style="color:#fff;font-weight:500;">${lang==='ar'?'الإجمالي':'Total'}</span><span class="calc-breakdown-val" style="font-size:1rem;font-weight:700;">AED ${total.toLocaleString()}</span></div>`;
+  breakdown.innerHTML=html;
+}
+function sendCalcToWhatsApp(){
+  const total=Object.values(calcState).reduce((a,b)=>a+b,0);
+  if(total===0){alert('Please select at least one service first.');return;}
+  const lang=document.documentElement.lang==='ar'?'ar':'en';
+  const names={bookkeeping:{en:'Monthly Bookkeeping',ar:'حفظ الدفاتر الشهري'},reconciliation:{en:'Bank Reconciliation',ar:'مطابقة الحسابات'},reporting:{en:'Financial Reports',ar:'التقارير المالية'},vat:{en:'VAT Filing',ar:'ضريبة القيمة المضافة'},cashflow:{en:'Cash Flow Statement',ar:'تقرير التدفق النقدي'},advisory:{en:'Financial Advisory',ar:'استشارات مالية'}};
+  let services='';
+  for(const[k,v]of Object.entries(calcState)){if(v>0)services+=`\n• ${names[k][lang]}: AED ${v}`;}
+  const msg=lang==='ar'?`مرحباً عمرو، احتاج عرض سعر مخصص:\n${services}\n\n*الإجمالي: AED ${total.toLocaleString()}/شهر*\n\nهل يمكننا مناقشة التفاصيل؟`:`Hello Amr, I'd like a custom quote for:\n${services}\n\n*Total: AED ${total.toLocaleString()}/month*\n\nCould we discuss further?`;
+  window.open('https://wa.me/971501337192?text='+encodeURIComponent(msg),'_blank');
+}
+
+// PLAN SELECT
+const planMessages={
+  en:{basic:"Hello Amr, I'm interested in the *Basic Package* (AED 500/month).\n\nIncludes:\n• Monthly bookkeeping\n• Bank reconciliation\n• Monthly P&L report\n\nCould we discuss further?",professional:"Hello Amr, I'm interested in the *Professional Package* (AED 1,000/month).\n\nIncludes:\n• Monthly bookkeeping\n• Bank reconciliation\n• Full financial reports\n• VAT filing (quarterly)\n• Cash flow statement\n\nCould we discuss further?",complete:"Hello Amr, I'm interested in the *Complete Package* (AED 1,500/month).\n\nIncludes:\n• All services + Financial advisory\n\nCould we discuss further?"},
+  ar:{basic:"مرحباً عمرو، أنا مهتم بـ *الباقة الأساسية* (500 درهم/شهر).\n\nهل يمكننا مناقشة التفاصيل؟",professional:"مرحباً عمرو، أنا مهتم بـ *الباقة الاحترافية* (1,000 درهم/شهر).\n\nهل يمكننا مناقشة التفاصيل؟",complete:"مرحباً عمرو، أنا مهتم بـ *الباقة الشاملة* (1,500 درهم/شهر).\n\nهل يمكننا مناقشة التفاصيل؟"}
+};
+function selectPlan(plan){
+  const lang=document.documentElement.lang==='ar'?'ar':'en';
+  window.open('https://wa.me/971501337192?text='+encodeURIComponent(planMessages[lang][plan]),'_blank');
+}
+
+// CONTACT FORM
+function submitForm(){
+  const name=document.getElementById('fname').value.trim();
+  const email=document.getElementById('femail').value.trim();
+  const phone=document.getElementById('fphone').value.trim();
+  const service=document.getElementById('fservice').value;
+  const biz=document.getElementById('fbiz').value.trim();
+  const msg=document.getElementById('fmessage').value.trim();
+  if(!name||!email){alert('Please fill in your name and email.');return;}
+  const lang=document.documentElement.lang==='ar'?'ar':'en';
+  const text=lang==='ar'?`رسالة جديدة من موقع ABA:\n\nالاسم: ${name}\nالشركة: ${biz||'—'}\nالبريد: ${email}\nالهاتف: ${phone||'—'}\nالخدمة: ${service||'—'}\nالرسالة: ${msg||'—'}`:`New message from ABA website:\n\nName: ${name}\nBusiness: ${biz||'—'}\nEmail: ${email}\nPhone: ${phone||'—'}\nService: ${service||'—'}\nMessage: ${msg||'—'}`;
+  window.open('https://wa.me/971501337192?text='+encodeURIComponent(text),'_blank');
+  document.getElementById('contactForm').style.display='none';
+  document.getElementById('formSuccess').style.display='block';
+}
+
+// FAQ
+function toggleFaq(btn){
+  const item=btn.closest('.faq-item');
+  const wasOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  if(!wasOpen)item.classList.add('open');
 }
 
 // CHAT
-function toggleChat() {
-  document.getElementById('chatWindow').classList.toggle('open');
-}
-function sendSuggestion(el) {
-  document.getElementById('chatInput').value = el.textContent;
-  sendMessage();
-}
-
-const responses = {
-  en: {
-    packages: "We offer 3 packages:\n\n• **Basic** — AED 500/mo: bookkeeping + reconciliation + P&L\n• **Professional** — AED 1,000/mo: + VAT filing + cash flow (most popular)\n• **Complete** — AED 1,500/mo: everything + financial advisory\n\nWhat type of business do you run?",
-    retail: "For a retail shop, the **Professional package (AED 1,000/mo)** is ideal — covers monthly bookkeeping, bank reconciliation, VAT filing, and full reports.",
-    restaurant: "For restaurants, I recommend the **Professional package (AED 1,000/mo)** — handles your daily transactions, VAT, and gives you clean monthly reports.",
-    freelance: "For freelancers, the **Basic package (AED 500/mo)** works perfectly — monthly bookkeeping, reconciliation, and a P&L report.",
-    trading: "For a trading company, the **Complete package (AED 1,500/mo)** is the best fit — full reports, monthly VAT filing, and financial advisory.",
-    default: "To recommend the best package, could you tell me:\n1. What industry are you in?\n2. Roughly how many transactions per month?\n\nOr reach Amr directly on WhatsApp: +971 50 133 7192"
-  },
-  ar: {
-    packages: "لدينا 3 باقات:\n\n• **الأساسية** — 500 درهم/شهر: حفظ دفاتر + مطابقة + أرباح\n• **الاحترافية** — 1,000 درهم/شهر: + ضريبة القيمة المضافة (الأكثر طلباً)\n• **الشاملة** — 1,500 درهم/شهر: كل شيء + استشارات مالية\n\nما نوع نشاطك التجاري؟",
-    retail: "لمحل التجزئة، **الباقة الاحترافية (1,000 درهم/شهر)** هي المثالية — تشمل حفظ الدفاتر، مطابقة البنك، ضريبة القيمة المضافة، والتقارير الكاملة.",
-    trading: "للشركات التجارية، **الباقة الشاملة (1,500 درهم/شهر)** هي الأنسب — تقارير كاملة، ضريبة القيمة المضافة الشهرية، واستشارات مالية.",
-    freelance: "للمستقلين، **الباقة الأساسية (500 درهم/شهر)** تكفي تماماً — حفظ دفاتر، مطابقة حسابات، وتقرير أرباح وخسائر.",
-    default: "لأنصحك بأفضل باقة، هل يمكنك إخباري:\n1. ما مجال عملك؟\n2. ما حجم معاملاتك الشهرية؟\n\nأو تواصل مع عمرو على واتساب: 971501337192+"
-  }
+function toggleChat(){document.getElementById('chatWindow').classList.toggle('open');}
+function sendSuggestion(el){document.getElementById('chatInput').value=el.textContent;sendMessage();}
+const responses={
+  en:{packages:"We offer 3 packages:\n\n• **Basic** — AED 500/mo\n• **Professional** — AED 1,000/mo (most popular)\n• **Complete** — AED 1,500/mo\n\nOr build your own price with our calculator! What type of business do you run?",retail:"For a retail shop, the **Professional package (AED 1,000/mo)** is ideal — covers bookkeeping, bank reconciliation, VAT filing, and full reports.",restaurant:"For restaurants, the **Professional package (AED 1,000/mo)** is great — handles daily transactions, VAT, and monthly reports.",freelance:"For freelancers, the **Basic package (AED 500/mo)** works perfectly — monthly bookkeeping, reconciliation, and P&L report.",trading:"For trading companies, the **Complete package (AED 1,500/mo)** is the best fit — full reports, monthly VAT, and financial advisory.",default:"To recommend the best package, tell me:\n1. What industry are you in?\n2. Roughly how many transactions per month?\n\nOr reach Amr on WhatsApp: +971 50 133 7192"},
+  ar:{packages:"لدينا 3 باقات:\n\n• **الأساسية** — 500 درهم/شهر\n• **الاحترافية** — 1,000 درهم/شهر (الأكثر طلباً)\n• **الشاملة** — 1,500 درهم/شهر\n\nأو صمّم باقتك الخاصة بالحاسبة! ما نوع نشاطك؟",retail:"لمحل التجزئة، **الباقة الاحترافية (1,000 درهم/شهر)** مثالية.",trading:"للشركات التجارية، **الباقة الشاملة (1,500 درهم/شهر)** هي الأنسب.",freelance:"للمستقلين، **الباقة الأساسية (500 درهم/شهر)** مثالية.",default:"لأنصحك بأفضل باقة، هل يمكنك إخباري:\n1. ما مجال عملك؟\n2. ما حجم معاملاتك الشهرية؟\n\nأو تواصل على واتساب: 971501337192+"}
 };
-
-function getResponse(msg) {
-  const lang = document.documentElement.lang === 'ar' ? 'ar' : 'en';
-  const m = msg.toLowerCase();
-  const r = responses[lang];
-  if (m.includes('package') || m.includes('باقة') || m.includes('price') || m.includes('سعر') || m.includes('offer') || m.includes('خدمات')) return r.packages;
-  if (m.includes('retail') || m.includes('shop') || m.includes('store') || m.includes('محل') || m.includes('تجزئة')) return r.retail;
-  if (m.includes('restaurant') || m.includes('cafe') || m.includes('food') || m.includes('مطعم')) return r.restaurant || r.retail;
-  if (m.includes('freelance') || m.includes('consultant') || m.includes('مستقل')) return r.freelance;
-  if (m.includes('trading') || m.includes('import') || m.includes('export') || m.includes('تجار') || m.includes('استيراد')) return r.trading;
-  if (m.includes('whatsapp') || m.includes('واتساب') || m.includes('contact') || m.includes('تواصل')) return (lang === 'ar' ? 'تواصل مع عمرو الآن على واتساب 👉 ' : 'Contact Amr on WhatsApp 👉 ') + 'https://wa.me/971501337192';
+function getResponse(msg){
+  const lang=document.documentElement.lang==='ar'?'ar':'en';
+  const m=msg.toLowerCase();
+  const r=responses[lang];
+  if(m.includes('package')||m.includes('باقة')||m.includes('price')||m.includes('سعر')||m.includes('offer'))return r.packages;
+  if(m.includes('retail')||m.includes('shop')||m.includes('store')||m.includes('محل')||m.includes('تجزئة'))return r.retail;
+  if(m.includes('restaurant')||m.includes('cafe')||m.includes('food')||m.includes('مطعم'))return r.restaurant||r.retail;
+  if(m.includes('freelance')||m.includes('consultant')||m.includes('مستقل'))return r.freelance;
+  if(m.includes('trading')||m.includes('import')||m.includes('export')||m.includes('تجار'))return r.trading;
+  if(m.includes('whatsapp')||m.includes('واتساب')||m.includes('contact')||m.includes('تواصل'))return(lang==='ar'?'تواصل مع عمرو الآن 👉 ':'Contact Amr now 👉 ')+'https://wa.me/971501337192';
   return r.default;
 }
-
-function sendMessage() {
-  const input = document.getElementById('chatInput');
-  const msg = input.value.trim();
-  if (!msg) return;
-  input.value = '';
-  const container = document.getElementById('chatMessages');
-  document.getElementById('chatSuggestions').style.display = 'none';
-
-  const u = document.createElement('div');
-  u.className = 'msg user';
-  u.textContent = msg;
-  container.appendChild(u);
-
-  const t = document.createElement('div');
-  t.className = 'msg bot typing';
-  t.innerHTML = '<span></span><span></span><span></span>';
-  container.appendChild(t);
-  container.scrollTop = container.scrollHeight;
-
-  setTimeout(() => {
+function sendMessage(){
+  const input=document.getElementById('chatInput');
+  const msg=input.value.trim();
+  if(!msg)return;
+  input.value='';
+  const container=document.getElementById('chatMessages');
+  document.getElementById('chatSuggestions').style.display='none';
+  const u=document.createElement('div');u.className='msg user';u.textContent=msg;container.appendChild(u);
+  const t=document.createElement('div');t.className='msg bot typing';t.innerHTML='<span></span><span></span><span></span>';container.appendChild(t);
+  container.scrollTop=container.scrollHeight;
+  setTimeout(()=>{
     container.removeChild(t);
-    const reply = getResponse(msg);
-    const b = document.createElement('div');
-    b.className = 'msg bot';
-    b.style.whiteSpace = 'pre-line';
-    b.innerHTML = reply.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/(https:\/\/wa\.me\/\S+)/g,'<a href="$1" target="_blank" style="color:var(--mint)">WhatsApp ↗</a>');
+    const reply=getResponse(msg);
+    const b=document.createElement('div');b.className='msg bot';b.style.whiteSpace='pre-line';
+    b.innerHTML=reply.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/(https:\/\/wa\.me\/\S+)/g,'<a href="$1" target="_blank" style="color:var(--mint)">WhatsApp ↗</a>');
     container.appendChild(b);
-
-    if (reply.includes('package') || reply.includes('باقة') || reply.includes('درهم') || reply.includes('AED')) {
-      const wa = document.createElement('a');
-      wa.href = 'https://wa.me/971501337192';
-      wa.target = '_blank';
-      wa.style.cssText = 'display:inline-flex;align-items:center;gap:6px;margin-top:8px;padding:0.5rem 1rem;background:var(--mint);color:var(--navy);text-decoration:none;font-size:0.78rem;font-weight:600;border-radius:8px;';
-      wa.innerHTML = '💬 ' + (document.documentElement.lang === 'ar' ? 'تواصل على واتساب' : 'Chat on WhatsApp');
-      container.appendChild(wa);
-    }
-    container.scrollTop = container.scrollHeight;
-  }, 1100);
+    if(reply.includes('AED')||reply.includes('درهم')){const wa=document.createElement('a');wa.href='https://wa.me/971501337192';wa.target='_blank';wa.style.cssText='display:inline-flex;align-items:center;gap:6px;margin-top:8px;padding:0.5rem 1rem;background:var(--mint);color:var(--navy);text-decoration:none;font-size:0.78rem;font-weight:600;border-radius:8px;';wa.innerHTML='💬 '+(document.documentElement.lang==='ar'?'تواصل على واتساب':'Chat on WhatsApp');container.appendChild(wa);}
+    container.scrollTop=container.scrollHeight;
+  },1100);
 }
 
 // SCROLL ANIMATIONS
-const observer = new IntersectionObserver(entries => {
-  entries.forEach((e, i) => {
-    if (e.isIntersecting) {
-      setTimeout(() => e.target.classList.add('visible'), i * 70);
-    }
-  });
-}, { threshold: 0.08 });
-document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+const observer=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('visible'),i*70);});},{threshold:0.08});
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
 </script>
 </body>
 </html>
