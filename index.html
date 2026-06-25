@@ -1254,7 +1254,6 @@ function updateCalc(){
       ?'اختر الخدمات على اليمين للبدء.'
       :'Select the services on the right to get started.';
   }
-  const lang=document.documentElement.lang==='ar'?'ar':'en';
   const selected=Object.entries(calcState).filter(([k,v])=>v);
   const count=selected.length;
   const emptyState=document.getElementById('calcEmptyState');
