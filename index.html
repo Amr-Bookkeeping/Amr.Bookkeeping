@@ -1253,8 +1253,8 @@ function updateCalc(){
   const emptyTxt=document.getElementById('calcEmptyText');
   if(emptyTxt){
     emptyTxt.textContent=lang==='ar'
-      ?'اختر الخدمات على اليمين للبدء.'
-      :'Select the services on the left to get started.';
+      ?'اختر من القائمة للبدء.'
+      :'Select from the list to get started.';
   }
   const selected=Object.entries(calcState).filter(([k,v])=>v);
   const count=selected.length;
