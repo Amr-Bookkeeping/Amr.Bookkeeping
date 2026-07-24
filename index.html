@@ -812,13 +812,19 @@ body.ar .chat-window{left:auto;right:2rem;}
   <h2 class="display fade-up" data-en="AML/CFT <em>Registration Services.</em>" data-ar="خدمات التسجيل في منظومة<br><em>مكافحة غسل الأموال.</em>">AML/CFT <em>Services.</em></h2>
   <p class="aml-intro fade-up" data-en="We help businesses register and comply with Anti-Money Laundering (AML) and Combating the Financing of Terrorism (CFT) requirements under UAE law — including registration with the FIU (goAML) and the Executive Office (EOCN)." data-ar="نساعد الشركات على التسجيل والامتثال لمتطلبات مكافحة غسل الأموال وتمويل الإرهاب وفق القانون الإماراتي — بما يشمل التسجيل في وحدة المعلومات المالية (goAML) والمكتب التنفيذي (EOCN).">We support businesses in meeting their Anti-Money Laundering and Combating the Financing of Terrorism obligations under UAE law — including registration with the FIU and Executive Office.</p>
   <div class="aml-grid fade-up">
-    <div class="aml-card"><span class="aml-card-icon">🏛️</span><h3 data-en="FIU Registration" data-ar="التسجيل في وحدة المعلومات المالية">FIU Registration</h3><p data-en="Registration and reporting on the UAE Financial Intelligence Unit (goAML) platform. Full assistance with STRs and SARs." data-ar="التسجيل وتقديم التقارير على منصة وحدة المعلومات المالية الإماراتية. مساعدة كاملة في تقارير المعاملات المشبوهة.">Registration and reporting on the UAE Financial Intelligence Unit (goAML) platform. Full assistance with STRs and SARs.</p></div>
-    <div class="aml-card"><span class="aml-card-icon">⚖️</span><h3 data-en="Executive Office Registration" data-ar="التسجيل في المكتب التنفيذي">Executive Office Registration</h3><p data-en="Registration with the Executive Office for Control & Non-Proliferation (EOCN) for DNFBPs. Compliance with UAE Cabinet Decision No. 10 of 2019." data-ar="التسجيل في المكتب التنفيذي للرقابة وعدم الانتشار للأعمال والمهن غير المالية المحددة.">Registration with the Executive Office for Control & Non-Proliferation (EOCN) for DNFBPs. Compliance with UAE Cabinet Decision No. 10 of 2019.</p></div>
+    <div class="aml-card" onclick="openAmlDrawer('fiu')" style="cursor:pointer;">
+      <span class="aml-card-icon">🏛️</span>
+      <h3 data-en="FIU Registration" data-ar="التسجيل في وحدة المعلومات المالية">FIU Registration</h3>
+      <p data-en="Registration and reporting on the UAE Financial Intelligence Unit (goAML) platform. Full assistance with STRs and SARs." data-ar="التسجيل وتقديم التقارير على منصة وحدة المعلومات المالية الإماراتية. مساعدة كاملة في تقارير المعاملات المشبوهة.">Registration and reporting on the UAE Financial Intelligence Unit (goAML) platform. Full assistance with STRs and SARs.</p>
+      <p style="margin-top:1rem;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);font-weight:600;" data-en="Why it matters →" data-ar="لماذا مهم →">Why it matters →</p>
+    </div>
+    <div class="aml-card" onclick="openAmlDrawer('eocn')" style="cursor:pointer;">
+      <span class="aml-card-icon">⚖️</span>
+      <h3 data-en="Executive Office Registration" data-ar="التسجيل في المكتب التنفيذي">Executive Office Registration</h3>
+      <p data-en="Registration with the Executive Office for Control & Non-Proliferation (EOCN) for DNFBPs. Compliance with UAE Cabinet Decision No. 10 of 2019." data-ar="التسجيل في المكتب التنفيذي للرقابة وعدم الانتشار للأعمال والمهن غير المالية المحددة.">Registration with the Executive Office for Control & Non-Proliferation (EOCN) for DNFBPs. Compliance with UAE Cabinet Decision No. 10 of 2019.</p>
+      <p style="margin-top:1rem;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);font-weight:600;" data-en="Why it matters →" data-ar="لماذا مهم →">Why it matters →</p>
+    </div>
   </div>
-  <div class="aml-services fade-up">
-    <h3 data-en="What We Handle For You" data-ar="ما نتولاه نيابةً عنك">AML Bookkeeping Services</h3>
-    <div class="aml-services-grid">
-      <div class="aml-svc-item"><strong data-en="Risk Assessment" data-ar="تقييم المخاطر">Risk Assessment</strong><p data-en="Business-wide AML/CFT risk assessment tailored to your sector." data-ar="تقييم شامل لمخاطر غسل الأموال مصمم لقطاعك.">Business-wide AML/CFT risk assessment tailored to your sector.</p></div>
       <div class="aml-svc-item"><strong data-en="Policies & Procedures" data-ar="السياسات والإجراءات">Policies & Procedures</strong><p data-en="Drafting AML/CFT policies and compliance manuals aligned with CBUAE guidelines." data-ar="صياغة سياسات مكافحة غسل الأموال متوافقة مع إرشادات المصرف المركزي.">Drafting AML/CFT policies and compliance manuals aligned with CBUAE guidelines.</p></div>
       <div class="aml-svc-item"><strong data-en="Transaction Monitoring" data-ar="مراقبة المعاملات">Transaction Monitoring</strong><p data-en="Ongoing monitoring to identify red flags and unusual patterns." data-ar="مراقبة مستمرة لتحديد المؤشرات المشبوهة والأنماط غير الاعتيادية.">Ongoing monitoring to identify red flags and unusual patterns.</p></div>
     </div>
@@ -1375,6 +1381,111 @@ function sendMessage(){
 // SCROLL ANIMATIONS
 const observer=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('visible'),i*70);});},{threshold:0.08});
 document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+
+// AML DRAWER
+var amlContent = {
+  fiu: {
+    tag_en: "AML Service 01", tag_ar: "خدمة AML 01",
+    icon: "🏛️",
+    title_en: "FIU Registration (goAML)",
+    title_ar: "التسجيل في وحدة المعلومات المالية (goAML)",
+    tagline_en: "Mandatory registration for UAE businesses on the goAML platform.",
+    tagline_ar: "التسجيل الإلزامي للشركات الإماراتية على منصة goAML.",
+    body_en: "The UAE Financial Intelligence Unit (FIU) operates the goAML platform — the official system for reporting suspicious financial activity. Registration is mandatory for Designated Non-Financial Businesses and Professions (DNFBPs). If your business falls under real estate, accounting, legal services, or trading in precious metals, you are legally required to register. Failure to register can result in significant financial penalties under UAE Federal Decree-Law No. 20 of 2018.",
+    body_ar: "تُشغِّل وحدة المعلومات المالية الإماراتية منصة goAML — النظام الرسمي للإبلاغ عن النشاط المالي المشبوه. التسجيل إلزامي للأعمال والمهن غير المالية المحددة (DNFBPs). إذا كان نشاطك ضمن العقارات أو المحاسبة أو الخدمات القانونية أو تداول المعادن الثمينة فأنت ملزَم قانونياً بالتسجيل.",
+    why_en: "⚠️ Non-compliance with goAML registration can result in fines starting from AED 50,000 under UAE AML law. Registration protects your business and demonstrates commitment to financial integrity.",
+    why_ar: "⚠️ عدم الامتثال لمتطلبات التسجيل في goAML قد يؤدي إلى غرامات تبدأ من 50,000 درهم. التسجيل يحمي نشاطك ويُثبت التزامك بالنزاهة المالية.",
+    steps_en: ["Review your business activity and confirm DNFBP classification", "Gather required documents (trade license, ownership structure, contact details)", "Complete registration on the official goAML UAE portal", "Submit Suspicious Transaction Reports (STRs) when required"],
+    steps_ar: ["مراجعة نشاطك التجاري والتأكد من تصنيفه ضمن DNFBPs", "جمع الوثائق المطلوبة (رخصة تجارية، هيكل الملكية، بيانات التواصل)", "إكمال التسجيل على بوابة goAML الإماراتية الرسمية", "تقديم تقارير المعاملات المشبوهة (STRs) عند الاقتضاء"],
+    cta_en: "Register on goAML — Contact Us",
+    cta_ar: "سجّل في goAML — تواصل معنا"
+  },
+  eocn: {
+    tag_en: "AML Service 02", tag_ar: "خدمة AML 02",
+    icon: "⚖️",
+    title_en: "Executive Office Registration (EOCN)",
+    title_ar: "التسجيل في المكتب التنفيذي (EOCN)",
+    tagline_en: "Compliance with UAE Cabinet Decision No. 10 of 2019 for DNFBPs.",
+    tagline_ar: "الامتثال لقرار مجلس الوزراء الإماراتي رقم 10 لسنة 2019.",
+    body_en: "The Executive Office for Control and Non-Proliferation (EOCN) oversees compliance with targeted financial sanctions in the UAE. DNFBPs must register with the EOCN and implement client screening procedures against sanctions lists. This registration is separate from goAML and is required under UAE Cabinet Decision No. 10 of 2019. Registered businesses must report any matches to sanctions lists immediately.",
+    body_ar: "المكتب التنفيذي للرقابة وعدم الانتشار (EOCN) يُشرف على الامتثال للعقوبات المالية المستهدفة في الإمارات. يُطلب من الأعمال والمهن غير المالية المحددة التسجيل وتطبيق إجراءات فحص العملاء. هذا التسجيل منفصل عن goAML وإلزامي بموجب قرار مجلس الوزراء رقم 10 لسنة 2019.",
+    why_en: "⚠️ EOCN registration protects your business from unknowingly facilitating sanctions violations. Non-compliance can lead to severe penalties, license revocation, and criminal liability under UAE law.",
+    why_ar: "⚠️ يضمن التسجيل في EOCN حماية نشاطك من التورط في انتهاكات العقوبات. عدم الامتثال قد يُفضي إلى عقوبات صارمة وإلغاء الرخصة والمسؤولية الجنائية.",
+    steps_en: ["Identify your DNFBP category and EOCN requirements", "Prepare ownership documents and business activity details", "Register on the EOCN portal and complete compliance profile", "Implement client screening against sanctions lists", "Submit regular compliance reports as required"],
+    steps_ar: ["تحديد فئة نشاطك ضمن DNFBPs ومتطلبات EOCN", "إعداد وثائق الملكية وتفاصيل النشاط التجاري", "التسجيل على بوابة EOCN وإكمال ملف الامتثال", "تطبيق إجراءات فحص العملاء مقابل قوائم العقوبات", "تقديم تقارير الامتثال الدورية وفق المتطلبات"],
+    cta_en: "Register with EOCN — Contact Us",
+    cta_ar: "سجّل في EOCN — تواصل معنا"
+  }
+};
+
+function openAmlDrawer(key) {
+  var lang = document.documentElement.lang === 'ar' ? 'ar' : 'en';
+  var d = amlContent[key];
+  if (!d) return;
+
+  document.getElementById('amlDrTag').textContent = lang === 'ar' ? d.tag_ar : d.tag_en;
+  document.getElementById('amlDrIcon').textContent = d.icon;
+  document.getElementById('amlDrTitle').textContent = lang === 'ar' ? d.title_ar : d.title_en;
+  document.getElementById('amlDrTagline').textContent = lang === 'ar' ? d.tagline_ar : d.tagline_en;
+  document.getElementById('amlDrBody').textContent = lang === 'ar' ? d.body_ar : d.body_en;
+  document.getElementById('amlDrWhy').textContent = lang === 'ar' ? d.why_ar : d.why_en;
+  document.getElementById('amlDrCta').textContent = lang === 'ar' ? d.cta_ar : d.cta_en;
+
+  var steps = lang === 'ar' ? d.steps_ar : d.steps_en;
+  var stepsLabel = lang === 'ar' ? 'خطوات التسجيل' : 'Registration Steps';
+  var stepsHtml = '<h4 style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:1rem;font-weight:600;">' + stepsLabel + '</h4>';
+  for (var i = 0; i < steps.length; i++) {
+    stepsHtml += '<div style="display:flex;gap:0.75rem;align-items:flex-start;padding:0.6rem 0;border-bottom:1px solid rgba(201,168,76,0.1);">';
+    stepsHtml += '<span style="width:24px;height:24px;border-radius:50%;background:rgba(201,168,76,0.15);color:#c9a84c;font-size:0.7rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">' + (i + 1) + '</span>';
+    stepsHtml += '<span style="font-size:0.875rem;color:rgba(255,255,255,0.5);line-height:1.7;padding-top:2px;">' + steps[i] + '</span>';
+    stepsHtml += '</div>';
+  }
+  document.getElementById('amlDrSteps').innerHTML = stepsHtml;
+
+  var overlay = document.getElementById('amlDrOverlay');
+  var panel = document.getElementById('amlDrPanel');
+  overlay.style.display = 'block';
+  panel.style.display = 'block';
+  document.body.style.overflow = 'hidden';
+  requestAnimationFrame(function() {
+    panel.style.transform = 'translateX(0)';
+  });
+}
+
+function closeAmlDrawer() {
+  var panel = document.getElementById('amlDrPanel');
+  var overlay = document.getElementById('amlDrOverlay');
+  panel.style.transform = 'translateX(100%)';
+  setTimeout(function() {
+    panel.style.display = 'none';
+    overlay.style.display = 'none';
+    document.body.style.overflow = '';
+  }, 400);
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeAmlDrawer();
+});
+
 </script>
+
+<!-- AML DRAWER -->
+<div id="amlDrOverlay" onclick="closeAmlDrawer()" style="display:none;position:fixed;inset:0;background:rgba(13,27,42,0.75);z-index:600;backdrop-filter:blur(4px);"></div>
+<div id="amlDrPanel" style="display:none;position:fixed;top:0;right:0;bottom:0;width:min(560px,100vw);background:#06111E;z-index:700;overflow-y:auto;transform:translateX(100%);transition:transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94);box-shadow:-20px 0 60px rgba(0,0,0,0.5);">
+  <div style="position:sticky;top:0;background:#06111E;z-index:10;padding:1.25rem 1.75rem;border-bottom:1px solid rgba(201,168,76,0.2);display:flex;align-items:center;justify-content:space-between;">
+    <span id="amlDrTag" style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#c9a84c;font-weight:600;"></span>
+    <button onclick="closeAmlDrawer()" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1rem;color:rgba(255,255,255,0.6);">✕</button>
+  </div>
+  <div style="padding:2rem 1.75rem;">
+    <div id="amlDrIcon" style="font-size:2.5rem;margin-bottom:1rem;"></div>
+    <h2 id="amlDrTitle" style="font-family:'Playfair Display',serif;font-size:1.75rem;font-weight:700;color:#fff;margin-bottom:0.75rem;line-height:1.2;"></h2>
+    <p id="amlDrTagline" style="font-size:0.95rem;color:#c9a84c;font-weight:500;margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(201,168,76,0.15);"></p>
+    <div id="amlDrBody" style="font-size:0.9rem;color:rgba(255,255,255,0.55);line-height:1.9;margin-bottom:1.5rem;"></div>
+    <div id="amlDrWhy" style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.18);border-radius:12px;padding:1.25rem;margin-bottom:1.5rem;font-size:0.88rem;color:rgba(255,255,255,0.55);line-height:1.8;"></div>
+    <div id="amlDrSteps" style="margin-bottom:1.5rem;"></div>
+    <a href="https://wa.me/971501337192" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:0.5rem;padding:1rem;background:#c9a84c;color:#06111E;text-decoration:none;font-size:0.82rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;border-radius:8px;">💬 <span id="amlDrCta">تواصل معنا على واتساب</span></a>
+  </div>
+</div>
+
 </body>
 </html>
