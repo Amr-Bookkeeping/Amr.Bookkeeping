@@ -37,7 +37,7 @@ body.ar{font-family:'Tajawal',sans-serif;direction:rtl;}
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(247,246,242,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:all 0.3s;}
 nav.scrolled{padding:0.75rem 4rem;box-shadow:var(--shadow-sm);}
 .nav-logo{text-decoration:none;color:var(--navy);display:flex;align-items:center;gap:0.75rem;}
-.nav-logo-mark{width:44px;height:52px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+.nav-logo-mark{flex-shrink:0;display:flex;align-items:center;justify-content:center;}
 .nav-logo-text{display:flex;flex-direction:column;line-height:1.1;}
 .nav-logo-name{font-size:0.75rem;font-weight:600;letter-spacing:0.02em;}
 .nav-logo-sub{font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--slate);}
@@ -411,31 +411,7 @@ body.ar .chat-window{left:auto;right:2rem;}
 
 <nav id="mainNav">
   <a href="#" class="nav-logo">
-    <div class="nav-logo-mark"><svg width="44" height="52" viewBox="0 0 88 104" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <!-- Rays -->
-  <line x1="44" y1="4" x2="44" y2="0" stroke="#90CAF9" stroke-width="1.5" opacity="0.35"/>
-  <line x1="64" y1="9" x2="70" y2="4" stroke="#90CAF9" stroke-width="1.5" opacity="0.28"/>
-  <line x1="78" y1="22" x2="85" y2="18" stroke="#90CAF9" stroke-width="1.5" opacity="0.22"/>
-  <line x1="84" y1="40" x2="92" y2="40" stroke="#90CAF9" stroke-width="1.5" opacity="0.18"/>
-  <line x1="78" y1="58" x2="85" y2="62" stroke="#90CAF9" stroke-width="1.5" opacity="0.14"/>
-  <line x1="24" y1="9" x2="18" y2="4" stroke="#90CAF9" stroke-width="1.5" opacity="0.28"/>
-  <line x1="10" y1="22" x2="3" y2="18" stroke="#90CAF9" stroke-width="1.5" opacity="0.22"/>
-  <line x1="4" y1="40" x2="-4" y2="40" stroke="#90CAF9" stroke-width="1.5" opacity="0.18"/>
-  <line x1="10" y1="58" x2="3" y2="62" stroke="#90CAF9" stroke-width="1.5" opacity="0.14"/>
-  <!-- Shield body -->
-  <path d="M8 14 L80 14 L80 60 Q80 84 44 96 Q8 84 8 60 Z" fill="#071828" stroke="#90CAF9" stroke-width="2.2"/>
-  <path d="M16 20 L72 20 L72 59 Q72 79 44 89 Q16 79 16 59 Z" fill="none" stroke="#90CAF9" stroke-width="0.5" opacity="0.22"/>
-  <!-- Divider line -->
-  <line x1="16" y1="46" x2="72" y2="46" stroke="#90CAF9" stroke-width="0.8" opacity="0.25"/>
-  <!-- Three stripes top half -->
-  <rect x="28" y="24" width="8" height="20" rx="1" fill="#90CAF9" opacity="0.15"/>
-  <rect x="40" y="24" width="8" height="20" rx="1" fill="#90CAF9" opacity="0.28"/>
-  <rect x="52" y="24" width="8" height="20" rx="1" fill="#90CAF9" opacity="0.15"/>
-  <!-- ABA text raised for balance -->
-  <text x="44" y="73" font-family="Georgia,serif" font-size="16" font-weight="700" fill="#E3F2FD" text-anchor="middle" letter-spacing="1.5">ABA</text>
-  <!-- Star tip -->
-  <polygon points="44,9 47,14 44,15 41,14" fill="#90CAF9"/>
-</svg></div>
+    <div class="nav-logo-mark"><img src="aba-logo.png" alt="A.B.A Logo" style="height:44px;width:auto;"/></div>
     <div class="nav-logo-text">
       <span class="nav-logo-name">A.B.A For Accounting & Bookkeeping</span>
       
@@ -886,19 +862,7 @@ body.ar .chat-window{left:auto;right:2rem;}
   <div class="footer-top">
     <div class="footer-brand">
       <div class="footer-logo">
-        <div class="footer-logo-mark"><svg width="44" height="52" viewBox="0 0 88 104" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <line x1="44" y1="4" x2="44" y2="0" stroke="#90CAF9" stroke-width="1.5" opacity="0.3"/>
-  <line x1="64" y1="9" x2="70" y2="4" stroke="#90CAF9" stroke-width="1.5" opacity="0.22"/>
-  <line x1="24" y1="9" x2="18" y2="4" stroke="#90CAF9" stroke-width="1.5" opacity="0.22"/>
-  <path d="M8 14 L80 14 L80 60 Q80 84 44 96 Q8 84 8 60 Z" fill="rgba(255,255,255,0.04)" stroke="rgba(144,202,249,0.5)" stroke-width="2"/>
-  <path d="M16 20 L72 20 L72 59 Q72 79 44 89 Q16 79 16 59 Z" fill="none" stroke="rgba(144,202,249,0.15)" stroke-width="0.5"/>
-  <line x1="16" y1="46" x2="72" y2="46" stroke="rgba(144,202,249,0.2)" stroke-width="0.8"/>
-  <rect x="28" y="24" width="8" height="20" rx="1" fill="rgba(144,202,249,0.12)"/>
-  <rect x="40" y="24" width="8" height="20" rx="1" fill="rgba(144,202,249,0.22)"/>
-  <rect x="52" y="24" width="8" height="20" rx="1" fill="rgba(144,202,249,0.12)"/>
-  <text x="44" y="73" font-family="Georgia,serif" font-size="16" font-weight="700" fill="rgba(227,242,253,0.9)" text-anchor="middle" letter-spacing="1.5">ABA</text>
-  <polygon points="44,9 47,14 44,15 41,14" fill="rgba(144,202,249,0.6)"/>
-</svg></div>
+        <div class="footer-logo-mark"><img src="aba-logo.png" alt="A.B.A Logo" style="height:40px;width:auto;filter:brightness(1.2);"/></div>
         <span class="footer-logo-text">A.B.A For Accounting & Bookkeeping</span>
       </div>
       <p class="footer-desc" data-en="Professional bookkeeping services for UAE businesses. Clean books, clear numbers, better decisions." data-ar="خدمات محاسبية احترافية للشركات الإماراتية. دفاتر نظيفة، أرقام واضحة، قرارات أفضل.">Professional bookkeeping services for UAE businesses. Clean books, clear numbers, better decisions.</p>
