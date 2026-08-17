@@ -184,8 +184,8 @@ body.ar .pricing-note{border-left:none;border-right:2px solid var(--mint);paddin
 .plan-badge{display:inline-block;background:var(--mint);color:var(--navy);font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:1.25rem;width:fit-content;}
 .plan-name{font-size:0.68rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--slate);margin-bottom:0.75rem;}
 .plan.featured .plan-name{color:rgba(255,255,255,0.4);}
-.plan-price{font-family:'Playfair Display',serif;font-size:2.75rem;font-weight:700;line-height:1;margin-bottom:0.2rem;}
-.plan.featured .plan-price{color:#fff;}
+.plan-price-from{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--mint);font-weight:500;margin-bottom:2px;}.plan-price{font-family:'Playfair Display',serif;font-size:2.75rem;font-weight:700;line-height:1;margin-bottom:0.2rem;}
+.plan.featured .plan-price-from{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--mint);font-weight:500;margin-bottom:2px;}.plan-price{color:#fff;}
 .plan-price-sub{font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:400;color:var(--slate);}
 .plan.featured .plan-price-sub{color:rgba(255,255,255,0.35);}
 .plan-divider{border:none;border-top:1px solid var(--border);margin:1.75rem 0;}
@@ -668,11 +668,10 @@ body.ar .chat-window{left:auto;right:2rem;}
   <div class="pricing-grid">
     <div class="plan fade-up">
       <p class="plan-name">Basic</p>
-      <p class="plan-price">AED 500<span class="plan-price-sub" data-en=" /month" data-ar=" /شهر"> /month</span></p>
+      <p class="plan-price-from" data-en="Starts from" data-ar="يبدأ من">Starts from</p><p class="plan-price">AED 500<span class="plan-price-sub" data-en=" /month" data-ar=" /شهر"> /month</span></p>
       <hr class="plan-divider">
       <ul class="plan-features">
         <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Monthly bookkeeping" data-ar="حفظ الدفاتر الشهري">Monthly bookkeeping</span></li>
-        <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Bank reconciliation" data-ar="مطابقة الحسابات">Bank reconciliation</span></li>
         <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Monthly P&L report" data-ar="تقرير الأرباح والخسائر">Monthly P&L report</span></li>
         <li class="off"><span class="feat-check off"><svg viewBox="0 0 12 12"><path d="M3 6h6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></span><span data-en="VAT filing" data-ar="تقديم ضريبة القيمة المضافة">VAT filing</span></li>
         <li class="off"><span class="feat-check off"><svg viewBox="0 0 12 12"><path d="M3 6h6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></span><span data-en="Cash flow statement" data-ar="تقرير التدفق النقدي">Cash flow statement</span></li>
@@ -684,14 +683,12 @@ body.ar .chat-window{left:auto;right:2rem;}
     <div class="plan featured fade-up">
       <div class="plan-badge" data-en="Most popular" data-ar="الأكثر طلباً">Most popular</div>
       <p class="plan-name">Professional</p>
-      <p class="plan-price">AED 1,000<span class="plan-price-sub" data-en=" /month" data-ar=" /شهر"> /month</span></p>
+      <p class="plan-price-from" data-en="Starts from" data-ar="يبدأ من">Starts from</p><p class="plan-price">AED 1,000<span class="plan-price-sub" data-en=" /month" data-ar=" /شهر"> /month</span></p>
       <hr class="plan-divider">
       <ul class="plan-features">
         <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Monthly bookkeeping" data-ar="حفظ الدفاتر الشهري">Monthly bookkeeping</span></li>
-        <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Bank reconciliation" data-ar="مطابقة الحسابات">Bank reconciliation</span></li>
         <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Full financial reports" data-ar="تقارير مالية كاملة">Full financial reports</span></li>
         <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="VAT filing (quarterly)" data-ar="ضريبة القيمة المضافة (ربع سنوي)">VAT filing (quarterly)</span></li>
-        <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Cash flow statement" data-ar="تقرير التدفق النقدي">Cash flow statement</span></li>
         <li class="off"><span class="feat-check off"><svg viewBox="0 0 12 12"><path d="M3 6h6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></span><span data-en="Financial advisory" data-ar="استشارات مالية">Financial advisory</span></li>
       </ul>
       <a href="#" onclick="selectPlan('professional');return false;" class="plan-btn" data-en="Get started" data-ar="ابدأ الآن">Get started</a>
@@ -699,15 +696,14 @@ body.ar .chat-window{left:auto;right:2rem;}
     </div>
     <div class="plan fade-up">
       <p class="plan-name">Complete</p>
-      <p class="plan-price">AED 1,500<span class="plan-price-sub" data-en=" /month" data-ar=" /شهر"> /month</span></p>
+      <p class="plan-price-from" data-en="Starts from" data-ar="يبدأ من">Starts from</p><p class="plan-price">AED 1,500<span class="plan-price-sub" data-en=" /month" data-ar=" /شهر"> /month</span></p>
       <hr class="plan-divider">
       <ul class="plan-features">
         <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Monthly bookkeeping" data-ar="حفظ الدفاتر الشهري">Monthly bookkeeping</span></li>
-        <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Bank reconciliation" data-ar="مطابقة الحسابات">Bank reconciliation</span></li>
         <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Full financial reports" data-ar="تقارير مالية كاملة">Full financial reports</span></li>
-        <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="VAT filing (monthly)" data-ar="ضريبة القيمة المضافة (شهري)">VAT filing (monthly)</span></li>
-        <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Cash flow statement" data-ar="تقرير التدفق النقدي">Cash flow statement</span></li>
+        <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="VAT filing (quarterly)" data-ar="ضريبة القيمة المضافة (ربع سنوي)">VAT filing (quarterly)</span></li>
         <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Financial advisory" data-ar="استشارات مالية">Financial advisory</span></li>
+        <li><span class="feat-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-en="Corporate Tax (yearly)" data-ar="ضريبة الشركات (سنوي)">Corporate Tax (yearly)</span></li>
       </ul>
       <a href="#" onclick="selectPlan('complete');return false;" class="plan-btn" data-en="Get started" data-ar="ابدأ الآن">Get started</a>
       <p class="plan-value" data-en="Full-service for established businesses" data-ar="خدمة كاملة للشركات الراسخة">Full-service for established businesses</p>
