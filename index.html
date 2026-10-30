@@ -269,18 +269,16 @@ body.ar .pricing-note{border-left:none;border-right:2px solid var(--mint);paddin
 .plan-value{text-align:center;margin-top:0.75rem;font-size:0.72rem;color:var(--slate);}
 .plan.featured .plan-value{color:rgba(255,255,255,0.25);}
 
-/* TESTIMONIALS */
-#testimonials{background:var(--white);}
-.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem;}
-.tcard{border:1px solid var(--border);border-radius:16px;padding:2rem;background:var(--paper);transition:transform 0.25s,box-shadow 0.25s;}
-.tcard:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
-.tcard-stars{display:flex;gap:3px;margin-bottom:1rem;}
-.tcard-stars span{color:var(--gold);font-size:0.9rem;}
-.tcard-text{font-size:0.9rem;color:var(--slate);line-height:1.8;margin-bottom:1.5rem;font-style:italic;}
-.tcard-author{display:flex;align-items:center;gap:0.75rem;}
-.tcard-avatar{width:38px;height:38px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:700;color:var(--mint);flex-shrink:0;}
-.tcard-name{font-size:0.85rem;font-weight:500;}
-.tcard-role{font-size:0.72rem;color:var(--slate);}
+/* COMPLIANCE DEADLINES */
+#deadlines{background:var(--white);}
+.deadlines-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem;}
+.dcard{border:1px solid var(--border);border-radius:16px;padding:2rem;background:var(--paper);transition:transform 0.25s,box-shadow 0.25s;}
+.dcard:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+.dcard-icon{font-size:1.6rem;margin-bottom:1rem;}
+.dcard-when{display:inline-block;font-size:0.75rem;font-weight:600;color:var(--navy);background:var(--mint);border-radius:999px;padding:0.25rem 0.75rem;margin-bottom:0.75rem;}
+.dcard h3{font-size:1.05rem;font-weight:600;margin-bottom:0.6rem;}
+.dcard p{font-size:0.9rem;color:var(--slate);line-height:1.8;}
+.deadlines-note{font-size:0.8rem;color:var(--slate);margin-top:2rem;}
 
 /* FAQ */
 #faq{background:var(--paper);}
@@ -445,7 +443,7 @@ body.ar .chat-window{left:auto;right:2rem;}
   .hero{padding:7rem 1.5rem 4rem;}
   .hero-sidebar,.trust-bar .trust-items{display:none;}
   .trust-bar{padding:1rem 1.5rem;}
-  .services-grid,.pricing-grid,.aml-grid,.aml-services-grid,.testimonials-grid,.footer-links{grid-template-columns:1fr;}
+  .services-grid,.pricing-grid,.aml-grid,.aml-services-grid,.deadlines-grid,.footer-links{grid-template-columns:1fr;}
   .about-inner,.contact-inner,.calc-inner,.why-grid,.faq-inner,.pricing-header,.section-header{grid-template-columns:1fr;}
   .hero-actions,.form-row{flex-direction:column;}
   .form-row{grid-template-columns:1fr;}
@@ -775,27 +773,43 @@ body.ar .chat-window{left:auto;right:2rem;}
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section id="testimonials">
-  <div class="eyebrow fade-up" data-en="Testimonials" data-ar="آراء العملاء">Testimonials</div>
-  <h2 class="display fade-up" data-en="What our clients<br><em>say about us.</em>" data-ar="ما يقوله<br><em>عملاؤنا.</em>">What our clients<br><em>say about us.</em></h2>
-  <div class="testimonials-grid">
-    <div class="tcard fade-up">
-      <div class="tcard-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-      <p class="tcard-text" data-en='"ABA transformed how I see my business finances. I finally understand where my money goes every month. Worth every dirham."' data-ar='"ABA غيّر طريقة رؤيتي لمالية عملي. أخيراً أفهم أين تذهب أموالي كل شهر. يستحق كل درهم."'>"ABA transformed how I see my business finances. I finally understand where my money goes every month. Worth every dirham."</p>
-      <div class="tcard-author"><div class="tcard-avatar">KA</div><div><div class="tcard-name">Khalid Al Rashidi</div><div class="tcard-role" data-en="Trading Company · Dubai" data-ar="شركة تجارية · دبي">Trading Company · Dubai</div></div></div>
+<!-- COMPLIANCE DEADLINES -->
+<section id="deadlines">
+  <div class="eyebrow fade-up" data-en="Compliance deadlines" data-ar="مواعيد الامتثال">Compliance deadlines</div>
+  <h2 class="display fade-up" data-en="Key UAE dates<br><em>you can't miss.</em>" data-ar="مواعيد مهمة<br><em>لا يجب أن تفوتك.</em>">Key UAE dates<br><em>you can't miss.</em></h2>
+  <div class="deadlines-grid">
+    <div class="dcard fade-up">
+      <div class="dcard-icon">🧾</div>
+      <div class="dcard-when" data-en="Within 28 days" data-ar="خلال 28 يوماً">Within 28 days</div>
+      <h3 data-en="VAT return" data-ar="إقرار ضريبة القيمة المضافة">VAT return</h3>
+      <p data-en="File and pay your VAT return within 28 days of the end of each tax period (monthly or quarterly)." data-ar="تقديم الإقرار وسداد الضريبة خلال 28 يوماً من نهاية كل فترة ضريبية (شهرية أو ربع سنوية).">File and pay your VAT return within 28 days of the end of each tax period (monthly or quarterly).</p>
     </div>
-    <div class="tcard fade-up">
-      <div class="tcard-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-      <p class="tcard-text" data-en='"Reports always on time, VAT filing handled perfectly. I stopped worrying about compliance and started focusing on growth."' data-ar='"تقارير دائماً في الوقت، وضريبة القيمة المضافة تُعالج باحترافية. توقفت عن القلق من الامتثال وبدأت في التركيز على النمو."'>"Reports always on time, VAT filing handled perfectly. I stopped worrying about compliance and started focusing on growth."</p>
-      <div class="tcard-author"><div class="tcard-avatar">SM</div><div><div class="tcard-name">Sara Mahmoud</div><div class="tcard-role" data-en="Retail Shop Owner · Dubai" data-ar="صاحبة محل تجزئة · دبي">Retail Shop Owner · Dubai</div></div></div>
+    <div class="dcard fade-up">
+      <div class="dcard-icon">📋</div>
+      <div class="dcard-when" data-en="Above AED 375,000" data-ar="عند تجاوز 375,000 درهم">Above AED 375,000</div>
+      <h3 data-en="VAT registration" data-ar="التسجيل في ضريبة القيمة المضافة">VAT registration</h3>
+      <p data-en="Registration is mandatory once taxable supplies exceed AED 375,000 in the past 12 months, or are expected to within the next 30 days." data-ar="التسجيل إلزامي عندما تتجاوز التوريدات الخاضعة للضريبة 375,000 درهم خلال آخر 12 شهراً، أو يُتوقع تجاوزها خلال الـ 30 يوماً التالية.">Registration is mandatory once taxable supplies exceed AED 375,000 in the past 12 months, or are expected to within the next 30 days.</p>
     </div>
-    <div class="tcard fade-up">
-      <div class="tcard-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-      <p class="tcard-text" data-en='"As a freelancer I was drowning in receipts. ABA sorted my entire backlog in a week and set up a clean system. Highly recommend."' data-ar='"كمستقل كنت غارقاً في الإيصالات. ABA رتّب كل سجلاتي المتراكمة في أسبوع وأنشأ نظاماً واضحاً. أنصح به بشدة."'>"As a freelancer I was drowning in receipts. ABA sorted my entire backlog in a week and set up a clean system. Highly recommend."</p>
-      <div class="tcard-author"><div class="tcard-avatar">YN</div><div><div class="tcard-name">Yousef Nasser</div><div class="tcard-role" data-en="Freelance Consultant · Abu Dhabi" data-ar="مستشار مستقل · أبوظبي">Freelance Consultant · Abu Dhabi</div></div></div>
+    <div class="dcard fade-up">
+      <div class="dcard-icon">🏛️</div>
+      <div class="dcard-when" data-en="Within 9 months" data-ar="خلال 9 أشهر">Within 9 months</div>
+      <h3 data-en="Corporate Tax return" data-ar="إقرار ضريبة الشركات">Corporate Tax return</h3>
+      <p data-en="File and pay Corporate Tax within 9 months of the end of your financial year. Registration with the FTA is required even if no tax is due." data-ar="تقديم الإقرار وسداد ضريبة الشركات خلال 9 أشهر من نهاية السنة المالية. التسجيل لدى الهيئة الاتحادية للضرائب مطلوب حتى لو لم تستحق ضريبة.">File and pay Corporate Tax within 9 months of the end of your financial year. Registration with the FTA is required even if no tax is due.</p>
+    </div>
+    <div class="dcard fade-up">
+      <div class="dcard-icon">🛡️</div>
+      <div class="dcard-when" data-en="Before you operate" data-ar="قبل مزاولة النشاط">Before you operate</div>
+      <h3 data-en="goAML & EOCN registration" data-ar="التسجيل في goAML وEOCN">goAML & EOCN registration</h3>
+      <p data-en="DNFBPs such as real estate brokers and gold traders must register on goAML and subscribe to EOCN sanctions notifications, and report suspicious transactions without delay." data-ar="على الأعمال والمهن غير المالية المحددة، مثل الوسطاء العقاريين وتجار الذهب، التسجيل في goAML والاشتراك في إشعارات العقوبات لدى EOCN، والإبلاغ عن المعاملات المشبوهة دون تأخير.">DNFBPs such as real estate brokers and gold traders must register on goAML and subscribe to EOCN sanctions notifications, and report suspicious transactions without delay.</p>
+    </div>
+    <div class="dcard fade-up">
+      <div class="dcard-icon">🗂️</div>
+      <div class="dcard-when" data-en="5 to 7 years" data-ar="من 5 إلى 7 سنوات">5 to 7 years</div>
+      <h3 data-en="Record keeping" data-ar="الاحتفاظ بالسجلات">Record keeping</h3>
+      <p data-en="Keep your accounting records and invoices for at least 5 years for VAT and 7 years for Corporate Tax." data-ar="الاحتفاظ بالسجلات المحاسبية والفواتير 5 سنوات على الأقل لضريبة القيمة المضافة و7 سنوات لضريبة الشركات.">Keep your accounting records and invoices for at least 5 years for VAT and 7 years for Corporate Tax.</p>
     </div>
   </div>
+  <p class="deadlines-note fade-up" data-en="General guidance only. Rules and deadlines can change, so we confirm them against the latest FTA and Ministry of Economy requirements for your business." data-ar="هذه معلومات عامة للإرشاد فقط. القواعد والمواعيد قد تتغير، لذلك نتحقق منها وفق أحدث متطلبات الهيئة الاتحادية للضرائب ووزارة الاقتصاد الخاصة بنشاطك.">General guidance only. Rules and deadlines can change, so we confirm them against the latest FTA and Ministry of Economy requirements for your business.</p>
 </section>
 
 <!-- FAQ -->
